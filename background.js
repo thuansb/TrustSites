@@ -347,11 +347,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.tabs.onActivated.addListener((activeInfo) => {
   chrome.tabs.get(activeInfo.tabId, (tab) => {
-    if (tab) {
-      verifyDomain(tab.url);
-    } else {
-      alert('eee')
-      chrome.browserAction.setIcon({path: "red.png"});
-    }
+    if (tab) verifyDomain(tab.url);
   });
 });
