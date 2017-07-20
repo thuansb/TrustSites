@@ -69,6 +69,7 @@ const domains = {
     'braintreepayments.com',
   ],
   cryptoRelated: [
+    'ethtrade.org',
     'supernet.org',
     'augur.net',
     'chronobank.io',
@@ -296,13 +297,11 @@ const domains = {
     'devcoin.org',
     'nxt.org',
     'dcoin.club',
-    'heatledger.',
     'cryptojoin.com',
     'icoo.io',
     'funding.webmoney.ru',
     'realityshares.com',
     'itprism.com',
-    'drupal.org',
   ],
   peer2Peer: [
     'openbazaar.org',
@@ -320,11 +319,8 @@ const domains = {
     'storj.io',
     'maidsafe.net',
     'sia.tech',
-    'ipfs.io',
     'bitcore.io',
     'matrix.org',
-    'ipfs.io',
-    'github.com',
     'duniter.org',
     'emercoin.com',
     'soundchain.org',
@@ -336,14 +332,26 @@ const domains = {
 
 const trustSites = Object.keys(domains).reduce((a, b) => a.concat(domains[b]), []);
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  if (changeInfo.url) {
-    const url = new URL(changeInfo.url);
-    const trusted = trustSites.find((trustedDomain) => {
-      return url.hostname.match(new RegExp('^([\da-z\.-]+\.)?' + trustedDomain.replace('.', '\.') + '$')) != null;
-    });
-    console.log(trusted);
-    const iconPath = trusted ? "green.png" : "red.png";
-    chrome.browserAction.setIcon({path: iconPath});
-  }
+function verifyDomain(stringUrl) {
+  const url = new URL(stringUrl);
+  const trusted = trustSites.find((trustedDomain) => {
+    return url.hostname.match(new RegExp('^([\da-z\.-]+\.)?' + trustedDomain.replace('.', '\.') + '$')) != null;
+  });
+  const iconPath = trusted ? "green.png" : "red.png";
+  chrome.browserAction.setIcon({path: iconPath});
+}
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.url) verifyDomain(changeInfo.url);
+});
+
+chrome.tabs.onActivated.addListener((activeInfo) => {
+  chrome.tabs.get(activeInfo.tabId, (tab) => {
+    if (tab) {
+      verifyDomain(tab.url);
+    } else {
+      alert('eee')
+      chrome.browserAction.setIcon({path: "red.png"});
+    }
+  });
 });
