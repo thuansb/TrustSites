@@ -1,6 +1,6 @@
 A small extension help us identifying the official crypto site, prevent from phishing attacks.
 
-Install extension at: https://chrome.google.com/webstore/detail/trusted-crypto-site-indic/pjckcnnlnefofdnnfjlkbcgoombmhjea
+Install extension at: https://goo.gl/gCfi9E
 
 ### Suggest a new site
 https://goo.gl/forms/JDKzxWekir3P2Gwm2
