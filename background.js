@@ -194,6 +194,7 @@ const domains = {
     'loadoo.com',
     'loaddebitcard.com',
     'torwallet.com',
+    'etherdelta.github.io',
   ],
   news: [
     'coindesk.com',
