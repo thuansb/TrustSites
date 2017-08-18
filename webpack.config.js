@@ -7,10 +7,16 @@ module.exports = {
     path: path.resolve('./public')
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel-loader'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]
+      }
+    ]
   }
 }
