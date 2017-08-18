@@ -1,0 +1,32 @@
+{
+  "name": "trustsites",
+  "version": "1.0.0",
+  "description": "A small extension help us identifying the official crypto site, prevent from phishing attacks.",
+  "main": "background.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuansb/TrustSites.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thuansb/TrustSites/issues"
+  },
+  "homepage": "https://github.com/thuansb/TrustSites#readme",
+  "dependencies": {
+    "bulma": "^0.5.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
+}

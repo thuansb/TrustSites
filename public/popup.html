@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Trusted Crypto Site Indicator</title>
+  <style>
+    body {
+      width: 300px;
+    }
+
+    .notation {
+      display: flex;
+    }
+
+    .icon {
+      flex: 1;
+    }
+
+    .description {
+      flex: 9;
+    }
+  </style>
+</head>
+<body>
+  <h3>Trusted Crypto Site Indicator</h3>
+  <p>Identifying the <b>official crypto site</b>, prevent from phishing attacks.</p>
+  <div id="root"></div>
+  <div>
+    <div class="notation">
+      <div class="icon">
+        <img src="red.png" />
+      </div>
+      <div class="description">
+        Not trusted site or not in the list
+      </div>
+    </div>
+    <div class="notation">
+      <div class="icon">
+        <img src="green.png" />
+      </div>
+      <div class="description">
+        Trusted site
+      </div>
+    </div>
+  </div>
+  <a target="_blank" href="https://goo.gl/forms/JDKzxWekir3P2Gwm2">Suggest new site to the list</a>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
