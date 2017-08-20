@@ -1,0 +1,29 @@
+@import "node_modules/bulma/sass/utilities/_all";
+@import "node_modules/bulma/sass/base/_all";
+@import "node_modules/bulma/sass/components/panel.sass";
+@import "node_modules/bulma/sass/components/modal.sass";
+@import "node_modules/bulma/sass/elements/title.sass";
+
+.main-content {
+    margin: 15px auto;
+} 
+
+.modal-content {
+    background-color: #FFF;
+    padding: 10px 5px;
+    .help {
+        &__notation {
+            display: flex;
+        
+            &__icon {
+                flex: 1;
+            }
+        
+            &__description {
+                flex: 9;
+            }
+        }
+    }
+}
+
+
