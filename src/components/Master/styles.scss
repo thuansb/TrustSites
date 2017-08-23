@@ -6,24 +6,20 @@
 
 .main-content {
     margin: 15px auto;
-} 
+}
 
-.modal-content {
-    background-color: #FFF;
-    padding: 10px 5px;
-    .help {
-        &__notation {
-            display: flex;
-        
-            &__icon {
-                flex: 1;
-            }
-        
-            &__description {
-                flex: 9;
-            }
+.help {
+    &__notation {
+        display: flex;
+        &__icon {
+            flex: 1;
+        }
+        &__description {
+            flex: 9;
         }
     }
 }
 
-
+.clickable {
+    cursor: pointer;
+}

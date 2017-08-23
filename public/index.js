@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 83);
+/******/ 	return __webpack_require__(__webpack_require__.s = 85);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -787,7 +787,7 @@ module.exports = ExecutionEnvironment;
 
 
 
-var _prodInvariant = __webpack_require__(17);
+var _prodInvariant = __webpack_require__(18);
 
 var ReactCurrentOwner = __webpack_require__(10);
 
@@ -1177,7 +1177,7 @@ module.exports = ReactComponentTreeHook;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(111);
+  var ReactDebugTool = __webpack_require__(113);
   debugTool = ReactDebugTool;
 }
 
@@ -1285,8 +1285,8 @@ var _prodInvariant = __webpack_require__(3),
 var CallbackQueue = __webpack_require__(61);
 var PooledClass = __webpack_require__(15);
 var ReactFeatureFlags = __webpack_require__(62);
-var ReactReconciler = __webpack_require__(18);
-var Transaction = __webpack_require__(27);
+var ReactReconciler = __webpack_require__(19);
+var Transaction = __webpack_require__(28);
 
 var invariant = __webpack_require__(1);
 
@@ -2028,7 +2028,7 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(10);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(25);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(52);
@@ -2476,6 +2476,16 @@ module.exports = PooledClass;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(17);
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -2491,14 +2501,14 @@ module.exports = PooledClass;
 var _assign = __webpack_require__(4);
 
 var ReactBaseClasses = __webpack_require__(50);
-var ReactChildren = __webpack_require__(85);
-var ReactDOMFactories = __webpack_require__(89);
+var ReactChildren = __webpack_require__(87);
+var ReactDOMFactories = __webpack_require__(91);
 var ReactElement = __webpack_require__(14);
-var ReactPropTypes = __webpack_require__(93);
-var ReactVersion = __webpack_require__(96);
+var ReactPropTypes = __webpack_require__(95);
+var ReactVersion = __webpack_require__(98);
 
-var createReactClass = __webpack_require__(97);
-var onlyChild = __webpack_require__(99);
+var createReactClass = __webpack_require__(99);
+var onlyChild = __webpack_require__(101);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
@@ -2506,7 +2516,7 @@ var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(33);
-  var canDefineProperty = __webpack_require__(24);
+  var canDefineProperty = __webpack_require__(25);
   var ReactElementValidator = __webpack_require__(54);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -2610,7 +2620,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2654,7 +2664,7 @@ function reactProdInvariant(code) {
 module.exports = reactProdInvariant;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2670,7 +2680,7 @@ module.exports = reactProdInvariant;
 
 
 
-var ReactRef = __webpack_require__(109);
+var ReactRef = __webpack_require__(111);
 var ReactInstrumentation = __webpack_require__(8);
 
 var warning = __webpack_require__(2);
@@ -2826,7 +2836,7 @@ module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2843,7 +2853,7 @@ module.exports = ReactReconciler;
 
 
 var DOMNamespaces = __webpack_require__(40);
-var setInnerHTML = __webpack_require__(29);
+var setInnerHTML = __webpack_require__(30);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 var setTextContent = __webpack_require__(66);
@@ -2949,7 +2959,7 @@ DOMLazyTree.queueText = queueText;
 module.exports = DOMLazyTree;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2965,7 +2975,7 @@ module.exports = DOMLazyTree;
 
 
 
-var EventPluginHub = __webpack_require__(21);
+var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(34);
 
 var accumulateInto = __webpack_require__(58);
@@ -3089,7 +3099,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3107,7 +3117,7 @@ module.exports = EventPropagators;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var EventPluginUtils = __webpack_require__(34);
 var ReactErrorUtils = __webpack_require__(35);
 
@@ -3369,7 +3379,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3433,7 +3443,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3484,7 +3494,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3516,7 +3526,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3542,7 +3552,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3801,7 +3811,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4035,7 +4045,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4051,7 +4061,7 @@ module.exports = TransactionImpl;
 
 
 
-var SyntheticUIEvent = __webpack_require__(22);
+var SyntheticUIEvent = __webpack_require__(23);
 var ViewportMetrics = __webpack_require__(65);
 
 var getEventModifierState = __webpack_require__(38);
@@ -4112,7 +4122,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4215,7 +4225,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4342,7 +4352,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4360,11 +4370,11 @@ module.exports = escapeTextContentForBrowser;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(26);
-var ReactEventEmitterMixin = __webpack_require__(135);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactEventEmitterMixin = __webpack_require__(137);
 var ViewportMetrics = __webpack_require__(65);
 
-var getVendorPrefixedEventName = __webpack_require__(136);
+var getVendorPrefixedEventName = __webpack_require__(138);
 var isEventSupported = __webpack_require__(37);
 
 /**
@@ -4669,16 +4679,6 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 });
 
 module.exports = ReactBrowserEventEmitter;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(16);
-
 
 /***/ }),
 /* 33 */
@@ -5235,13 +5235,13 @@ module.exports = getEventModifierState;
 
 
 
-var DOMLazyTree = __webpack_require__(19);
-var Danger = __webpack_require__(120);
+var DOMLazyTree = __webpack_require__(20);
+var Danger = __webpack_require__(122);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
-var setInnerHTML = __webpack_require__(29);
+var setInnerHTML = __webpack_require__(30);
 var setTextContent = __webpack_require__(66);
 
 function getNodeAfter(parentNode, node) {
@@ -5534,7 +5534,7 @@ var _prodInvariant = __webpack_require__(3);
 var ReactPropTypesSecret = __webpack_require__(70);
 var propTypesFactory = __webpack_require__(55);
 
-var React = __webpack_require__(16);
+var React = __webpack_require__(17);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(1);
@@ -5910,7 +5910,7 @@ module.exports = KeyEscapeUtils;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var ReactInstanceMap = __webpack_require__(23);
+var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactUpdates = __webpack_require__(11);
 
@@ -6579,13 +6579,13 @@ module.exports = getEventCharCode;
 
 
 
-var _prodInvariant = __webpack_require__(17),
+var _prodInvariant = __webpack_require__(18),
     _assign = __webpack_require__(4);
 
 var ReactNoopUpdateQueue = __webpack_require__(51);
 
-var canDefineProperty = __webpack_require__(24);
-var emptyObject = __webpack_require__(25);
+var canDefineProperty = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var invariant = __webpack_require__(1);
 var lowPriorityWarning = __webpack_require__(33);
 
@@ -6911,9 +6911,9 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ReactElement = __webpack_require__(14);
 
-var checkReactTypeSpec = __webpack_require__(90);
+var checkReactTypeSpec = __webpack_require__(92);
 
-var canDefineProperty = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(25);
 var getIteratorFn = __webpack_require__(53);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(33);
@@ -7164,7 +7164,7 @@ module.exports = ReactElementValidator;
 // Therefore we re-export development-only version with all the PropTypes checks here.
 // However if one is migrating to the `prop-types` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
-var factory = __webpack_require__(94);
+var factory = __webpack_require__(96);
 module.exports = function(isValidElement) {
   // It is still allowed in 15.5.
   var throwOnDirectAccess = false;
@@ -7738,8 +7738,8 @@ module.exports = ViewportMetrics;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(30);
-var setInnerHTML = __webpack_require__(29);
+var escapeTextContentForBrowser = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(30);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -7989,7 +7989,7 @@ var DOMProperty = __webpack_require__(13);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var quoteAttributeValueForBrowser = __webpack_require__(134);
+var quoteAttributeValueForBrowser = __webpack_require__(136);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -8457,11 +8457,11 @@ module.exports = ReactDOMSelect;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var ReactCompositeComponent = __webpack_require__(142);
+var ReactCompositeComponent = __webpack_require__(144);
 var ReactEmptyComponent = __webpack_require__(74);
 var ReactHostComponent = __webpack_require__(75);
 
-var getNextDebugID = __webpack_require__(145);
+var getNextDebugID = __webpack_require__(147);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -8592,7 +8592,7 @@ module.exports = instantiateReactComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var React = __webpack_require__(16);
+var React = __webpack_require__(17);
 
 var invariant = __webpack_require__(1);
 
@@ -8747,9 +8747,9 @@ module.exports = ReactHostComponent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var REACT_ELEMENT_TYPE = __webpack_require__(146);
+var REACT_ELEMENT_TYPE = __webpack_require__(148);
 
-var getIteratorFn = __webpack_require__(147);
+var getIteratorFn = __webpack_require__(149);
 var invariant = __webpack_require__(1);
 var KeyEscapeUtils = __webpack_require__(46);
 var warning = __webpack_require__(2);
@@ -9009,9 +9009,9 @@ module.exports = EventListener;
 
 
 
-var ReactDOMSelection = __webpack_require__(159);
+var ReactDOMSelection = __webpack_require__(161);
 
-var containsNode = __webpack_require__(161);
+var containsNode = __webpack_require__(163);
 var focusNode = __webpack_require__(67);
 var getActiveElement = __webpack_require__(79);
 
@@ -9183,26 +9183,26 @@ module.exports = getActiveElement;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(19);
+var DOMLazyTree = __webpack_require__(20);
 var DOMProperty = __webpack_require__(13);
-var React = __webpack_require__(16);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var React = __webpack_require__(17);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMContainerInfo = __webpack_require__(176);
-var ReactDOMFeatureFlags = __webpack_require__(177);
+var ReactDOMContainerInfo = __webpack_require__(178);
+var ReactDOMFeatureFlags = __webpack_require__(179);
 var ReactFeatureFlags = __webpack_require__(62);
-var ReactInstanceMap = __webpack_require__(23);
+var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMarkupChecksum = __webpack_require__(178);
-var ReactReconciler = __webpack_require__(18);
+var ReactMarkupChecksum = __webpack_require__(180);
+var ReactReconciler = __webpack_require__(19);
 var ReactUpdateQueue = __webpack_require__(47);
 var ReactUpdates = __webpack_require__(11);
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var instantiateReactComponent = __webpack_require__(72);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(29);
+var setInnerHTML = __webpack_require__(30);
 var shouldUpdateReactComponent = __webpack_require__(45);
 var warning = __webpack_require__(2);
 
@@ -9754,165 +9754,501 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(32);
+var _react = __webpack_require__(16);
 
 var _react2 = _interopRequireDefault(_react);
 
+__webpack_require__(191);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function Modal(_ref) {
+    var isOpen = _ref.isOpen,
+        toggleModal = _ref.toggleModal,
+        children = _ref.children;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+    return _react2.default.createElement(
+        'div',
+        { className: 'modal ' + (isOpen && 'is-active') },
+        _react2.default.createElement('div', { className: 'modal-background' }),
+        _react2.default.createElement(
+            'div',
+            { className: 'modal-content' },
+            children
+        ),
+        _react2.default.createElement('button', {
+            onClick: toggleModal,
+            className: 'modal-close is-large',
+            'aria-label': 'close' })
+    );
+}
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SiteList = function (_React$Component) {
-    _inherits(SiteList, _React$Component);
-
-    function SiteList() {
-        _classCallCheck(this, SiteList);
-
-        return _possibleConstructorReturn(this, (SiteList.__proto__ || Object.getPrototypeOf(SiteList)).apply(this, arguments));
-    }
-
-    _createClass(SiteList, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "nav",
-                { className: "panel" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "panel-heading" },
-                    "TRUSTED SITE LIST"
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "panel-block" },
-                    _react2.default.createElement(
-                        "p",
-                        { className: "control has-icons-left" },
-                        _react2.default.createElement("input", { className: "input is-small", type: "text", placeholder: "search" }),
-                        _react2.default.createElement(
-                            "span",
-                            { className: "icon is-small is-left" },
-                            _react2.default.createElement("i", { className: "fa fa-search" })
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "p",
-                    { className: "panel-tabs" },
-                    _react2.default.createElement(
-                        "a",
-                        { className: "is-active" },
-                        "all"
-                    ),
-                    _react2.default.createElement(
-                        "a",
-                        null,
-                        "public"
-                    ),
-                    _react2.default.createElement(
-                        "a",
-                        null,
-                        "private"
-                    ),
-                    _react2.default.createElement(
-                        "a",
-                        null,
-                        "sources"
-                    ),
-                    _react2.default.createElement(
-                        "a",
-                        null,
-                        "forks"
-                    )
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { className: "panel-block is-active", href: "https://myetherwallet.com", target: "blank" },
-                    _react2.default.createElement(
-                        "span",
-                        { className: "panel-icon" },
-                        _react2.default.createElement("img", { src: "https://www.google.com/s2/favicons?domain=myetherwallet.com" })
-                    ),
-                    "myetherwallet.com"
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { className: "panel-block" },
-                    _react2.default.createElement(
-                        "span",
-                        { className: "panel-icon" },
-                        _react2.default.createElement("i", { className: "fa fa-book" })
-                    ),
-                    "marksheet"
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { className: "panel-block" },
-                    _react2.default.createElement(
-                        "span",
-                        { className: "panel-icon" },
-                        _react2.default.createElement("i", { className: "fa fa-book" })
-                    ),
-                    "minireset.css"
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { className: "panel-block" },
-                    _react2.default.createElement(
-                        "span",
-                        { className: "panel-icon" },
-                        _react2.default.createElement("i", { className: "fa fa-book" })
-                    ),
-                    "jgthms.github.io"
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { className: "panel-block" },
-                    _react2.default.createElement(
-                        "span",
-                        { className: "panel-icon" },
-                        _react2.default.createElement("i", { className: "fa fa-code-fork" })
-                    ),
-                    "daniellowtw/infboard"
-                )
-            );
-        }
-    }]);
-
-    return SiteList;
-}(_react2.default.Component);
-
-exports.default = SiteList;
+exports.default = Modal;
 
 /***/ }),
 /* 83 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(84);
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(selector) {
+		if (typeof memo[selector] === "undefined") {
+			memo[selector] = fn.call(this, selector);
+		}
+
+		return memo[selector]
+	};
+})(function (target) {
+	return document.querySelector(target)
+});
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(193);
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton) options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+	if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else {
+		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	options.attrs.type = "text/css";
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	options.attrs.type = "text/css";
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = options.transform(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(86);
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
-var _react = __webpack_require__(32);
+var _react = __webpack_require__(16);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(100);
+var _reactDom = __webpack_require__(102);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Master = __webpack_require__(186);
+var _Master = __webpack_require__(188);
 
 var _Master2 = _interopRequireDefault(_Master);
 
@@ -9921,7 +10257,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_Master2.default, null), document.getElementById('app'));
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9937,11 +10273,11 @@ _reactDom2.default.render(_react2.default.createElement(_Master2.default, null),
 
 
 
-var PooledClass = __webpack_require__(86);
+var PooledClass = __webpack_require__(88);
 var ReactElement = __webpack_require__(14);
 
 var emptyFunction = __webpack_require__(9);
-var traverseAllChildren = __webpack_require__(87);
+var traverseAllChildren = __webpack_require__(89);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -10117,7 +10453,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10134,7 +10470,7 @@ module.exports = ReactChildren;
 
 
 
-var _prodInvariant = __webpack_require__(17);
+var _prodInvariant = __webpack_require__(18);
 
 var invariant = __webpack_require__(1);
 
@@ -10235,7 +10571,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10251,14 +10587,14 @@ module.exports = PooledClass;
 
 
 
-var _prodInvariant = __webpack_require__(17);
+var _prodInvariant = __webpack_require__(18);
 
 var ReactCurrentOwner = __webpack_require__(10);
 var REACT_ELEMENT_TYPE = __webpack_require__(52);
 
 var getIteratorFn = __webpack_require__(53);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(88);
+var KeyEscapeUtils = __webpack_require__(90);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -10417,7 +10753,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10481,7 +10817,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10656,7 +10992,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10672,10 +11008,10 @@ module.exports = ReactDOMFactories;
 
 
 
-var _prodInvariant = __webpack_require__(17);
+var _prodInvariant = __webpack_require__(18);
 
-var ReactPropTypeLocationNames = __webpack_require__(91);
-var ReactPropTypesSecret = __webpack_require__(92);
+var ReactPropTypeLocationNames = __webpack_require__(93);
+var ReactPropTypesSecret = __webpack_require__(94);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -10749,7 +11085,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10780,7 +11116,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10802,7 +11138,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10826,7 +11162,7 @@ var factory = __webpack_require__(55);
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10846,7 +11182,7 @@ var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
 var ReactPropTypesSecret = __webpack_require__(56);
-var checkPropTypes = __webpack_require__(95);
+var checkPropTypes = __webpack_require__(97);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -11346,7 +11682,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11415,7 +11751,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11434,7 +11770,7 @@ module.exports = checkPropTypes;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11457,12 +11793,12 @@ var _require2 = __webpack_require__(14),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(51);
-var factory = __webpack_require__(98);
+var factory = __webpack_require__(100);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11480,7 +11816,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _assign = __webpack_require__(4);
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var _invariant = __webpack_require__(1);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -12342,7 +12678,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12357,7 +12693,7 @@ module.exports = factory;
  */
 
 
-var _prodInvariant = __webpack_require__(17);
+var _prodInvariant = __webpack_require__(18);
 
 var ReactElement = __webpack_require__(14);
 
@@ -12386,17 +12722,17 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(101);
+module.exports = __webpack_require__(103);
 
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12415,15 +12751,15 @@ module.exports = __webpack_require__(101);
 
 
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDefaultInjection = __webpack_require__(102);
+var ReactDefaultInjection = __webpack_require__(104);
 var ReactMount = __webpack_require__(80);
-var ReactReconciler = __webpack_require__(18);
+var ReactReconciler = __webpack_require__(19);
 var ReactUpdates = __webpack_require__(11);
-var ReactVersion = __webpack_require__(180);
+var ReactVersion = __webpack_require__(182);
 
-var findDOMNode = __webpack_require__(181);
+var findDOMNode = __webpack_require__(183);
 var getHostComponentFromComposite = __webpack_require__(81);
-var renderSubtreeIntoContainer = __webpack_require__(182);
+var renderSubtreeIntoContainer = __webpack_require__(184);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -12500,9 +12836,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(8);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(183);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(184);
-  var ReactDOMInvalidARIAHook = __webpack_require__(185);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(185);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(186);
+  var ReactDOMInvalidARIAHook = __webpack_require__(187);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -12513,7 +12849,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12529,25 +12865,25 @@ module.exports = ReactDOM;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(103);
-var BeforeInputEventPlugin = __webpack_require__(104);
-var ChangeEventPlugin = __webpack_require__(108);
-var DefaultEventPluginOrder = __webpack_require__(116);
-var EnterLeaveEventPlugin = __webpack_require__(117);
-var HTMLDOMPropertyConfig = __webpack_require__(118);
-var ReactComponentBrowserEnvironment = __webpack_require__(119);
-var ReactDOMComponent = __webpack_require__(125);
+var ARIADOMPropertyConfig = __webpack_require__(105);
+var BeforeInputEventPlugin = __webpack_require__(106);
+var ChangeEventPlugin = __webpack_require__(110);
+var DefaultEventPluginOrder = __webpack_require__(118);
+var EnterLeaveEventPlugin = __webpack_require__(119);
+var HTMLDOMPropertyConfig = __webpack_require__(120);
+var ReactComponentBrowserEnvironment = __webpack_require__(121);
+var ReactDOMComponent = __webpack_require__(127);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMEmptyComponent = __webpack_require__(151);
-var ReactDOMTreeTraversal = __webpack_require__(152);
-var ReactDOMTextComponent = __webpack_require__(153);
-var ReactDefaultBatchingStrategy = __webpack_require__(154);
-var ReactEventListener = __webpack_require__(155);
-var ReactInjection = __webpack_require__(157);
-var ReactReconcileTransaction = __webpack_require__(158);
-var SVGDOMPropertyConfig = __webpack_require__(164);
-var SelectEventPlugin = __webpack_require__(165);
-var SimpleEventPlugin = __webpack_require__(166);
+var ReactDOMEmptyComponent = __webpack_require__(153);
+var ReactDOMTreeTraversal = __webpack_require__(154);
+var ReactDOMTextComponent = __webpack_require__(155);
+var ReactDefaultBatchingStrategy = __webpack_require__(156);
+var ReactEventListener = __webpack_require__(157);
+var ReactInjection = __webpack_require__(159);
+var ReactReconcileTransaction = __webpack_require__(160);
+var SVGDOMPropertyConfig = __webpack_require__(166);
+var SelectEventPlugin = __webpack_require__(167);
+var SimpleEventPlugin = __webpack_require__(168);
 
 var alreadyInjected = false;
 
@@ -12604,7 +12940,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12683,7 +13019,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12699,11 +13035,11 @@ module.exports = ARIADOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(20);
+var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
-var FallbackCompositionState = __webpack_require__(105);
-var SyntheticCompositionEvent = __webpack_require__(106);
-var SyntheticInputEvent = __webpack_require__(107);
+var FallbackCompositionState = __webpack_require__(107);
+var SyntheticCompositionEvent = __webpack_require__(108);
+var SyntheticInputEvent = __webpack_require__(109);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -13072,7 +13408,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13172,7 +13508,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13213,7 +13549,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13255,7 +13591,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13271,8 +13607,8 @@ module.exports = SyntheticInputEvent;
 
 
 
-var EventPluginHub = __webpack_require__(21);
-var EventPropagators = __webpack_require__(20);
+var EventPluginHub = __webpack_require__(22);
+var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
@@ -13572,7 +13908,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13589,7 +13925,7 @@ module.exports = ChangeEventPlugin;
 
 
 
-var ReactOwner = __webpack_require__(110);
+var ReactOwner = __webpack_require__(112);
 
 var ReactRef = {};
 
@@ -13666,7 +14002,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13765,7 +14101,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13782,12 +14118,12 @@ module.exports = ReactOwner;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(112);
-var ReactHostOperationHistoryHook = __webpack_require__(113);
+var ReactInvalidSetStateWarningHook = __webpack_require__(114);
+var ReactHostOperationHistoryHook = __webpack_require__(115);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var performanceNow = __webpack_require__(114);
+var performanceNow = __webpack_require__(116);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -14132,7 +14468,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14175,7 +14511,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14214,7 +14550,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14231,7 +14567,7 @@ module.exports = ReactHostOperationHistoryHook;
  * @typechecks
  */
 
-var performance = __webpack_require__(115);
+var performance = __webpack_require__(117);
 
 var performanceNow;
 
@@ -14253,7 +14589,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14281,7 +14617,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14312,7 +14648,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14328,9 +14664,9 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(20);
+var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 var eventTypes = {
   mouseEnter: {
@@ -14415,7 +14751,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14656,7 +14992,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14673,7 +15009,7 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 var DOMChildrenOperations = __webpack_require__(39);
-var ReactDOMIDOperations = __webpack_require__(124);
+var ReactDOMIDOperations = __webpack_require__(126);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -14689,7 +15025,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14707,10 +15043,10 @@ module.exports = ReactComponentBrowserEnvironment;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(19);
+var DOMLazyTree = __webpack_require__(20);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createNodesFromMarkup = __webpack_require__(121);
+var createNodesFromMarkup = __webpack_require__(123);
 var emptyFunction = __webpack_require__(9);
 var invariant = __webpack_require__(1);
 
@@ -14741,7 +15077,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14762,8 +15098,8 @@ module.exports = Danger;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createArrayFromMixed = __webpack_require__(122);
-var getMarkupWrap = __webpack_require__(123);
+var createArrayFromMixed = __webpack_require__(124);
+var getMarkupWrap = __webpack_require__(125);
 var invariant = __webpack_require__(1);
 
 /**
@@ -14831,7 +15167,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14964,7 +15300,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15065,7 +15401,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15103,7 +15439,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15124,27 +15460,27 @@ module.exports = ReactDOMIDOperations;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var AutoFocusUtils = __webpack_require__(126);
-var CSSPropertyOperations = __webpack_require__(127);
-var DOMLazyTree = __webpack_require__(19);
+var AutoFocusUtils = __webpack_require__(128);
+var CSSPropertyOperations = __webpack_require__(129);
+var DOMLazyTree = __webpack_require__(20);
 var DOMNamespaces = __webpack_require__(40);
 var DOMProperty = __webpack_require__(13);
 var DOMPropertyOperations = __webpack_require__(69);
-var EventPluginHub = __webpack_require__(21);
-var EventPluginRegistry = __webpack_require__(26);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(22);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactDOMComponentFlags = __webpack_require__(57);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMInput = __webpack_require__(137);
-var ReactDOMOption = __webpack_require__(138);
+var ReactDOMInput = __webpack_require__(139);
+var ReactDOMOption = __webpack_require__(140);
 var ReactDOMSelect = __webpack_require__(71);
-var ReactDOMTextarea = __webpack_require__(139);
+var ReactDOMTextarea = __webpack_require__(141);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMultiChild = __webpack_require__(140);
-var ReactServerRenderingTransaction = __webpack_require__(149);
+var ReactMultiChild = __webpack_require__(142);
+var ReactServerRenderingTransaction = __webpack_require__(151);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(37);
 var shallowEqual = __webpack_require__(44);
@@ -16119,7 +16455,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16148,7 +16484,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16168,10 +16504,10 @@ var CSSProperty = __webpack_require__(68);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(8);
 
-var camelizeStyleName = __webpack_require__(128);
-var dangerousStyleValue = __webpack_require__(130);
-var hyphenateStyleName = __webpack_require__(131);
-var memoizeStringOnly = __webpack_require__(133);
+var camelizeStyleName = __webpack_require__(130);
+var dangerousStyleValue = __webpack_require__(132);
+var hyphenateStyleName = __webpack_require__(133);
+var memoizeStringOnly = __webpack_require__(135);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -16369,7 +16705,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16386,7 +16722,7 @@ module.exports = CSSPropertyOperations;
 
 
 
-var camelize = __webpack_require__(129);
+var camelize = __webpack_require__(131);
 
 var msPattern = /^-ms-/;
 
@@ -16414,7 +16750,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16451,7 +16787,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16536,7 +16872,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16553,7 +16889,7 @@ module.exports = dangerousStyleValue;
 
 
 
-var hyphenate = __webpack_require__(132);
+var hyphenate = __webpack_require__(134);
 
 var msPattern = /^ms-/;
 
@@ -16580,7 +16916,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16618,7 +16954,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16653,7 +16989,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16669,7 +17005,7 @@ module.exports = memoizeStringOnly;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -16684,7 +17020,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16700,7 +17036,7 @@ module.exports = quoteAttributeValueForBrowser;
 
 
 
-var EventPluginHub = __webpack_require__(21);
+var EventPluginHub = __webpack_require__(22);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -16721,7 +17057,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16827,7 +17163,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17120,7 +17456,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17138,7 +17474,7 @@ module.exports = ReactDOMInput;
 
 var _assign = __webpack_require__(4);
 
-var React = __webpack_require__(16);
+var React = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMSelect = __webpack_require__(71);
 
@@ -17248,7 +17584,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17414,7 +17750,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17433,15 +17769,15 @@ module.exports = ReactDOMTextarea;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactComponentEnvironment = __webpack_require__(43);
-var ReactInstanceMap = __webpack_require__(23);
+var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var ReactReconciler = __webpack_require__(18);
-var ReactChildReconciler = __webpack_require__(141);
+var ReactReconciler = __webpack_require__(19);
+var ReactChildReconciler = __webpack_require__(143);
 
 var emptyFunction = __webpack_require__(9);
-var flattenChildren = __webpack_require__(148);
+var flattenChildren = __webpack_require__(150);
 var invariant = __webpack_require__(1);
 
 /**
@@ -17866,7 +18202,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17882,7 +18218,7 @@ module.exports = ReactMultiChild;
 
 
 
-var ReactReconciler = __webpack_require__(18);
+var ReactReconciler = __webpack_require__(19);
 
 var instantiateReactComponent = __webpack_require__(72);
 var KeyEscapeUtils = __webpack_require__(46);
@@ -18025,7 +18361,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18044,20 +18380,20 @@ module.exports = ReactChildReconciler;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var React = __webpack_require__(16);
+var React = __webpack_require__(17);
 var ReactComponentEnvironment = __webpack_require__(43);
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactErrorUtils = __webpack_require__(35);
-var ReactInstanceMap = __webpack_require__(23);
+var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactNodeTypes = __webpack_require__(73);
-var ReactReconciler = __webpack_require__(18);
+var ReactReconciler = __webpack_require__(19);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(143);
+  var checkReactTypeSpec = __webpack_require__(145);
 }
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var invariant = __webpack_require__(1);
 var shallowEqual = __webpack_require__(44);
 var shouldUpdateReactComponent = __webpack_require__(45);
@@ -18931,7 +19267,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18949,7 +19285,7 @@ module.exports = ReactCompositeComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypeLocationNames = __webpack_require__(144);
+var ReactPropTypeLocationNames = __webpack_require__(146);
 var ReactPropTypesSecret = __webpack_require__(70);
 
 var invariant = __webpack_require__(1);
@@ -19024,7 +19360,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19055,7 +19391,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19081,7 +19417,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19106,7 +19442,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19152,7 +19488,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19234,7 +19570,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19253,9 +19589,9 @@ module.exports = flattenChildren;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactServerUpdateQueue = __webpack_require__(150);
+var ReactServerUpdateQueue = __webpack_require__(152);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -19330,7 +19666,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19475,7 +19811,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19493,7 +19829,7 @@ module.exports = ReactServerUpdateQueue;
 
 var _assign = __webpack_require__(4);
 
-var DOMLazyTree = __webpack_require__(19);
+var DOMLazyTree = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -19540,7 +19876,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19682,7 +20018,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19702,10 +20038,10 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var DOMChildrenOperations = __webpack_require__(39);
-var DOMLazyTree = __webpack_require__(19);
+var DOMLazyTree = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var validateDOMNesting = __webpack_require__(48);
 
@@ -19850,7 +20186,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19869,7 +20205,7 @@ module.exports = ReactDOMTextComponent;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(11);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -19923,7 +20259,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19948,7 +20284,7 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
 var getEventTarget = __webpack_require__(36);
-var getUnboundedScrollPosition = __webpack_require__(156);
+var getUnboundedScrollPosition = __webpack_require__(158);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -20083,7 +20419,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20127,7 +20463,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20144,11 +20480,11 @@ module.exports = getUnboundedScrollPosition;
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginHub = __webpack_require__(21);
+var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(34);
 var ReactComponentEnvironment = __webpack_require__(43);
 var ReactEmptyComponent = __webpack_require__(74);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactHostComponent = __webpack_require__(75);
 var ReactUpdates = __webpack_require__(11);
 
@@ -20166,7 +20502,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20186,10 +20522,10 @@ var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(61);
 var PooledClass = __webpack_require__(15);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactInputSelection = __webpack_require__(78);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 var ReactUpdateQueue = __webpack_require__(47);
 
 /**
@@ -20350,7 +20686,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20368,7 +20704,7 @@ module.exports = ReactReconcileTransaction;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var getNodeForCharacterOffset = __webpack_require__(160);
+var getNodeForCharacterOffset = __webpack_require__(162);
 var getTextContentAccessor = __webpack_require__(60);
 
 /**
@@ -20567,7 +20903,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20646,7 +20982,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20663,7 +20999,7 @@ module.exports = getNodeForCharacterOffset;
  * 
  */
 
-var isTextNode = __webpack_require__(162);
+var isTextNode = __webpack_require__(164);
 
 /*eslint-disable no-bitwise */
 
@@ -20691,7 +21027,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20708,7 +21044,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(163);
+var isNode = __webpack_require__(165);
 
 /**
  * @param {*} object The object to check.
@@ -20721,7 +21057,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20751,7 +21087,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21058,7 +21394,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21074,7 +21410,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(20);
+var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInputSelection = __webpack_require__(78);
@@ -21251,7 +21587,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21271,19 +21607,19 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(3);
 
 var EventListener = __webpack_require__(77);
-var EventPropagators = __webpack_require__(20);
+var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticAnimationEvent = __webpack_require__(167);
-var SyntheticClipboardEvent = __webpack_require__(168);
+var SyntheticAnimationEvent = __webpack_require__(169);
+var SyntheticClipboardEvent = __webpack_require__(170);
 var SyntheticEvent = __webpack_require__(12);
-var SyntheticFocusEvent = __webpack_require__(169);
-var SyntheticKeyboardEvent = __webpack_require__(170);
-var SyntheticMouseEvent = __webpack_require__(28);
-var SyntheticDragEvent = __webpack_require__(172);
-var SyntheticTouchEvent = __webpack_require__(173);
-var SyntheticTransitionEvent = __webpack_require__(174);
-var SyntheticUIEvent = __webpack_require__(22);
-var SyntheticWheelEvent = __webpack_require__(175);
+var SyntheticFocusEvent = __webpack_require__(171);
+var SyntheticKeyboardEvent = __webpack_require__(172);
+var SyntheticMouseEvent = __webpack_require__(29);
+var SyntheticDragEvent = __webpack_require__(174);
+var SyntheticTouchEvent = __webpack_require__(175);
+var SyntheticTransitionEvent = __webpack_require__(176);
+var SyntheticUIEvent = __webpack_require__(23);
+var SyntheticWheelEvent = __webpack_require__(177);
 
 var emptyFunction = __webpack_require__(9);
 var getEventCharCode = __webpack_require__(49);
@@ -21483,7 +21819,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21527,7 +21863,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21570,7 +21906,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21586,7 +21922,7 @@ module.exports = SyntheticClipboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(22);
+var SyntheticUIEvent = __webpack_require__(23);
 
 /**
  * @interface FocusEvent
@@ -21611,7 +21947,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21627,10 +21963,10 @@ module.exports = SyntheticFocusEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(22);
+var SyntheticUIEvent = __webpack_require__(23);
 
 var getEventCharCode = __webpack_require__(49);
-var getEventKey = __webpack_require__(171);
+var getEventKey = __webpack_require__(173);
 var getEventModifierState = __webpack_require__(38);
 
 /**
@@ -21700,7 +22036,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21817,7 +22153,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21833,7 +22169,7 @@ module.exports = getEventKey;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface DragEvent
@@ -21858,7 +22194,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21874,7 +22210,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(22);
+var SyntheticUIEvent = __webpack_require__(23);
 
 var getEventModifierState = __webpack_require__(38);
 
@@ -21908,7 +22244,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21952,7 +22288,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21968,7 +22304,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface WheelEvent
@@ -22008,7 +22344,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22047,7 +22383,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22071,7 +22407,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22087,7 +22423,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var adler32 = __webpack_require__(179);
+var adler32 = __webpack_require__(181);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -22126,7 +22462,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22175,7 +22511,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22194,7 +22530,7 @@ module.exports = adler32;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22214,7 +22550,7 @@ var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactInstanceMap = __webpack_require__(23);
+var ReactInstanceMap = __webpack_require__(24);
 
 var getHostComponentFromComposite = __webpack_require__(81);
 var invariant = __webpack_require__(1);
@@ -22260,7 +22596,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22281,7 +22617,7 @@ var ReactMount = __webpack_require__(80);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22298,7 +22634,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -22399,7 +22735,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22448,7 +22784,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22547,7 +22883,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22559,15 +22895,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(32);
+var _react = __webpack_require__(16);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SiteList = __webpack_require__(82);
+var _SiteList = __webpack_require__(189);
 
 var _SiteList2 = _interopRequireDefault(_SiteList);
 
-__webpack_require__(187);
+var _HelpModal = __webpack_require__(196);
+
+var _HelpModal2 = _interopRequireDefault(_HelpModal);
+
+__webpack_require__(197);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22586,7 +22926,7 @@ var Master = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Master.__proto__ || Object.getPrototypeOf(Master)).call(this, props));
 
         _this.state = {
-            showModal: false
+            isModalOpen: false
         };
         _this.toggleModal = _this.toggleModal.bind(_this);
         return _this;
@@ -22595,7 +22935,9 @@ var Master = function (_React$Component) {
     _createClass(Master, [{
         key: 'toggleModal',
         value: function toggleModal() {
-            this.setState({ showModal: !this.state.showModal });
+            this.setState({
+                isModalOpen: !this.state.isModalOpen
+            });
         }
     }, {
         key: 'render',
@@ -22604,66 +22946,9 @@ var Master = function (_React$Component) {
                 'div',
                 { className: 'Root' },
                 _react2.default.createElement(
-                    'h5',
-                    { className: 'title is-5' },
-                    'Trusted Crypto Site Indicator'
-                ),
-                _react2.default.createElement(
                     'div',
                     { className: 'main-content' },
-                    _react2.default.createElement(_SiteList2.default, null)
-                ),
-                _react2.default.createElement(
-                    'a',
-                    { href: 'javascript:void(0)', onClick: this.toggleModal },
-                    'how to use'
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'modal ' + (this.state.showModal && 'is-active') },
-                    _react2.default.createElement('div', { className: 'modal-background' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'modal-content' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'help' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'help__notation' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'help__notation__icon' },
-                                    _react2.default.createElement('img', { src: 'red.png' })
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'help__notation__description' },
-                                    'Untrusted site/not in the list'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'help__notation' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'help__notation__icon' },
-                                    _react2.default.createElement('img', { src: 'green.png' })
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'help__notation__description' },
-                                    'Trusted site'
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { target: 'blank', href: 'https://goo.gl/forms/JDKzxWekir3P2Gwm2' },
-                            'Suggest new site to the list'
-                        )
-                    ),
-                    _react2.default.createElement('button', { onClick: this.toggleModal, className: 'modal-close is-large', 'aria-label': 'close' })
+                    _react2.default.createElement(_SiteList2.default, { toggleModal: this.toggleModal })
                 )
             );
         }
@@ -22675,13 +22960,287 @@ var Master = function (_React$Component) {
 exports.default = Master;
 
 /***/ }),
-/* 187 */
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(16);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DetailModal = __webpack_require__(190);
+
+var _DetailModal2 = _interopRequireDefault(_DetailModal);
+
+var _wallet = __webpack_require__(199);
+
+var _wallet2 = _interopRequireDefault(_wallet);
+
+var _exchanger = __webpack_require__(200);
+
+var _exchanger2 = _interopRequireDefault(_exchanger);
+
+var _currency = __webpack_require__(201);
+
+var _currency2 = _interopRequireDefault(_currency);
+
+var _other = __webpack_require__(202);
+
+var _other2 = _interopRequireDefault(_other);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+_currency2.default.sites = _currency2.default.sites.sort(function (c1, c2) {
+    return Number(c1.rank) > Number(c2.rank) ? 1 : -1;
+});
+console.log(JSON.stringify(_currency2.default));
+
+var domainData = {
+    'wallet': _wallet2.default,
+    'exchanger': _exchanger2.default,
+    'currency': _currency2.default,
+    'other': _other2.default
+};
+
+var SiteList = function (_React$Component) {
+    _inherits(SiteList, _React$Component);
+
+    function SiteList(props) {
+        _classCallCheck(this, SiteList);
+
+        var _this = _possibleConstructorReturn(this, (SiteList.__proto__ || Object.getPrototypeOf(SiteList)).call(this, props));
+
+        _this.changeTab = function (tab) {
+            return _this.setState({ activedTab: tab });
+        };
+
+        _this.toggleModal = function (site) {
+            return _this.setState({
+                isModalOpen: !_this.state.isModalOpen,
+                currencyInfo: site || _this.state.currencyInfo
+            });
+        };
+
+        _this.state = {
+            activedTab: 'wallet',
+            isModalOpen: false
+        };
+        return _this;
+    }
+
+    _createClass(SiteList, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var genDomainBlock = function genDomainBlock(site) {
+                return _this2.state.activedTab === 'currency' ? _react2.default.createElement(
+                    'a',
+                    {
+                        key: site.name || site.domain,
+                        className: 'panel-block',
+                        href: 'javascript:void(0)',
+                        onClick: function onClick() {
+                            return _this2.toggleModal(site);
+                        } },
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'panel-icon' },
+                        _react2.default.createElement('img', {
+                            src: 'https://www.google.com/s2/favicons?domain=' + (site.domain || site.url) })
+                    ),
+                    site.name || site.domain
+                ) : _react2.default.createElement(
+                    'a',
+                    {
+                        key: site.name || site.domain,
+                        className: 'panel-block',
+                        href: site.url || 'https://' + site.domain,
+                        target: 'blank' },
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'panel-icon' },
+                        _react2.default.createElement('img', {
+                            src: 'https://www.google.com/s2/favicons?domain=' + (site.domain || site.url) })
+                    ),
+                    site.name || site.domain
+                );
+            };
+
+            return _react2.default.createElement(
+                'nav',
+                { className: 'panel' },
+                _react2.default.createElement(
+                    'h3',
+                    { className: 'is-title' },
+                    'Trusted Crypto Sites'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'panel-heading' },
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'icon is-small clickable', onClick: this.props.toggleModal },
+                        _react2.default.createElement('i', { className: 'fa fa-question-circle' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'panel-block' },
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'control has-icons-left' },
+                        _react2.default.createElement('input', { className: 'input is-small', type: 'text', placeholder: 'search' }),
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'icon is-small is-left' },
+                            _react2.default.createElement('i', { className: 'fa fa-search' })
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'panel-tabs' },
+                    _react2.default.createElement(
+                        'a',
+                        {
+                            onClick: function onClick() {
+                                return _this2.changeTab('wallet');
+                            },
+                            className: this.state.activedTab === 'wallet' && 'is-active' },
+                        'wallet'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        {
+                            onClick: function onClick() {
+                                return _this2.changeTab('exchanger');
+                            },
+                            className: this.state.activedTab === 'exchanger' && 'is-active' },
+                        'exchanger'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        {
+                            onClick: function onClick() {
+                                return _this2.changeTab('currency');
+                            },
+                            className: this.state.activedTab === 'currency' && 'is-active' },
+                        'currencies'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        {
+                            onClick: function onClick() {
+                                return _this2.changeTab('other');
+                            },
+                            className: this.state.activedTab === 'other' && 'is-active' },
+                        'others'
+                    )
+                ),
+                domainData[this.state.activedTab].sites.map(genDomainBlock),
+                _react2.default.createElement(_DetailModal2.default, { isOpen: this.state.isModalOpen, toggleModal: function toggleModal() {
+                        return _this2.toggleModal();
+                    }, currencyInfo: this.state.currencyInfo })
+            );
+        }
+    }]);
+
+    return SiteList;
+}(_react2.default.Component);
+
+exports.default = SiteList;
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(16);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Modal = __webpack_require__(82);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function DetailModal(_ref) {
+    var currencyInfo = _ref.currencyInfo,
+        props = _objectWithoutProperties(_ref, ['currencyInfo']);
+
+    return _react2.default.createElement(
+        _Modal2.default,
+        props,
+        _react2.default.createElement(
+            'div',
+            { className: 'detail__modal' },
+            _react2.default.createElement(
+                'h5',
+                { className: 'title is-5' },
+                currencyInfo && currencyInfo.name
+            ),
+            _react2.default.createElement(
+                'h6',
+                { className: 'subtitle is-6' },
+                currencyInfo && currencyInfo.code
+            ),
+            _react2.default.createElement(
+                'ul',
+                null,
+                currencyInfo && currencyInfo.relatedSite.map(function (site) {
+                    return _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement('img', {
+                            src: 'https://www.google.com/s2/favicons?domain=' + (site.domain || site.url) }),
+                        ' ',
+                        ' ',
+                        _react2.default.createElement(
+                            'a',
+                            { target: 'blank', href: site.url || 'https://' + site.domain },
+                            site.name || site.domain
+                        )
+                    );
+                })
+            )
+        )
+    );
+}
+
+exports.default = DetailModal;
+
+/***/ }),
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(188);
+var content = __webpack_require__(192);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -22689,14 +23248,14 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(190)(content, options);
+var update = __webpack_require__(84)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./styles.scss");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./styles.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -22706,462 +23265,21 @@ if(false) {
 }
 
 /***/ }),
-/* 188 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(189)(undefined);
+exports = module.exports = __webpack_require__(83)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(359deg); } }\n\n/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */\nhtml,\nbody,\np,\nol,\nul,\nli,\ndl,\ndt,\ndd,\nblockquote,\nfigure,\nfieldset,\nlegend,\ntextarea,\npre,\niframe,\nhr,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  padding: 0; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 100%;\n  font-weight: normal; }\n\nul {\n  list-style: none; }\n\nbutton,\ninput,\nselect,\ntextarea {\n  margin: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n* {\n  box-sizing: inherit; }\n  *:before, *:after {\n    box-sizing: inherit; }\n\nimg,\nembed,\nobject,\naudio,\nvideo {\n  max-width: 100%; }\n\niframe {\n  border: 0; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0;\n  text-align: left; }\n\nhtml {\n  background-color: #fff;\n  font-size: 16px;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  min-width: 300px;\n  overflow-x: hidden;\n  overflow-y: scroll;\n  text-rendering: optimizeLegibility; }\n\narticle,\naside,\nfigure,\nfooter,\nheader,\nhgroup,\nsection {\n  display: block; }\n\nbody,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: BlinkMacSystemFont, -apple-system, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\ncode,\npre {\n  -moz-osx-font-smoothing: auto;\n  -webkit-font-smoothing: auto;\n  font-family: monospace; }\n\nbody {\n  color: #4a4a4a;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5; }\n\na {\n  color: #00d1b2;\n  cursor: pointer;\n  text-decoration: none; }\n  a strong {\n    color: currentColor; }\n  a:hover {\n    color: #363636; }\n\ncode {\n  background-color: whitesmoke;\n  color: #ff3860;\n  font-size: 0.875em;\n  font-weight: normal;\n  padding: 0.25em 0.5em 0.25em; }\n\nhr {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 1.5rem 0; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  vertical-align: baseline; }\n\nsmall {\n  font-size: 0.875em; }\n\nspan {\n  font-style: inherit;\n  font-weight: inherit; }\n\nstrong {\n  color: #363636;\n  font-weight: 700; }\n\npre {\n  background-color: whitesmoke;\n  color: #4a4a4a;\n  font-size: 0.875em;\n  white-space: pre;\n  word-wrap: normal; }\n  pre code {\n    -webkit-overflow-scrolling: touch;\n    background: none;\n    color: inherit;\n    display: block;\n    font-size: 1em;\n    overflow-x: auto;\n    padding: 1.25rem 1.5rem; }\n\ntable td,\ntable th {\n  text-align: left;\n  vertical-align: top; }\n\ntable th {\n  color: #363636; }\n\n.is-clearfix:after {\n  clear: both;\n  content: \" \";\n  display: table; }\n\n.is-pulled-left {\n  float: left !important; }\n\n.is-pulled-right {\n  float: right !important; }\n\n.is-clipped {\n  overflow: hidden !important; }\n\n.is-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0; }\n\n.is-size-1 {\n  font-size: 3rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-1-mobile {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-1-tablet {\n    font-size: 3rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-1-touch {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-1-desktop {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-1-widescreen {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-1-fullhd {\n    font-size: 3rem !important; } }\n\n.is-size-2 {\n  font-size: 2.5rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-2-mobile {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-2-tablet {\n    font-size: 2.5rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-2-touch {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-2-desktop {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-2-widescreen {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-2-fullhd {\n    font-size: 2.5rem !important; } }\n\n.is-size-3 {\n  font-size: 2rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-3-mobile {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-3-tablet {\n    font-size: 2rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-3-touch {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-3-desktop {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-3-widescreen {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-3-fullhd {\n    font-size: 2rem !important; } }\n\n.is-size-4 {\n  font-size: 1.5rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-4-mobile {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-4-tablet {\n    font-size: 1.5rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-4-touch {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-4-desktop {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-4-widescreen {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-4-fullhd {\n    font-size: 1.5rem !important; } }\n\n.is-size-5 {\n  font-size: 1.25rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-5-mobile {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-5-tablet {\n    font-size: 1.25rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-5-touch {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-5-desktop {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-5-widescreen {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-5-fullhd {\n    font-size: 1.25rem !important; } }\n\n.is-size-6 {\n  font-size: 1rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-6-mobile {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-6-tablet {\n    font-size: 1rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-6-touch {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-6-desktop {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-6-widescreen {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-6-fullhd {\n    font-size: 1rem !important; } }\n\n.is-size-7 {\n  font-size: 0.75rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-7-mobile {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-7-tablet {\n    font-size: 0.75rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-7-touch {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-7-desktop {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-7-widescreen {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-7-fullhd {\n    font-size: 0.75rem !important; } }\n\n.has-text-centered {\n  text-align: center !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-centered-mobile {\n    text-align: center !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-centered-tablet {\n    text-align: center !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-centered-tablet-only {\n    text-align: center !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-centered-touch {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-centered-desktop {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-centered-desktop-only {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-centered-widescreen {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-centered-widescreen-only {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-centered-fullhd {\n    text-align: center !important; } }\n\n.has-text-left {\n  text-align: left !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-left-mobile {\n    text-align: left !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-left-tablet {\n    text-align: left !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-left-tablet-only {\n    text-align: left !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-left-touch {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-left-desktop {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-left-desktop-only {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-left-widescreen {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-left-widescreen-only {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-left-fullhd {\n    text-align: left !important; } }\n\n.has-text-right {\n  text-align: right !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-right-mobile {\n    text-align: right !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-right-tablet {\n    text-align: right !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-right-tablet-only {\n    text-align: right !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-right-touch {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-right-desktop {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-right-desktop-only {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-right-widescreen {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-right-widescreen-only {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-right-fullhd {\n    text-align: right !important; } }\n\n.is-capitalized {\n  text-transform: capitalize !important; }\n\n.is-lowercase {\n  text-transform: lowercase !important; }\n\n.is-uppercase {\n  text-transform: uppercase !important; }\n\n.has-text-white {\n  color: white !important; }\n\na.has-text-white:hover, a.has-text-white:focus {\n  color: #e6e6e6 !important; }\n\n.has-text-black {\n  color: #0a0a0a !important; }\n\na.has-text-black:hover, a.has-text-black:focus {\n  color: black !important; }\n\n.has-text-light {\n  color: whitesmoke !important; }\n\na.has-text-light:hover, a.has-text-light:focus {\n  color: #dbdbdb !important; }\n\n.has-text-dark {\n  color: #363636 !important; }\n\na.has-text-dark:hover, a.has-text-dark:focus {\n  color: #1c1c1c !important; }\n\n.has-text-primary {\n  color: #00d1b2 !important; }\n\na.has-text-primary:hover, a.has-text-primary:focus {\n  color: #009e86 !important; }\n\n.has-text-info {\n  color: #3273dc !important; }\n\na.has-text-info:hover, a.has-text-info:focus {\n  color: #205bbc !important; }\n\n.has-text-success {\n  color: #23d160 !important; }\n\na.has-text-success:hover, a.has-text-success:focus {\n  color: #1ca64c !important; }\n\n.has-text-warning {\n  color: #ffdd57 !important; }\n\na.has-text-warning:hover, a.has-text-warning:focus {\n  color: #ffd324 !important; }\n\n.has-text-danger {\n  color: #ff3860 !important; }\n\na.has-text-danger:hover, a.has-text-danger:focus {\n  color: #ff0537 !important; }\n\n.has-text-black-bis {\n  color: #121212 !important; }\n\n.has-text-black-ter {\n  color: #242424 !important; }\n\n.has-text-grey-darker {\n  color: #363636 !important; }\n\n.has-text-grey-dark {\n  color: #4a4a4a !important; }\n\n.has-text-grey {\n  color: #7a7a7a !important; }\n\n.has-text-grey-light {\n  color: #b5b5b5 !important; }\n\n.has-text-grey-lighter {\n  color: #dbdbdb !important; }\n\n.has-text-white-ter {\n  color: whitesmoke !important; }\n\n.has-text-white-bis {\n  color: #fafafa !important; }\n\n.is-block {\n  display: block !important; }\n\n@media screen and (max-width: 768px) {\n  .is-block-mobile {\n    display: block !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-block-tablet {\n    display: block !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-block-tablet-only {\n    display: block !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-block-touch {\n    display: block !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-block-desktop {\n    display: block !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-block-desktop-only {\n    display: block !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-block-widescreen {\n    display: block !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-block-widescreen-only {\n    display: block !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-block-fullhd {\n    display: block !important; } }\n\n.is-flex {\n  display: flex !important; }\n\n@media screen and (max-width: 768px) {\n  .is-flex-mobile {\n    display: flex !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-flex-tablet {\n    display: flex !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-flex-tablet-only {\n    display: flex !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-flex-touch {\n    display: flex !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-flex-desktop {\n    display: flex !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-flex-desktop-only {\n    display: flex !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-flex-widescreen {\n    display: flex !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-flex-widescreen-only {\n    display: flex !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-flex-fullhd {\n    display: flex !important; } }\n\n.is-inline {\n  display: inline !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-mobile {\n    display: inline !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-tablet {\n    display: inline !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-tablet-only {\n    display: inline !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-touch {\n    display: inline !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-desktop {\n    display: inline !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-desktop-only {\n    display: inline !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-widescreen {\n    display: inline !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-widescreen-only {\n    display: inline !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-fullhd {\n    display: inline !important; } }\n\n.is-inline-block {\n  display: inline-block !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-block-mobile {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-block-tablet {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-block-tablet-only {\n    display: inline-block !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-block-touch {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-block-desktop {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-block-desktop-only {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-block-widescreen {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-block-widescreen-only {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-block-fullhd {\n    display: inline-block !important; } }\n\n.is-inline-flex {\n  display: inline-flex !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-flex-mobile {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-flex-tablet {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-flex-tablet-only {\n    display: inline-flex !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-flex-touch {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-flex-desktop {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-flex-desktop-only {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-flex-widescreen {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-flex-widescreen-only {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-flex-fullhd {\n    display: inline-flex !important; } }\n\n.is-hidden {\n  display: none !important; }\n\n@media screen and (max-width: 768px) {\n  .is-hidden-mobile {\n    display: none !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-hidden-tablet {\n    display: none !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-hidden-tablet-only {\n    display: none !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-hidden-touch {\n    display: none !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-hidden-desktop {\n    display: none !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-hidden-desktop-only {\n    display: none !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-hidden-widescreen {\n    display: none !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-hidden-widescreen-only {\n    display: none !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-hidden-fullhd {\n    display: none !important; } }\n\n.is-marginless {\n  margin: 0 !important; }\n\n.is-paddingless {\n  padding: 0 !important; }\n\n.is-radiusless {\n  border-radius: 0 !important; }\n\n.is-shadowless {\n  box-shadow: none !important; }\n\n.is-unselectable {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.panel {\n  font-size: 1rem; }\n  .panel:not(:last-child) {\n    margin-bottom: 1.5rem; }\n\n.panel-heading,\n.panel-tabs,\n.panel-block {\n  border-bottom: 1px solid #dbdbdb;\n  border-left: 1px solid #dbdbdb;\n  border-right: 1px solid #dbdbdb; }\n  .panel-heading:first-child,\n  .panel-tabs:first-child,\n  .panel-block:first-child {\n    border-top: 1px solid #dbdbdb; }\n\n.panel-heading {\n  background-color: whitesmoke;\n  border-radius: 3px 3px 0 0;\n  color: #363636;\n  font-size: 1.25em;\n  font-weight: 300;\n  line-height: 1.25;\n  padding: 0.5em 0.75em; }\n\n.panel-tabs {\n  align-items: flex-end;\n  display: flex;\n  font-size: 0.875em;\n  justify-content: center; }\n  .panel-tabs a {\n    border-bottom: 1px solid #dbdbdb;\n    margin-bottom: -1px;\n    padding: 0.5em; }\n    .panel-tabs a.is-active {\n      border-bottom-color: #4a4a4a;\n      color: #363636; }\n\n.panel-list a {\n  color: #4a4a4a; }\n  .panel-list a:hover {\n    color: #00d1b2; }\n\n.panel-block {\n  align-items: center;\n  color: #363636;\n  display: flex;\n  justify-content: flex-start;\n  padding: 0.5em 0.75em; }\n  .panel-block input[type=\"checkbox\"] {\n    margin-right: 0.75em; }\n  .panel-block > .control {\n    flex-grow: 1;\n    flex-shrink: 1;\n    width: 100%; }\n  .panel-block.is-wrapped {\n    flex-wrap: wrap; }\n  .panel-block.is-active {\n    border-left-color: #00d1b2;\n    color: #363636; }\n    .panel-block.is-active .panel-icon {\n      color: #00d1b2; }\n\na.panel-block,\nlabel.panel-block {\n  cursor: pointer; }\n  a.panel-block:hover,\n  label.panel-block:hover {\n    background-color: whitesmoke; }\n\n.panel-icon {\n  display: inline-block;\n  font-size: 14px;\n  height: 1em;\n  line-height: 1em;\n  text-align: center;\n  vertical-align: top;\n  width: 1em;\n  color: #7a7a7a;\n  margin-right: 0.75em; }\n  .panel-icon .fa {\n    font-size: inherit;\n    line-height: inherit; }\n\n.modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  align-items: center;\n  display: none;\n  justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 20; }\n  .modal.is-active {\n    display: flex; }\n\n.modal-background {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.86); }\n\n.modal-content,\n.modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n  @media screen and (min-width: 769px), print {\n    .modal-content,\n    .modal-card {\n      margin: 0 auto;\n      max-height: calc(100vh - 40px);\n      width: 640px; } }\n\n.modal-close {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  flex-grow: 0;\n  flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px; }\n  .modal-close:before, .modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    transform-origin: center center; }\n  .modal-close:before {\n    height: 2px;\n    width: 50%; }\n  .modal-close:after {\n    height: 50%;\n    width: 2px; }\n  .modal-close:hover, .modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3); }\n  .modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4); }\n  .modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px; }\n  .modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px; }\n  .modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px; }\n\n.modal-card {\n  display: flex;\n  flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden; }\n\n.modal-card-head,\n.modal-card-foot {\n  align-items: center;\n  background-color: whitesmoke;\n  display: flex;\n  flex-shrink: 0;\n  justify-content: flex-start;\n  padding: 20px;\n  position: relative; }\n\n.modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px; }\n\n.modal-card-title {\n  color: #363636;\n  flex-grow: 1;\n  flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1; }\n\n.modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb; }\n  .modal-card-foot .button:not(:last-child) {\n    margin-right: 10px; }\n\n.modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  flex-grow: 1;\n  flex-shrink: 1;\n  overflow: auto;\n  padding: 20px; }\n\n.title,\n.subtitle {\n  word-break: break-word; }\n  .title:not(:last-child),\n  .subtitle:not(:last-child) {\n    margin-bottom: 1.5rem; }\n  .title em,\n  .title span,\n  .subtitle em,\n  .subtitle span {\n    font-weight: inherit; }\n  .title .tag,\n  .subtitle .tag {\n    vertical-align: middle; }\n\n.title {\n  color: #363636;\n  font-size: 2rem;\n  font-weight: 600;\n  line-height: 1.125; }\n  .title strong {\n    color: inherit;\n    font-weight: inherit; }\n  .title + .highlight {\n    margin-top: -0.75rem; }\n  .title:not(.is-spaced) + .subtitle {\n    margin-top: -1.5rem; }\n  .title.is-1 {\n    font-size: 3rem; }\n  .title.is-2 {\n    font-size: 2.5rem; }\n  .title.is-3 {\n    font-size: 2rem; }\n  .title.is-4 {\n    font-size: 1.5rem; }\n  .title.is-5 {\n    font-size: 1.25rem; }\n  .title.is-6 {\n    font-size: 1rem; }\n  .title.is-7 {\n    font-size: 0.75rem; }\n\n.subtitle {\n  color: #4a4a4a;\n  font-size: 1.25rem;\n  font-weight: 400;\n  line-height: 1.25; }\n  .subtitle strong {\n    color: #363636;\n    font-weight: 600; }\n  .subtitle:not(.is-spaced) + .title {\n    margin-top: -1.5rem; }\n  .subtitle.is-1 {\n    font-size: 3rem; }\n  .subtitle.is-2 {\n    font-size: 2.5rem; }\n  .subtitle.is-3 {\n    font-size: 2rem; }\n  .subtitle.is-4 {\n    font-size: 1.5rem; }\n  .subtitle.is-5 {\n    font-size: 1.25rem; }\n  .subtitle.is-6 {\n    font-size: 1rem; }\n  .subtitle.is-7 {\n    font-size: 0.75rem; }\n\n.main-content {\n  margin: 15px auto; }\n\n.modal-content {\n  background-color: #FFF;\n  padding: 10px 5px; }\n  .modal-content .help__notation {\n    display: flex; }\n    .modal-content .help__notation__icon {\n      flex: 1; }\n    .modal-content .help__notation__description {\n      flex: 9; }\n", ""]);
+exports.push([module.i, ".modal-content {\n  background-color: #FFF;\n  padding: 10px 5px; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 189 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-/* 190 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-
-var stylesInDom = {};
-
-var	memoize = function (fn) {
-	var memo;
-
-	return function () {
-		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-		return memo;
-	};
-};
-
-var isOldIE = memoize(function () {
-	// Test for IE <= 9 as proposed by Browserhacks
-	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
-	// to operate correctly into non-standard environments
-	// @see https://github.com/webpack-contrib/style-loader/issues/177
-	return window && document && document.all && !window.atob;
-});
-
-var getElement = (function (fn) {
-	var memo = {};
-
-	return function(selector) {
-		if (typeof memo[selector] === "undefined") {
-			memo[selector] = fn.call(this, selector);
-		}
-
-		return memo[selector]
-	};
-})(function (target) {
-	return document.querySelector(target)
-});
-
-var singleton = null;
-var	singletonCounter = 0;
-var	stylesInsertedAtTop = [];
-
-var	fixUrls = __webpack_require__(191);
-
-module.exports = function(list, options) {
-	if (typeof DEBUG !== "undefined" && DEBUG) {
-		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-	}
-
-	options = options || {};
-
-	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
-
-	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-	// tags it will allow on a page
-	if (!options.singleton) options.singleton = isOldIE();
-
-	// By default, add <style> tags to the <head> element
-	if (!options.insertInto) options.insertInto = "head";
-
-	// By default, add <style> tags to the bottom of the target
-	if (!options.insertAt) options.insertAt = "bottom";
-
-	var styles = listToStyles(list, options);
-
-	addStylesToDom(styles, options);
-
-	return function update (newList) {
-		var mayRemove = [];
-
-		for (var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-
-		if(newList) {
-			var newStyles = listToStyles(newList, options);
-			addStylesToDom(newStyles, options);
-		}
-
-		for (var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-
-			if(domStyle.refs === 0) {
-				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
-
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-};
-
-function addStylesToDom (styles, options) {
-	for (var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-
-		if(domStyle) {
-			domStyle.refs++;
-
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles (list, options) {
-	var styles = [];
-	var newStyles = {};
-
-	for (var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = options.base ? item[0] + options.base : item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-
-		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
-		else newStyles[id].parts.push(part);
-	}
-
-	return styles;
-}
-
-function insertStyleElement (options, style) {
-	var target = getElement(options.insertInto)
-
-	if (!target) {
-		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-	}
-
-	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-	if (options.insertAt === "top") {
-		if (!lastStyleElementInsertedAtTop) {
-			target.insertBefore(style, target.firstChild);
-		} else if (lastStyleElementInsertedAtTop.nextSibling) {
-			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			target.appendChild(style);
-		}
-		stylesInsertedAtTop.push(style);
-	} else if (options.insertAt === "bottom") {
-		target.appendChild(style);
-	} else {
-		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-	}
-}
-
-function removeStyleElement (style) {
-	if (style.parentNode === null) return false;
-	style.parentNode.removeChild(style);
-
-	var idx = stylesInsertedAtTop.indexOf(style);
-	if(idx >= 0) {
-		stylesInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement (options) {
-	var style = document.createElement("style");
-
-	options.attrs.type = "text/css";
-
-	addAttrs(style, options.attrs);
-	insertStyleElement(options, style);
-
-	return style;
-}
-
-function createLinkElement (options) {
-	var link = document.createElement("link");
-
-	options.attrs.type = "text/css";
-	options.attrs.rel = "stylesheet";
-
-	addAttrs(link, options.attrs);
-	insertStyleElement(options, link);
-
-	return link;
-}
-
-function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
-		el.setAttribute(key, attrs[key]);
-	});
-}
-
-function addStyle (obj, options) {
-	var style, update, remove, result;
-
-	// If a transform function was defined, run it on the css
-	if (options.transform && obj.css) {
-	    result = options.transform(obj.css);
-
-	    if (result) {
-	    	// If transform returns a value, use that instead of the original css.
-	    	// This allows running runtime transformations on the css.
-	    	obj.css = result;
-	    } else {
-	    	// If the transform function returns a falsy value, don't add this css.
-	    	// This allows conditional loading of css
-	    	return function() {
-	    		// noop
-	    	};
-	    }
-	}
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-
-		style = singleton || (singleton = createStyleElement(options));
-
-		update = applyToSingletonTag.bind(null, style, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-
-	} else if (
-		obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function"
-	) {
-		style = createLinkElement(options);
-		update = updateLink.bind(null, style, options);
-		remove = function () {
-			removeStyleElement(style);
-
-			if(style.href) URL.revokeObjectURL(style.href);
-		};
-	} else {
-		style = createStyleElement(options);
-		update = applyToTag.bind(null, style);
-		remove = function () {
-			removeStyleElement(style);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle (newObj) {
-		if (newObj) {
-			if (
-				newObj.css === obj.css &&
-				newObj.media === obj.media &&
-				newObj.sourceMap === obj.sourceMap
-			) {
-				return;
-			}
-
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag (style, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (style.styleSheet) {
-		style.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = style.childNodes;
-
-		if (childNodes[index]) style.removeChild(childNodes[index]);
-
-		if (childNodes.length) {
-			style.insertBefore(cssNode, childNodes[index]);
-		} else {
-			style.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag (style, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		style.setAttribute("media", media)
-	}
-
-	if(style.styleSheet) {
-		style.styleSheet.cssText = css;
-	} else {
-		while(style.firstChild) {
-			style.removeChild(style.firstChild);
-		}
-
-		style.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink (link, options, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	/*
-		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-		and there is no publicPath defined then lets turn convertToAbsoluteUrls
-		on by default.  Otherwise default to the convertToAbsoluteUrls option
-		directly
-	*/
-	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-	if (options.convertToAbsoluteUrls || autoFixUrls) {
-		css = fixUrls(css);
-	}
-
-	if (sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = link.href;
-
-	link.href = URL.createObjectURL(blob);
-
-	if(oldSrc) URL.revokeObjectURL(oldSrc);
-}
-
-
-/***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports) {
 
 
@@ -23254,6 +23372,2687 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 194 */,
+/* 195 */,
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(16);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Modal = __webpack_require__(82);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function HelpModal(props) {
+    return _react2.default.createElement(
+        _Modal2.default,
+        props,
+        _react2.default.createElement(
+            'div',
+            { className: 'help' },
+            _react2.default.createElement(
+                'div',
+                { className: 'help__notation' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'help__notation__icon' },
+                    _react2.default.createElement('img', { src: 'red.png' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'help__notation__description' },
+                    'Untrusted site/not in the list'
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'help__notation' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'help__notation__icon' },
+                    _react2.default.createElement('img', { src: 'green.png' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'help__notation__description' },
+                    'Trusted site'
+                )
+            )
+        ),
+        _react2.default.createElement(
+            'a',
+            { target: 'blank', href: 'https://goo.gl/forms/JDKzxWekir3P2Gwm2' },
+            'Suggest new site to the list'
+        )
+    );
+}
+
+exports.default = HelpModal;
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(198);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(84)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./styles.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(83)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(359deg); } }\n\n/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */\nhtml,\nbody,\np,\nol,\nul,\nli,\ndl,\ndt,\ndd,\nblockquote,\nfigure,\nfieldset,\nlegend,\ntextarea,\npre,\niframe,\nhr,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  padding: 0; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 100%;\n  font-weight: normal; }\n\nul {\n  list-style: none; }\n\nbutton,\ninput,\nselect,\ntextarea {\n  margin: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n* {\n  box-sizing: inherit; }\n  *:before, *:after {\n    box-sizing: inherit; }\n\nimg,\nembed,\nobject,\naudio,\nvideo {\n  max-width: 100%; }\n\niframe {\n  border: 0; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0;\n  text-align: left; }\n\nhtml {\n  background-color: #fff;\n  font-size: 16px;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  min-width: 300px;\n  overflow-x: hidden;\n  overflow-y: scroll;\n  text-rendering: optimizeLegibility; }\n\narticle,\naside,\nfigure,\nfooter,\nheader,\nhgroup,\nsection {\n  display: block; }\n\nbody,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: BlinkMacSystemFont, -apple-system, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\ncode,\npre {\n  -moz-osx-font-smoothing: auto;\n  -webkit-font-smoothing: auto;\n  font-family: monospace; }\n\nbody {\n  color: #4a4a4a;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5; }\n\na {\n  color: #00d1b2;\n  cursor: pointer;\n  text-decoration: none; }\n  a strong {\n    color: currentColor; }\n  a:hover {\n    color: #363636; }\n\ncode {\n  background-color: whitesmoke;\n  color: #ff3860;\n  font-size: 0.875em;\n  font-weight: normal;\n  padding: 0.25em 0.5em 0.25em; }\n\nhr {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 1.5rem 0; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  vertical-align: baseline; }\n\nsmall {\n  font-size: 0.875em; }\n\nspan {\n  font-style: inherit;\n  font-weight: inherit; }\n\nstrong {\n  color: #363636;\n  font-weight: 700; }\n\npre {\n  background-color: whitesmoke;\n  color: #4a4a4a;\n  font-size: 0.875em;\n  white-space: pre;\n  word-wrap: normal; }\n  pre code {\n    -webkit-overflow-scrolling: touch;\n    background: none;\n    color: inherit;\n    display: block;\n    font-size: 1em;\n    overflow-x: auto;\n    padding: 1.25rem 1.5rem; }\n\ntable td,\ntable th {\n  text-align: left;\n  vertical-align: top; }\n\ntable th {\n  color: #363636; }\n\n.is-clearfix:after {\n  clear: both;\n  content: \" \";\n  display: table; }\n\n.is-pulled-left {\n  float: left !important; }\n\n.is-pulled-right {\n  float: right !important; }\n\n.is-clipped {\n  overflow: hidden !important; }\n\n.is-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0; }\n\n.is-size-1 {\n  font-size: 3rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-1-mobile {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-1-tablet {\n    font-size: 3rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-1-touch {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-1-desktop {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-1-widescreen {\n    font-size: 3rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-1-fullhd {\n    font-size: 3rem !important; } }\n\n.is-size-2 {\n  font-size: 2.5rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-2-mobile {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-2-tablet {\n    font-size: 2.5rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-2-touch {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-2-desktop {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-2-widescreen {\n    font-size: 2.5rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-2-fullhd {\n    font-size: 2.5rem !important; } }\n\n.is-size-3 {\n  font-size: 2rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-3-mobile {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-3-tablet {\n    font-size: 2rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-3-touch {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-3-desktop {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-3-widescreen {\n    font-size: 2rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-3-fullhd {\n    font-size: 2rem !important; } }\n\n.is-size-4 {\n  font-size: 1.5rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-4-mobile {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-4-tablet {\n    font-size: 1.5rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-4-touch {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-4-desktop {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-4-widescreen {\n    font-size: 1.5rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-4-fullhd {\n    font-size: 1.5rem !important; } }\n\n.is-size-5 {\n  font-size: 1.25rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-5-mobile {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-5-tablet {\n    font-size: 1.25rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-5-touch {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-5-desktop {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-5-widescreen {\n    font-size: 1.25rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-5-fullhd {\n    font-size: 1.25rem !important; } }\n\n.is-size-6 {\n  font-size: 1rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-6-mobile {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-6-tablet {\n    font-size: 1rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-6-touch {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-6-desktop {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-6-widescreen {\n    font-size: 1rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-6-fullhd {\n    font-size: 1rem !important; } }\n\n.is-size-7 {\n  font-size: 0.75rem !important; }\n\n@media screen and (max-width: 768px) {\n  .is-size-7-mobile {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-size-7-tablet {\n    font-size: 0.75rem !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-size-7-touch {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-size-7-desktop {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-size-7-widescreen {\n    font-size: 0.75rem !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-size-7-fullhd {\n    font-size: 0.75rem !important; } }\n\n.has-text-centered {\n  text-align: center !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-centered-mobile {\n    text-align: center !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-centered-tablet {\n    text-align: center !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-centered-tablet-only {\n    text-align: center !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-centered-touch {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-centered-desktop {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-centered-desktop-only {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-centered-widescreen {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-centered-widescreen-only {\n    text-align: center !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-centered-fullhd {\n    text-align: center !important; } }\n\n.has-text-left {\n  text-align: left !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-left-mobile {\n    text-align: left !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-left-tablet {\n    text-align: left !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-left-tablet-only {\n    text-align: left !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-left-touch {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-left-desktop {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-left-desktop-only {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-left-widescreen {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-left-widescreen-only {\n    text-align: left !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-left-fullhd {\n    text-align: left !important; } }\n\n.has-text-right {\n  text-align: right !important; }\n\n@media screen and (max-width: 768px) {\n  .has-text-right-mobile {\n    text-align: right !important; } }\n\n@media screen and (min-width: 769px), print {\n  .has-text-right-tablet {\n    text-align: right !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .has-text-right-tablet-only {\n    text-align: right !important; } }\n\n@media screen and (max-width: 1007px) {\n  .has-text-right-touch {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1008px) {\n  .has-text-right-desktop {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .has-text-right-desktop-only {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1200px) {\n  .has-text-right-widescreen {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .has-text-right-widescreen-only {\n    text-align: right !important; } }\n\n@media screen and (min-width: 1392px) {\n  .has-text-right-fullhd {\n    text-align: right !important; } }\n\n.is-capitalized {\n  text-transform: capitalize !important; }\n\n.is-lowercase {\n  text-transform: lowercase !important; }\n\n.is-uppercase {\n  text-transform: uppercase !important; }\n\n.has-text-white {\n  color: white !important; }\n\na.has-text-white:hover, a.has-text-white:focus {\n  color: #e6e6e6 !important; }\n\n.has-text-black {\n  color: #0a0a0a !important; }\n\na.has-text-black:hover, a.has-text-black:focus {\n  color: black !important; }\n\n.has-text-light {\n  color: whitesmoke !important; }\n\na.has-text-light:hover, a.has-text-light:focus {\n  color: #dbdbdb !important; }\n\n.has-text-dark {\n  color: #363636 !important; }\n\na.has-text-dark:hover, a.has-text-dark:focus {\n  color: #1c1c1c !important; }\n\n.has-text-primary {\n  color: #00d1b2 !important; }\n\na.has-text-primary:hover, a.has-text-primary:focus {\n  color: #009e86 !important; }\n\n.has-text-info {\n  color: #3273dc !important; }\n\na.has-text-info:hover, a.has-text-info:focus {\n  color: #205bbc !important; }\n\n.has-text-success {\n  color: #23d160 !important; }\n\na.has-text-success:hover, a.has-text-success:focus {\n  color: #1ca64c !important; }\n\n.has-text-warning {\n  color: #ffdd57 !important; }\n\na.has-text-warning:hover, a.has-text-warning:focus {\n  color: #ffd324 !important; }\n\n.has-text-danger {\n  color: #ff3860 !important; }\n\na.has-text-danger:hover, a.has-text-danger:focus {\n  color: #ff0537 !important; }\n\n.has-text-black-bis {\n  color: #121212 !important; }\n\n.has-text-black-ter {\n  color: #242424 !important; }\n\n.has-text-grey-darker {\n  color: #363636 !important; }\n\n.has-text-grey-dark {\n  color: #4a4a4a !important; }\n\n.has-text-grey {\n  color: #7a7a7a !important; }\n\n.has-text-grey-light {\n  color: #b5b5b5 !important; }\n\n.has-text-grey-lighter {\n  color: #dbdbdb !important; }\n\n.has-text-white-ter {\n  color: whitesmoke !important; }\n\n.has-text-white-bis {\n  color: #fafafa !important; }\n\n.is-block {\n  display: block !important; }\n\n@media screen and (max-width: 768px) {\n  .is-block-mobile {\n    display: block !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-block-tablet {\n    display: block !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-block-tablet-only {\n    display: block !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-block-touch {\n    display: block !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-block-desktop {\n    display: block !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-block-desktop-only {\n    display: block !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-block-widescreen {\n    display: block !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-block-widescreen-only {\n    display: block !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-block-fullhd {\n    display: block !important; } }\n\n.is-flex {\n  display: flex !important; }\n\n@media screen and (max-width: 768px) {\n  .is-flex-mobile {\n    display: flex !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-flex-tablet {\n    display: flex !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-flex-tablet-only {\n    display: flex !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-flex-touch {\n    display: flex !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-flex-desktop {\n    display: flex !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-flex-desktop-only {\n    display: flex !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-flex-widescreen {\n    display: flex !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-flex-widescreen-only {\n    display: flex !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-flex-fullhd {\n    display: flex !important; } }\n\n.is-inline {\n  display: inline !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-mobile {\n    display: inline !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-tablet {\n    display: inline !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-tablet-only {\n    display: inline !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-touch {\n    display: inline !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-desktop {\n    display: inline !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-desktop-only {\n    display: inline !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-widescreen {\n    display: inline !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-widescreen-only {\n    display: inline !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-fullhd {\n    display: inline !important; } }\n\n.is-inline-block {\n  display: inline-block !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-block-mobile {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-block-tablet {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-block-tablet-only {\n    display: inline-block !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-block-touch {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-block-desktop {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-block-desktop-only {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-block-widescreen {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-block-widescreen-only {\n    display: inline-block !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-block-fullhd {\n    display: inline-block !important; } }\n\n.is-inline-flex {\n  display: inline-flex !important; }\n\n@media screen and (max-width: 768px) {\n  .is-inline-flex-mobile {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-inline-flex-tablet {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-inline-flex-tablet-only {\n    display: inline-flex !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-inline-flex-touch {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-inline-flex-desktop {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-inline-flex-desktop-only {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-inline-flex-widescreen {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-inline-flex-widescreen-only {\n    display: inline-flex !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-inline-flex-fullhd {\n    display: inline-flex !important; } }\n\n.is-hidden {\n  display: none !important; }\n\n@media screen and (max-width: 768px) {\n  .is-hidden-mobile {\n    display: none !important; } }\n\n@media screen and (min-width: 769px), print {\n  .is-hidden-tablet {\n    display: none !important; } }\n\n@media screen and (min-width: 769px) and (max-width: 1007px) {\n  .is-hidden-tablet-only {\n    display: none !important; } }\n\n@media screen and (max-width: 1007px) {\n  .is-hidden-touch {\n    display: none !important; } }\n\n@media screen and (min-width: 1008px) {\n  .is-hidden-desktop {\n    display: none !important; } }\n\n@media screen and (min-width: 1008px) and (max-width: 1199px) {\n  .is-hidden-desktop-only {\n    display: none !important; } }\n\n@media screen and (min-width: 1200px) {\n  .is-hidden-widescreen {\n    display: none !important; } }\n\n@media screen and (min-width: 1200px) and (max-width: 1391px) {\n  .is-hidden-widescreen-only {\n    display: none !important; } }\n\n@media screen and (min-width: 1392px) {\n  .is-hidden-fullhd {\n    display: none !important; } }\n\n.is-marginless {\n  margin: 0 !important; }\n\n.is-paddingless {\n  padding: 0 !important; }\n\n.is-radiusless {\n  border-radius: 0 !important; }\n\n.is-shadowless {\n  box-shadow: none !important; }\n\n.is-unselectable {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.panel {\n  font-size: 1rem; }\n  .panel:not(:last-child) {\n    margin-bottom: 1.5rem; }\n\n.panel-heading,\n.panel-tabs,\n.panel-block {\n  border-bottom: 1px solid #dbdbdb;\n  border-left: 1px solid #dbdbdb;\n  border-right: 1px solid #dbdbdb; }\n  .panel-heading:first-child,\n  .panel-tabs:first-child,\n  .panel-block:first-child {\n    border-top: 1px solid #dbdbdb; }\n\n.panel-heading {\n  background-color: whitesmoke;\n  border-radius: 3px 3px 0 0;\n  color: #363636;\n  font-size: 1.25em;\n  font-weight: 300;\n  line-height: 1.25;\n  padding: 0.5em 0.75em; }\n\n.panel-tabs {\n  align-items: flex-end;\n  display: flex;\n  font-size: 0.875em;\n  justify-content: center; }\n  .panel-tabs a {\n    border-bottom: 1px solid #dbdbdb;\n    margin-bottom: -1px;\n    padding: 0.5em; }\n    .panel-tabs a.is-active {\n      border-bottom-color: #4a4a4a;\n      color: #363636; }\n\n.panel-list a {\n  color: #4a4a4a; }\n  .panel-list a:hover {\n    color: #00d1b2; }\n\n.panel-block {\n  align-items: center;\n  color: #363636;\n  display: flex;\n  justify-content: flex-start;\n  padding: 0.5em 0.75em; }\n  .panel-block input[type=\"checkbox\"] {\n    margin-right: 0.75em; }\n  .panel-block > .control {\n    flex-grow: 1;\n    flex-shrink: 1;\n    width: 100%; }\n  .panel-block.is-wrapped {\n    flex-wrap: wrap; }\n  .panel-block.is-active {\n    border-left-color: #00d1b2;\n    color: #363636; }\n    .panel-block.is-active .panel-icon {\n      color: #00d1b2; }\n\na.panel-block,\nlabel.panel-block {\n  cursor: pointer; }\n  a.panel-block:hover,\n  label.panel-block:hover {\n    background-color: whitesmoke; }\n\n.panel-icon {\n  display: inline-block;\n  font-size: 14px;\n  height: 1em;\n  line-height: 1em;\n  text-align: center;\n  vertical-align: top;\n  width: 1em;\n  color: #7a7a7a;\n  margin-right: 0.75em; }\n  .panel-icon .fa {\n    font-size: inherit;\n    line-height: inherit; }\n\n.modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  align-items: center;\n  display: none;\n  justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 20; }\n  .modal.is-active {\n    display: flex; }\n\n.modal-background {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.86); }\n\n.modal-content,\n.modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n  @media screen and (min-width: 769px), print {\n    .modal-content,\n    .modal-card {\n      margin: 0 auto;\n      max-height: calc(100vh - 40px);\n      width: 640px; } }\n\n.modal-close {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  flex-grow: 0;\n  flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px; }\n  .modal-close:before, .modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    transform-origin: center center; }\n  .modal-close:before {\n    height: 2px;\n    width: 50%; }\n  .modal-close:after {\n    height: 50%;\n    width: 2px; }\n  .modal-close:hover, .modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3); }\n  .modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4); }\n  .modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px; }\n  .modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px; }\n  .modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px; }\n\n.modal-card {\n  display: flex;\n  flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden; }\n\n.modal-card-head,\n.modal-card-foot {\n  align-items: center;\n  background-color: whitesmoke;\n  display: flex;\n  flex-shrink: 0;\n  justify-content: flex-start;\n  padding: 20px;\n  position: relative; }\n\n.modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px; }\n\n.modal-card-title {\n  color: #363636;\n  flex-grow: 1;\n  flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1; }\n\n.modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb; }\n  .modal-card-foot .button:not(:last-child) {\n    margin-right: 10px; }\n\n.modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  flex-grow: 1;\n  flex-shrink: 1;\n  overflow: auto;\n  padding: 20px; }\n\n.title,\n.subtitle {\n  word-break: break-word; }\n  .title:not(:last-child),\n  .subtitle:not(:last-child) {\n    margin-bottom: 1.5rem; }\n  .title em,\n  .title span,\n  .subtitle em,\n  .subtitle span {\n    font-weight: inherit; }\n  .title .tag,\n  .subtitle .tag {\n    vertical-align: middle; }\n\n.title {\n  color: #363636;\n  font-size: 2rem;\n  font-weight: 600;\n  line-height: 1.125; }\n  .title strong {\n    color: inherit;\n    font-weight: inherit; }\n  .title + .highlight {\n    margin-top: -0.75rem; }\n  .title:not(.is-spaced) + .subtitle {\n    margin-top: -1.5rem; }\n  .title.is-1 {\n    font-size: 3rem; }\n  .title.is-2 {\n    font-size: 2.5rem; }\n  .title.is-3 {\n    font-size: 2rem; }\n  .title.is-4 {\n    font-size: 1.5rem; }\n  .title.is-5 {\n    font-size: 1.25rem; }\n  .title.is-6 {\n    font-size: 1rem; }\n  .title.is-7 {\n    font-size: 0.75rem; }\n\n.subtitle {\n  color: #4a4a4a;\n  font-size: 1.25rem;\n  font-weight: 400;\n  line-height: 1.25; }\n  .subtitle strong {\n    color: #363636;\n    font-weight: 600; }\n  .subtitle:not(.is-spaced) + .title {\n    margin-top: -1.5rem; }\n  .subtitle.is-1 {\n    font-size: 3rem; }\n  .subtitle.is-2 {\n    font-size: 2.5rem; }\n  .subtitle.is-3 {\n    font-size: 2rem; }\n  .subtitle.is-4 {\n    font-size: 1.5rem; }\n  .subtitle.is-5 {\n    font-size: 1.25rem; }\n  .subtitle.is-6 {\n    font-size: 1rem; }\n  .subtitle.is-7 {\n    font-size: 0.75rem; }\n\n.main-content {\n  margin: 15px auto; }\n\n.help__notation {\n  display: flex; }\n  .help__notation__icon {\n    flex: 1; }\n  .help__notation__description {\n    flex: 9; }\n\n.clickable {\n  cursor: pointer; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  name: 'Wallet',
+  sites: [{
+    domain: 'myetherwallet.com',
+    keywords: ['ether'],
+    props: {
+      walletType: 'hardware',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'ledgerwallet.com',
+    keywords: ['hardware', 'ether', 'bitcoin'],
+    props: {
+      walletType: 'hardware',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'trezor.io',
+    keywords: ['hardware', 'ether', 'bitcoin'],
+    props: {
+      walletType: 'hardware',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Variable',
+      security: 'Good'
+    }
+  }, {
+    domain: 'blockchain.info',
+    keywords: ['hot-wallet', 'bitcoin'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: false,
+      privacy: 'Weak',
+      security: 'Good'
+    }
+  }, {
+    domain: 'coinbase.com',
+    keywords: ['hot-wallet', 'ether', 'bitcoin'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: false,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'exodus.io',
+    keywords: ['hot-wallet', 'bitcoin', 'ethereum', 'golem', 'augur', 'dash', 'litecoin', 'aragon'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'mycelium.com',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'keepkey.com',
+    keywords: ['hardware'],
+    props: {
+      walletType: 'hardware',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'jaxx.io',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'electrum.org',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Moderate'
+    }
+  }, {
+    domain: 'bitcoin.org',
+    keywords: ['hot-wallet', 'bitcoin'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'copay.io',
+    keywords: ['multisig'],
+    props: {
+      walletType: 'multisig',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'bitcoinarmory.com',
+    keywords: ['varies'],
+    props: {
+      walletType: 'varies',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'greenaddress.it',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Moderate',
+      security: 'Good'
+    }
+  }, {
+    domain: 'xapo.com',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: false,
+      privacy: 'Moderate',
+      security: 'Moderate'
+    }
+  }, {
+    domain: 'btc.com',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'bitgo.com',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: false,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'airbitz.co',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'coolbitx.com',
+    keywords: ['hardware'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: false,
+      mobileApp: true,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    name: 'Ethereum clasic wallet',
+    url: 'https://ethereumproject.github.io/etherwallet/',
+    keywords: ['hot-wallet'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    name: 'Ethereum Wallet (Mist)',
+    url: 'https://github.com/ethereum/mist/releases/',
+    keywords: ['desktop-wallet'],
+    props: {
+      walletType: 'desktop-wallet',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'metamask.io',
+    keywords: ['browser-extension'],
+    props: {
+      walletType: 'browser-extension',
+      webInterface: false,
+      mobileApp: false,
+      desktopClient: true,
+      independenceWallet: true,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'gatehub.net',
+    keywords: ['hot-wallet', 'ripple'],
+    props: {
+      walletType: 'hot-wallet',
+      webInterface: true,
+      mobileApp: false,
+      desktopClient: false,
+      independenceWallet: false,
+      privacy: 'Good',
+      security: 'Good'
+    }
+  }, {
+    domain: 'litecoin.org',
+    keywords: ['litecoin']
+  }, {
+    domain: 'dash.org',
+    url: 'https://www.dash.org/wallets/',
+    keywords: ['dash']
+  }, {
+    name: 'NEM wallet',
+    domain: 'nem.io',
+    url: 'https://www.nem.io/install.html',
+    keywords: ['nem']
+  }, {
+    name: 'Monero wallets',
+    domain: 'getmonero.org',
+    url: 'https://getmonero.org/downloads/',
+    keywords: ['monero']
+  }, {
+    domain: 'mymonero.com',
+    keywords: ['monero', 'web-wallet']
+  }, {
+    name: 'NEO wallets',
+    domain: 'neo.org',
+    url: 'https://neo.org/download',
+    keywords: ['neo']
+  }]
+};
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'Exchanger',
+    sites: [{
+        domain: 'bittrex.com',
+        keywords: '',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Bittrex is one of the larger crypto to crypto exchanges offering a large number ' + 'of trading pairs into bitcoin. The exchange does have a very high turnover crypt' + 'o currencies - leading some to accuse it of allowing pump and dump schemes that ' + 'erode confidence in the crypto currency ecosystem as a whole.'
+        }
+    }, {
+        domain: 'bitstamp.net',
+        keywords: '',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Bitstamp is run from the United Kingdom and is one of the most popular fiat to B' + 'itcoin exchanges. Bitstamp only allows for one exchange pair of USD to Bitcoin b' + 'ut does use conversion of other fiat currencies via its Slovenian banking partne' + 'r which will incur higher fees.'
+        }
+    }, {
+        domain: 'coinbase.com',
+        keywords: '',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Coinbase offer USD to BTC trading and have publicly stated their plans to add ot' + 'her pairs as and when banking arrangements in other jurisdictions are secured. W' + 'ith the seamless integration of wallet and exchange features coinbase has rapidl' + 'y increased its trading volume and provides decent liquidity on low spreads.'
+        }
+    }, {
+        domain: 'gemini.com',
+        keywords: '',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Gemini Exchange is aptly named after its two founders the Winklevoss twins. The ' + 'exchange is based in New York. In all perhaps one of the most considered and wel' + 'l positioned exchanges to capitalise on the bridge between main financial market' + 's and the present ecosystem. A breath of fresh air in bringing a touch of wall s' + 'treet class & security to the innovative 7 nascent Bitcoin arena.'
+        }
+    }, {
+        domain: 'kraken.com',
+        keywords: '',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Kraken is a top European based exchange and offers a variety of fiat to bitcoin ' + 'pairs such as JPY, EUR, GBP and USD. Volume is decent especially on the JPY BTC ' + 'pair after MT Gox\'s collapse - with Kraken assuming the mantle in that region. ' + 'The exchange also has a smattering if popular crypto to crypto pairs including l' + 'itecoin and dogecoin.'
+        }
+    }, {
+        domain: 'poloniex.com',
+        keywords: '',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Poloniex is a pure crypto to crypto exchange based in the United States. With a ' + 'grand redesign in early 2015 the site has added a wealth of features to provide ' + 'a fully immersive trading experience. Technical analysis charts and live chat me' + 'an it is easy to stay abreast of news flow and analyse price trends before takin' + 'g a position.'
+        }
+    }, {
+        domain: 'bitfinex.com',
+        keywords: 'British Virgin Islands, fiat',
+        props: {
+            country: 'British Virgin Islands',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'BitFinex offers three main functions - it is a bitcoin, litecoin and dashcoin to' + ' fiat exchange, a margin trading exchange and a liquidity provider. Although the' + ' company is said to be in Beta phase there are a number of features available th' + 'at expand the financial positions you can take - for example the ability to shor' + 't Bitcoin via margin trading.'
+        }
+    }, {
+        domain: 'bitflyer.jp',
+        keywords: 'leading Japanese exchange, send and receive Bitcoins in just 1',
+        props: {
+            country: 'Japan',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'bitFlyer is the leading Japanese exchange in trade volume. It allows users to ex' + 'change Bitcoin for JPY and to trade with margin. The exchange allows users send ' + 'and receive Bitcoins in just 1 second, storing said BTC using next generation en' + 'cryption by DigiCert.'
+        }
+    }, {
+        domain: 'bithumb.com',
+        keywords: 'Korea, largest exchanges in South Korea, buy/sell/store Bitcoin and Ethereum',
+        props: {
+            country: 'Korea',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Bithumb is one of the largest exchanges in South Korea, allowing users to buy/se' + 'll/store Bitcoin and Ethereum. Bithump offers additional services like remittanc' + 'es and gift vouchers.'
+        }
+    }, {
+        domain: 'okcoin.com',
+        otherDomains: ['okcoin.cn'],
+        keywords: 'largest volumes and good liquidity - best pricing',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'OKCoin is another top Bitcoin exchange. Even though it is based in China - it ha' + 's offshoot offices around the world. With some of the largest volumes and good l' + 'iquidity - best pricing is easy to achieve. OkCoin offers both LTC and BTC tradi' + 'ng pairs into USD as well as futures on LTC and BTC with leverage up to 20 X.'
+        }
+    }, {
+        domain: 'btcc.com',
+        otherDomains: ['btcchina.com'],
+        keywords: 'China, CNY',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH, MXN',
+            desc: 'BTCC is one of the dominant players for CNY (Chinese Yuan) trades into Bitcoin. ' + 'They also offer a Litecoin pair too. With high volume and healthy liquidity ther' + 'e are no issues with using this exchange to find the best price available.'
+        }
+    }, {
+        domain: 'gdax.com',
+        keywords: 'USD, EUR',
+        props: {
+            country: 'Unknown',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'GDAX offers institutions and professionals the ability to trade a variety of dig' + 'ital currencies like Bitcoin, Ethereum, and more on a regulated U.S. based excha' + 'nge.'
+        }
+    }, {
+        domain: 'huobi.com',
+        keywords: 'China, leading trading',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'HuoBi is one of the world\'s leading trading platform, committed to provide inve' + 'stors with a professional, safe and honest transaction services. March 4, 2014, ' + 'fire currency net daily trading volume of more than 260,000, the transaction amo' + 'unted to 1 billion yuan, creating a global trading platform where Bitcoin record' + ', is one of the world\'s largest trading volume of Bitcoin trading platform .'
+        }
+    }, {
+        domain: 'coinone.co.kr',
+        keywords: 'Korea, KRW',
+        props: {
+            country: 'Korea',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Coinone is a South Korea-based exchange platform that allows users to buy, sell ' + 'and store Bitcoin, Ether and Ether Classic. The market allows users to exchange ' + 'these cryptocurrencies for South Korean Won (KRW) and offers margin trading serv' + 'ices.'
+        }
+    }, {
+        domain: 'korbit.co.kr',
+        keywords: 'Korea, biggest BTCand ETH exchange in Korea, safe',
+        props: {
+            country: 'Korea',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Korbit is the biggest BTCand ETH exchange in South Korea. They provide a safe pl' + 'atform to trade and exchange BTC to KRW and have multiple withdrawal and deposit' + ' methods. Their trading fee is 1%.'
+        }
+    }, {
+        domain: 'hitbtc.com',
+        keywords: 'UK, USD, EUR, GBP to BTC',
+        props: {
+            country: 'Uk',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'HitBTC registerd in the UK in early 2015. The exchange offers USD, EUR, GBP to B' + 'TC as well as a collection of the most common crypto to crypto trading pairs. Th' + 'e volume has been steadily rising providing decent liquidity and a narrowing bid' + ' ask spread. Security is good with its two factor authentication and with an unb' + 'lemished track record.'
+        }
+    }, {
+        domain: 'jubi.com',
+        keywords: 'China, CNY',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Jubi is a Chinese exchange, allowing users to exchange a wide variety of cryptoc' + 'urrencies for CNY. The exchange was founded in January 2014 by Beijing Zigong Te' + 'chnology Co., Ltd., and was officially launched in March 2014. Its core team is ' + 'composed of many technical staff who have been concerned with virtual currency f' + 'or many years. The company is committed to providing a safe, stable and quality ' + 'trading experience for the second generation of cryptocurrencies or altcoins.'
+        }
+    }, {
+        domain: 'yunbi.com',
+        keywords: 'China, Peatio Open Source Project',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Built with the code released by Peatio Open Source Project, YUNBI adheres to the' + ' principle of integrity, transparency and being open­-sourced, offering customer' + 's a highly­-safe and easily­-operating platform to trade digital currencies.'
+        }
+    }, {
+        domain: 'binance.com',
+        keywords: 'China, BTC, ETH, LTC, BNB, NEO, GAS',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: ''
+        }
+    }, {
+        domain: 'gatecoin.com',
+        keywords: 'security, reliability and cost-efficient',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Gatecoin is a regulated digital currency exchange focused on security, reliabili' + 'ty and cost-efficient transfers. They also provide other related services such a' + 's prepaid debit cards, merchant and remittance solutions.'
+        }
+    }, {
+        domain: 'quadrigacx.com',
+        keywords: 'BTC and LTC/ETH, CAD',
+        props: {
+            country: 'Canada',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH, CAD',
+            desc: 'QuadrigaCX is one of the largest BTC and ETH exchanges in Canada. They provide a' + ' safe platform to trade and exchange BTC and ETH to CAD and have multiple withdr' + 'awal and deposit methods.'
+        }
+    }, {
+        domain: 'livecoin.net',
+        keywords: '',
+        props: {
+            country: 'Unknown',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Livecoin is multi-cryptocurrency trading platform, suitable for both beginners a' + 'nd experienced traders. Livecoin offers services both for regular users and for ' + 'coin developers. These include ICOs, swaps and others. Users can also play dice ' + 'on the exchange.'
+        }
+    }, {
+        domain: 'bisq.io',
+        keywords: 'fiat to crypto, crypto to fiat',
+        props: {
+            country: 'US',
+            type: 'decentralized',
+            pairs: 'multi',
+            desc: 'BitSquare is one of the largest decentralized multi-crypto exchanges. They provi' + 'de a safe, decentralized platform to trade and exchange fiat to crypto and crypt' + 'o to fiat.'
+        }
+    }, {
+        domain: 'coincheck.com',
+        keywords: 'BTC to JPY',
+        props: {
+            country: 'Japan',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Coincheck is one of the largest BTC exchanges in Japan. They provide a safe plat' + 'form to trade and exchange BTC to JPY and have multiple withdrawal and deposit m' + 'ethods.'
+        }
+    }, {
+        domain: 'bitso.com',
+        keywords: 'Mexican, Mexican Pesos, MXN, ',
+        props: {
+            country: 'Mexico',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH, MXN',
+            desc: 'Bitso is a Mexican cryptocurrency exchange founded in 2014. It allows users to e' + 'xchange Bitcoin and Ether for Mexican Pesos. Users can deposit and withdraw MXN ' + 'through the Ripple Gateway among others. Bitso is committed to developing effici' + 'ent financial services in Mexico.'
+        }
+    }, {
+        domain: 'btcmarkets.net',
+        keywords: 'BTC to AUD',
+        props: {
+            country: 'Australia',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'BTCMarkets is one of the largest BTC and ETH exchange in Australia. They provide' + ' a safe platform to trade and exchange BTC to AUD and have multiple withdrawal a' + 'nd deposit methods.'
+        }
+    }, {
+        domain: 'luno.com',
+        keywords: 'wallet and exhcange, multiple countries',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'BTC only',
+            desc: 'Luno is a UK-based Bitcoin exchange that offers wallet and exhcange services to ' + 'multiple countries. Luno was formerly known as BitX.'
+        }
+    }, {
+        domain: 'mercadobitcoin.com.br',
+        keywords: 'Brazil and South America',
+        props: {
+            country: 'Brazil',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Mercado Bitcoin is the biggest exchange in Brasil and South America. It allows u' + 'sers to trade Bitcoin, Litecoin and Brazilian Reais. Users are required to provi' + 'de a CPF or CNPJ number in order to register and login. Mercado Bitcoin has no l' + 'imits for VIP accounts and higher, which requires document verification. Mercado' + ' Bitcoin has a solid reputation within the crypto community and over 100 thousan' + 'd clients that use their service.'
+        }
+    }, {
+        domain: 'paymium.com',
+        keywords: 'EUR/BTC',
+        props: {
+            country: 'France',
+            type: 'centralized',
+            pairs: 'BTC Only',
+            desc: 'Paymium is the first European exchange founded in 2011. They provide EUR/BTC exc' + 'hange service as well as send and receive Bitcoins by mail. They comply with Eur' + 'opean Regulations and accept SEPA Wire Transfer and Credit Card Bitcoin purchase' + ' (arriving December 15th, 2016).'
+        }
+    }, {
+        domain: 'cryptopia.co.nz',
+        keywords: 'NZ',
+        props: {
+            country: 'NZ',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Cryptopia\'s focus is on a better user experience for crypto-currencies. In orde' + 'r to make cryptocurrencies more accessible to everyone we provide mining pools, ' + 'marketplace, exchange services and a support framework for each coin listed.'
+        }
+    }, {
+        domain: 'bit2c.co.il',
+        keywords: 'Israel',
+        props: {
+            country: 'Israel, Shekel and BTC',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH, Shekel',
+            desc: 'Bit2C is an Israeli based Bitcoin exchange. The exchange allows for trading in S' + 'hekel and BTC.'
+        }
+    }, {
+        domain: 'vaultoro.com',
+        keywords: 'UK, trade Bitcoin for physical gold ',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'BTC',
+            desc: 'Vaultoro is a UK-based exchange and the first trading platform where you can tra' + 'de Bitcoin for physical gold without the need to use a fiat currency or a bank a' + 'ccount.'
+        }
+    }, {
+        domain: 'therocktrading.com',
+        keywords: 'Malta',
+        props: {
+            country: 'Malta, Europe, EUR, USD',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'The Rock Trading is one of the leading Bitcoin exchanges in Europe. It offers re' + 'al time trading between euro, usd and bitcoin/altcoins It\'s one of the oldest E' + 'uropean exchanges.'
+        }
+    }, {
+        domain: 'btcxindia.com',
+        keywords: 'leading Bitcoin exchanges in India',
+        props: {
+            country: 'India',
+            type: 'centralized',
+            pairs: 'BTC',
+            desc: 'BTCXIndia is one of the leading Bitcoin exchanges in India. It offers real time ' + 'trading between rupees and bitcoins for the Indian community.'
+        }
+    }, {
+        domain: 'unocoin.com',
+        keywords: 'India, INR',
+        props: {
+            country: 'India',
+            type: 'centralized',
+            pairs: 'BTC',
+            desc: 'Unocoin is India\'s most popular Bitcoin wallet. It has a built in exchange that' + ' allows users to exchange Bitcoin for Indian Rupees (INR). Unocoin charges a 1% ' + 'fee to buy or sell bitcoins. Over an extended period of usage (minimum 60 days) ' + 'and a significant transaction volume on your account, there will be an upgrade t' + 'o “Gold Membership” and the trading fee will drop to 0.7% and the transaction li' + 'mit per day will increase.'
+        }
+    }, {
+        domain: 'bitbay.net',
+        keywords: 'Poland, biggest BTC, LTC, ETH and LSK exchange in Poland',
+        props: {
+            country: 'Poland',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: ''
+        }
+    }, {
+        domain: 'bleutrade.com',
+        keywords: '',
+        props: {
+            country: 'Unknown',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Bleutrade is an alternative cryptocurrency exchange that offers trading on multi' + 'ple cryptocurrencies, including Bitcoin, Ether, Litecoin, DASH, and many others.' + ' The Bluetrade Echange only charges a 0.25% taker and maker fee for all currenci' + 'es, although they reserve the right to charge a Fee which can range from 0.2% to' + ' 0.5% per trade, as well as fixed fees for withdrawals. Bleutrade does not suppo' + 'rt fiat currencies.'
+        }
+    }, {
+        domain: 'exmo.com',
+        keywords: 'Spain, lowest fees',
+        props: {
+            country: 'Spain',
+            type: 'centralized',
+            pairs: 'BTC, LTC, DOGE, DASH, ETH',
+            desc: '2 years old exchange with a big team. They trade BTC, LTC, DOGE, DASH, ETH they ' + 'claim to have the lowest fees on the market. The company is registered in the UK' + ' but based in Spain.'
+        }
+    }, {
+        domain: 'bitmarket.net',
+        keywords: 'Poland, PLN and ERU',
+        props: {
+            country: 'Poland',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH, and DOGE, PLN and ERU',
+            desc: 'BitMarket is a Polish cryptocurrency exchange that offers trading in BTC, LTC, E' + 'TH, and DOGE. The market offers both margin trading services and investment oppo' + 'rtunities for users. BitMarket accepts PLN and ERU via regular and instant trans' + 'fers.'
+        }
+    }, {
+        domain: 'wavesplatform.com',
+        keywords: 'Poland, biggest BTC, LTC, ETH and LSK exchange in Poland',
+        props: {
+            country: 'Poland',
+            type: 'decentralized',
+            pairs: 'multi',
+            desc: 'The Waves Decentralized Exchange is a decentralized market where users can trade' + ' waves-based assets, including Waves, Waves Assets, fiat tokens and cryptocurren' + 'cy tokens like wBTC and wETH. On the WavesDEX, users can trade with no counterpa' + 'rty risk as all operations take place on the Waves blockchain itself ensuring th' + 'at no trust is required. In order to access the exchange, users must download th' + 'e Waves wallet.'
+        }
+    }, {
+        domain: 'novaexchange.com',
+        keywords: 'Tanzania, support deposits in 469 Altcoins',
+        props: {
+            country: 'Tanzania',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'They support deposits in 469 Altcoins and no fiat currencies. You can trade a lo' + 't of low market cap cryptocurrency pairs but, trade with care.'
+        }
+    }, {
+        domain: 'zaif.jp',
+        keywords: 'Japan, Bitcoin and NEM for JPY.',
+        props: {
+            country: 'Japan',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Zaif is a Japanese exchange that allows users to buy and sell various coins like' + ' Bitcoin and NEM for JPY. The Zaif exchange also allows for margin trading and o' + 'ffers an affiliate program.'
+        }
+    }, {
+        domain: 'itbit.com',
+        keywords: 'fiat to crypto exchange - and offers EUR, USD & SGD to Bitcoin, security is stro' + 'ng',
+        props: {
+            country: 'US',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'ItBit is fiat to crypto exchange - and offers EUR, USD & SGD to Bitcoin. The exc' + 'hange is based in the US and in Singapore. Security is strong with two factor au' + 'thentication and cold storage and the interface of the exchange is easy to use a' + 'nd well designed.'
+        }
+    }, {
+        domain: 'cex.io',
+        keywords: 'UK, US, USD and EUR to BTC',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'As BTCchina is to Asia - so CEX.io is to Europe and America. CEX.io combines a m' + 'ining pool, crypto to crypto exchanges and fiat to Bitcoin exchange. They also o' + 'ffer the ability to trade mining contracts - or the rights to bitcoin mining equ' + 'ipment for a specific period of time. The exchange also offers USD and EUR to BT' + 'C pairs alongside a number of crypto to crypto pairs'
+        }
+    }, {
+        domain: 'coinfloor.co.uk',
+        keywords: 'UK, top exchanges in UK, high levels of security, GBP, Euro, Polish Zloty and US' + 'D',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Coinfloor is one of the UK\'s top exchanges. Coinfloor uses 100% multisignature ' + 'cold storage. Coinfloor has a number of fiat to crypto trading pairs - GBP, Euro' + ', Polish Zloty and USD. In all Coinfloor is a solid exchange to use specifically' + ' because of its high levels of security.'
+        }
+    }, {
+        domain: 'etherdelta.github.io',
+        keywords: 'decentralized Ethereum token exchange',
+        props: {
+            country: 'Unknown',
+            type: 'decentralized',
+            pairs: 'Ethereum, ERC20',
+            desc: 'EtherDelta is a decentralized Ethereum token exchange, brought to you by Etherbo' + 'ost. Here, users can trade any most Ethereum-based tokens such as Iconomi, Augur' + ', 1ST, and others. The exchange currenly has only one fee, which is the 0.3% tak' + 'er fee. Deposit, withdraw, and maker transactions are all free.'
+        }
+    }, {
+        domain: 'lakebtc.com',
+        keywords: 'China',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'LakeBTC project was started in early 2013 as a virtual Bitcoin exchange initiall' + 'y for traders and other financial professionals. Later that year, the exchange w' + 'as incorporated and operated under the current domain name. LakeBTC is currently' + ' owned by Lake Investments Limited (BVI), with Shanghai Trading IT, Inc. providi' + 'ng technical and customer support.'
+        }
+    }, {
+        domain: 'c-cex.com',
+        keywords: 'Germany, alternative to the mainstays of Cryptsy and Bittrex',
+        props: {
+            country: 'Germany',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'C-CEX.com is a crypto to crypto exchange and a fiat to crypto exchange and offer' + 's a good alternative to the mainstays of Cryptsy and Bittrex. With decent liquid' + 'ity on a few of the trading pairs CCEX is a good exchange to use. Security has n' + 'ot been compromised as of the time of writing.'
+        }
+    }, {
+        domain: 'liqui.io',
+        keywords: 'Ukraine',
+        props: {
+            country: 'Ukraine',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Liqui is a Ukraine-based cryptocurrency exchange. It allows users to buy and sel' + 'l Bitcoin and altcoins, although not national currencies. Liqui offers IOU marke' + 'ts that allow users to buy and sell coins from Initial Coin Offerings that are n' + 'ot trading yet.'
+        }
+    }, {
+        domain: 'ethexindia.com',
+        keywords: 'India, India first market place for Ethereum Tokens',
+        props: {
+            country: 'India',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'ETHEXIndia is India’s first market place for Ethereum Tokens. It offers real-tim' + 'e trading for ETH/INR, allowing users to buy and sell Ether for INR with a tight' + ' spread.'
+        }
+    }, {
+        domain: 'bter.com',
+        keywords: 'hybrid fiat to crypto and crypto to crypto exchanges',
+        props: {
+            country: 'British Virgin Islands',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'BTER is another of the hybrid fiat to crypto and crypto to crypto exchanges. Alt' + 'hough they had a rocky start to 2015 with a severe security breach, they have gr' + 'adually reopened markets and have dealt with the situation in a professional man' + 'ner.'
+        }
+    }, {
+        domain: 'localbitcoins.com',
+        keywords: 'Finland',
+        props: {
+            country: 'Finland',
+            type: 'peer to peer',
+            pairs: 'BTC',
+            desc: 'Local Bitcoins is a different sort of exchange that allows anyone anywhere to tr' + 'ade. It therefore has the largest amount of markets - although some without much' + ' liquidity - for example in Venezuela and other emerging markets. LocalBitcoins ' + 'works like an open outcry with people in the same location as you - if you want ' + 'to trade you can place a buy or a sell for a price and wait to be contacted by s' + 'omeone who is wants to execute that trade.'
+        }
+    }, {
+        domain: 'viabtc.cn',
+        keywords: 'China',
+        props: {
+            country: 'China',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Founded in May 2016, ViaBTC is a cryptocurrency technology company that operates' + ' a mining pool, mining contracts and the ViaBTC exchange. The ViaBTC exchange is' + ' a China-based website, allowing users to trade BTC and ETH for CNY. The ViaBTC ' + 'exchange features advanced Trading View charts and easy and convenient API'
+        }
+    }, {
+        domain: 'cryptox.pl',
+        keywords: 'UK',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'CryptoX is a multi cryptocurrency exchange that offers trading services for Bitc' + 'oin, Litecoin, Dash, Monero and Byteball. The exchange does not offer FIAT tradi' + 'ng pairs.'
+        }
+    }, {
+        domain: 'tidex.com',
+        keywords: 'UK, Waves Platform',
+        props: {
+            country: 'UK',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Tidex is a new bitcoin and altcoin exchange that trades popular digital currenci' + 'es, including several Waves assets. based in the UK and officially endorsed by t' + 'he Waves Platform. It trades WAVES, Waves tokens and other popular cryptocurrenc' + 'ies including LTC, ETH, DOGE, DASH and BTS, although no fiat currencies. It laun' + 'ched with zero-fee model for traders and liquidity guaranteed.'
+        }
+    }, {
+        domain: 'tuxexchange.com',
+        keywords: 'Canada  ',
+        props: {
+            country: 'Canada, only charges a 0.3% taker fee (maker, deposits, and withdraws have no fe' + 'es',
+            type: 'centralized',
+            pairs: 'BTC, LTC, ETH',
+            desc: 'Tux Exchange is a Canadian cryptocurrency exchange that offers trading on multip' + 'le cryptocurrencies, including Bitcoin, Ether, Litecoin, Zcash, DASH, Dogecoin, ' + 'Monero, Peercoin, Potcoin, Blackcoin, Namecoin, Emercoin, Syscoin, Counterparty ' + 'and Pepecash. The Tux Echange only charges a 0.3% taker fee (maker, deposits, an' + 'd withdraws have no fees). Tux does not support fiat currencies, however. The Tu' + 'x Exchange is named after the Tuxedo cat.'
+        }
+    }, {
+        domain: 'quoine.com',
+        keywords: 'Japan, exchange BTC and ETH for multiple national currencies',
+        props: {
+            country: 'Japan',
+            type: 'centralized',
+            pairs: 'multi',
+            desc: 'Quoine exchange is a Japanese Bitcoin and Ether exchange. It allows users to exc' + 'hange BTC and ETH for multiple national currencies. Quoine currently offers 0% f' + 'ees on all pairs except ETHBTC and margin trading with leverage starting at 2X a' + 'nd up to 25X. Quoine has other special features like futures trading, algo tradi' + 'ng, and even lending to earn interest on your deposits.'
+        }
+    }, {
+        domain: 'remitano.com',
+        keywords: 'peer to peer',
+        props: {
+            country: 'Unknown',
+            type: 'peer to peer',
+            pairs: 'BTC',
+            desc: ''
+        }
+    }]
+};
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    "name": "Currency",
+    "sites": [{
+        "name": "Bitcoin",
+        "code": "BTC",
+        "rank": "1",
+        "domain": "bitcoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bitcoin.org"
+        }, {
+            "name": "Website 2",
+            "url": "https://www.bitcoin.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://blockchain.info"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://blockexplorer.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://bitcointalk.org"
+        }, {
+            "name": "Message Board 2",
+            "url": "https://forum.bitcoin.com"
+        }]
+    }, {
+        "name": "Ethereum",
+        "code": "ETH",
+        "rank": "2",
+        "domain": "ethereum.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.ethereum.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://live.ether.camp"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://etherscan.io"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://etherchain.org"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.ethereum.org"
+        }]
+    }, {
+        "name": "Bitcoin Cash",
+        "code": "BCH",
+        "rank": "3",
+        "domain": "bitcoincash.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.bitcoincash.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://blockchair.com/bitcoin-cash/blocks"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://blockdozer.com/insight"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://www.blocktrail.com/BCC"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=2040221.0"
+        }]
+    }, {
+        "name": "Ripple",
+        "code": "XRP",
+        "rank": "4",
+        "domain": "ripple.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://ripple.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://ripple.com/graph"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://bithomp.com/explorer"
+        }, {
+            "name": "Message Board",
+            "url": "http://www.xrpchat.com"
+        }]
+    }, {
+        "name": "IOTA",
+        "code": "MIOTA",
+        "rank": "5",
+        "domain": "iota.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://iota.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://www.iota.tips"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://iotasear.ch"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://thetangle.org"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.iota.org"
+        }, {
+            "name": "Message Board 2",
+            "url": "https://slack.iota.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1216479.0"
+        }]
+    }, {
+        "name": "Litecoin",
+        "code": "LTC",
+        "rank": "6",
+        "domain": "litecoin.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://litecoin.com"
+        }, {
+            "name": "Website 2",
+            "url": "https://litecoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://explorer.litecoin.net/chain/Litecoin"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://chainz.cryptoid.info/ltc"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://live.blockcypher.com/ltc"
+        }, {
+            "name": "Message Board",
+            "url": "https://litecointalk.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=47417.0"
+        }]
+    }, {
+        "name": "NEM",
+        "code": "XEM",
+        "rank": "7",
+        "domain": "nem.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://nem.io"
+        }, {
+            "name": "Explorer",
+            "url": "http://nembex.nem.ninja"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://explorer.ournem.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.nem.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=654845.0"
+        }]
+    }, {
+        "name": "Dash",
+        "code": "DASH",
+        "rank": "8",
+        "domain": "dash.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.dash.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/dash"
+        }, {
+            "name": "Message Board",
+            "url": "https://www.dash.org/forum"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=421615.0"
+        }]
+    }, {
+        "name": "NEO",
+        "code": "NEO",
+        "rank": "9",
+        "domain": "neo.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://neo.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://neotracker.io"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://antcha.in"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://neoexplorer.co"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1571738.0"
+        }]
+    }, {
+        "name": "Monero",
+        "code": "XMR",
+        "rank": "10",
+        "domain": "monero.cc",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.monero.cc"
+        }, {
+            "name": "Explorer",
+            "url": "http://chainradar.com/xmr/blocks"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://moneroblocks.info"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.getmonero.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=583449.0"
+        }]
+    }, {
+        "name": "Ethereum Classic",
+        "code": "ETC",
+        "rank": "11",
+        "domain": "ethereumclassic.github.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://ethereumclassic.github.io"
+        }, {
+            "name": "Explorer",
+            "url": "http://gastracker.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1559630.0"
+        }]
+    }, {
+        "name": "BitConnect",
+        "code": "BCC",
+        "rank": "12",
+        "domain": "bitconnectcoin.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bitconnectcoin.co"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/bcc"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://www.blockexperts.com/bcc"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1681719.0"
+        }]
+    }, {
+        "name": "OmiseGo",
+        "code": "OMG",
+        "rank": "13",
+        "domain": "omg.omise.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://omg.omise.co"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/OmiseGo"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"
+        }]
+    }, {
+        "name": "Stratis",
+        "code": "STRAT",
+        "rank": "14",
+        "domain": "stratisplatform.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://stratisplatform.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/strat"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://cryptobe.com/chain/Stratis"
+        }, {
+            "name": "Message Board",
+            "url": "https://www.stratistalk.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1512202.0"
+        }]
+    }, {
+        "name": "Qtum",
+        "code": "QTUM",
+        "rank": "15",
+        "domain": "qtum.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://qtum.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Qtum"
+        }, {
+            "name": "Explorer 2",
+            "url": "ethplorer.io/address/0x9a642d6b3368ddc662CA244bAdf32cDA716005BC"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1720632.0"
+        }]
+    }, {
+        "name": "Waves",
+        "code": "WAVES",
+        "rank": "16",
+        "domain": "wavesplatform.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://wavesplatform.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://wavesgo.com"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://wavesexplorer.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://wavestalk.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1387944.0"
+        }]
+    }, {
+        "name": "Zcash",
+        "code": "ZEC",
+        "rank": "17",
+        "domain": "z.cash",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://z.cash"
+        }, {
+            "name": "Explorer",
+            "url": "https://explorer.zcha.in"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.z.cash"
+        }]
+    }, {
+        "name": "EOS",
+        "code": "EOS",
+        "rank": "18",
+        "domain": "eos.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://eos.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/EOS"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0"
+        }]
+    }, {
+        "name": "TenX",
+        "code": "PAY",
+        "rank": "19",
+        "domain": "tenx.tech",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.tenx.tech"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/TenXPay"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0xb97048628db6b661d4c2aa833e95dbe1a905b280"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1953612.0"
+        }]
+    }, {
+        "name": "BitShares",
+        "code": "BTS",
+        "rank": "20",
+        "domain": "bitshares.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bitshares.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://cryptofresh.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://bitsharestalk.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1949828"
+        }]
+    }, {
+        "name": "Tether",
+        "code": "USDT",
+        "rank": "21",
+        "domain": "tether.to",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://tether.to"
+        }, {
+            "name": "Explorer",
+            "url": "http://omnichest.info/lookupsp.aspx?sp=31"
+        }]
+    }, {
+        "name": "Lisk",
+        "code": "LSK",
+        "rank": "22",
+        "domain": "lisk.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://lisk.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://explorer.lisk.io"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.lisk.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1346646"
+        }]
+    }, {
+        "name": "Steem",
+        "code": "STEEM",
+        "rank": "23",
+        "domain": "steem.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://steem.io"
+        }, {
+            "name": "Website 2",
+            "url": "https://steemit.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://steemd.com"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://steemdb.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://busy.org"
+        }, {
+            "name": "Message Board 2",
+            "url": "https://chainbb.com/forum/steem"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1410943.0"
+        }]
+    }, {
+        "name": "Iconomi",
+        "code": "ICN",
+        "rank": "24",
+        "domain": "iconomi.net",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.iconomi.net"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/ICONOMI"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1789926.0"
+        }]
+    }, {
+        "name": "Binance Coin",
+        "code": "BNB",
+        "rank": "25",
+        "domain": "binance.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.binance.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
+        }, {
+            "name": "Announcement",
+            "url": "https://binance.zendesk.com/hc/en-us/articles/115000497111-Binance-Coin-BNB-"
+        }]
+    }, {
+        "name": "Stellar Lumens",
+        "code": "XLM",
+        "rank": "26",
+        "domain": "stellar.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.stellar.org"
+        }, {
+            "name": "Website 2",
+            "url": "https://mystellar.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://www.stellar.org/stats"
+        }, {
+            "name": "Message Board",
+            "url": "https://stellarcommunity.org"
+        }, {
+            "name": "Message Board 2",
+            "url": "https://galactictalk.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=719019.0"
+        }]
+    }, {
+        "name": "Veritaseum",
+        "code": "VERI",
+        "rank": "27",
+        "domain": "veritas.veritaseum.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://veritas.veritaseum.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://ethplorer.io/address/0x8f3470a7388c05ee4e7af3d01d8c722b0ff52374"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://etherscan.io/token/0x8f3470a7388c05ee4e7af3d01d8c722b0ff52374"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1887061"
+        }]
+    }, {
+        "name": "Augur",
+        "code": "REP",
+        "rank": "28",
+        "domain": "augur.net",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.augur.net"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/REP"
+        }]
+    }, {
+        "name": "Golem",
+        "code": "GNT",
+        "rank": "29",
+        "domain": "golem.network",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://golem.network"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Golem"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1655002.0"
+        }]
+    }, {
+        "name": "Bytecoin",
+        "code": "BCN",
+        "rank": "30",
+        "domain": "bytecoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bytecoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://chainradar.com/bcn/blocks"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://democats.org/pool/?name=bytecoin"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=512747.0"
+        }]
+    }, {
+        "name": "MaidSafeCoin",
+        "code": "MAID",
+        "rank": "31",
+        "domain": "maidsafe.net",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://maidsafe.net"
+        }, {
+            "name": "Explorer",
+            "url": "http://omnichest.info/lookupsp.aspx?sp=3"
+        }, {
+            "name": "Message Board",
+            "url": "https://safenetforum.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=579797.0"
+        }]
+    }, {
+        "name": "Factom",
+        "code": "FCT",
+        "rank": "32",
+        "domain": "factom.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://factom.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://explorer.factom.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=850070.0"
+        }]
+    }, {
+        "name": "Siacoin",
+        "code": "SC",
+        "rank": "33",
+        "domain": "sia.tech",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://sia.tech"
+        }, {
+            "name": "Explorer",
+            "url": "http://explore.sia.tech"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1060294.0"
+        }]
+    }, {
+        "name": "0x",
+        "code": "ZRX",
+        "rank": "34",
+        "domain": "0xproject.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://0xproject.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/ZRX"
+        }]
+    }, {
+        "name": "Gas",
+        "code": "GAS",
+        "rank": "35",
+        "domain": "neo.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://neo.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://antchain.xyz/asset/hash/602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://neotracker.io/asset/602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
+        }, {
+            "name": "Explorer 3",
+            "url": "https://neoexplorer.co/assets/602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
+        }]
+    }, {
+        "name": "Dogecoin",
+        "code": "DOGE",
+        "rank": "36",
+        "domain": "dogecoin.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://dogecoin.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://dogechain.info/chain/Dogecoin"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=361813.0"
+        }]
+    }, {
+        "name": "Basic Attention Token",
+        "code": "BAT",
+        "rank": "37",
+        "domain": "basicattentiontoken.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://basicattentiontoken.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Bat"
+        }]
+    }, {
+        "name": "Byteball",
+        "code": "GBYTE",
+        "rank": "38",
+        "domain": "byteball.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://byteball.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://explorer.byteball.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1608859.0"
+        }]
+    }, {
+        "name": "Status",
+        "code": "SNT",
+        "rank": "39",
+        "domain": "status.im",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://status.im"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/StatusNetwork"
+        }]
+    }, {
+        "name": "Gnosis",
+        "code": "GNO",
+        "rank": "40",
+        "domain": "gnosis.pm",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://gnosis.pm"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Gnosis"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1529098.0"
+        }]
+    }, {
+        "name": "Metal",
+        "code": "MTL",
+        "rank": "41",
+        "domain": "metalpay.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.metalpay.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xF433089366899D83a9f26A773D59ec7eCF30355e"
+        }]
+    }, {
+        "name": "DigixDAO",
+        "code": "DGD",
+        "rank": "42",
+        "domain": "digix.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://digix.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/dgd"
+        }, {
+            "name": "Announcement",
+            "url": "https://forum.bitcoin.com/alternative-cryptocurrencies-altcoins/digixdao-token-dgd-pre-launch-via-ccedk-acount-digixdao-t7120.html"
+        }]
+    }, {
+        "name": "Ark",
+        "code": "ARK",
+        "rank": "43",
+        "domain": "ark.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://ark.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://explorer.ark.io/networkMonitor"
+        }, {
+            "name": "Message Board",
+            "url": "http://forum.ark.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1649695.0"
+        }]
+    }, {
+        "name": "Populous",
+        "code": "PPT",
+        "rank": "44",
+        "domain": "populous.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://populous.co"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xd4fa1460f537bb9085d22c7bccb5dd450ef28e3a"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1866936.0"
+        }]
+    }, {
+        "name": "Civic",
+        "code": "CVC",
+        "rank": "45",
+        "domain": "civic.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.civic.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/civic"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1942882.0"
+        }]
+    }, {
+        "name": "MCAP",
+        "code": "MCAP",
+        "rank": "46",
+        "domain": "bitcoingrowthfund.com/mcap",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bitcoingrowthfund.com/mcap"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x93e682107d1e9defb0b5ee701c71707a4b2e46bc"
+        }]
+    }, {
+        "name": "Decred",
+        "code": "DCR",
+        "rank": "47",
+        "domain": "decred.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.decred.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://mainnet.decred.org"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.decred.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1290358.0"
+        }]
+    }, {
+        "name": "GameCredits",
+        "code": "GAME",
+        "rank": "48",
+        "domain": "gamecredits.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://gamecredits.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://blockexplorer.gamecredits.com/ "
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1266597"
+        }]
+    }, {
+        "name": "Bytom",
+        "code": "BTM",
+        "rank": "49",
+        "domain": "bytom.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://bytom.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1975390.0"
+        }]
+    }, {
+        "name": "Ardor",
+        "code": "ARDR",
+        "rank": "50",
+        "domain": "ardorplatform.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.ardorplatform.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://www.mynxt.info/asset/12422608354438203866"
+        }, {
+            "name": "Message Board",
+            "url": "https://nxtforum.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1518497.0"
+        }]
+    }, {
+        "name": "Komodo",
+        "code": "KMD",
+        "rank": "51",
+        "domain": "komodoplatform.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://komodoplatform.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://kmd.explorer.supernet.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1605144.0"
+        }]
+    }, {
+        "name": "Monaco",
+        "code": "MCO",
+        "rank": "52",
+        "domain": "mona.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.mona.co"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Monaco"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0xb63b606ac810a52cca15e44bb630fd42d8d1d83d"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1926269.0"
+        }]
+    }, {
+        "name": "DigiByte",
+        "code": "DGB",
+        "rank": "53",
+        "domain": "digibyte.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.digibyte.co"
+        }, {
+            "name": "Explorer",
+            "url": "http://digiexplorer.info"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=408268.0"
+        }]
+    }, {
+        "name": "PIVX",
+        "code": "PIVX",
+        "rank": "54",
+        "domain": "pivx.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.pivx.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/pivx"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://www.presstab.pw/phpexplorer/PIVX"
+        }, {
+            "name": "Explorer 3",
+            "url": "http://pivx.presstab.pw"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.pivx.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1262920"
+        }]
+    }, {
+        "name": "FunFair",
+        "code": "FUN",
+        "rank": "55",
+        "domain": "funfair.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://funfair.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/FunFair"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0x419d0d8bdd9af5e606ae2232ed285aff190e711b"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1968383.0"
+        }]
+    }, {
+        "name": "Nxt",
+        "code": "NXT",
+        "rank": "56",
+        "domain": "nxt.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://nxt.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://www.mynxt.info/blockexplorer"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://nxtportal.org"
+        }, {
+            "name": "Explorer 3",
+            "url": "http://www.peerexplorer.com"
+        }, {
+            "name": "Message Board",
+            "url": "https://nxtforum.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=587007.0"
+        }]
+    }, {
+        "name": "Bancor",
+        "code": "BNT",
+        "rank": "57",
+        "domain": "bancor.network",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://bancor.network"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Bancor"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1789222.0"
+        }]
+    }, {
+        "name": "district0x",
+        "code": "DNT",
+        "rank": "58",
+        "domain": "district0x.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://district0x.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/district0x"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://ethplorer.io/address/0x0abdace70d3790235af448c88547603b945604ea"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=2009966.0"
+        }]
+    }, {
+        "name": "MobileGo",
+        "code": "MGO",
+        "rank": "59",
+        "domain": "mobilego.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://mobilego.io"
+        }, {
+            "name": "Explorer",
+            "url": "http://www.wavesgo.com/assets.html?2Y8eFFXDTkxgCvXbMT5K4J38cpDYYbQdciJEZb48vTDj"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://etherscan.io/token/0x40395044Ac3c0C57051906dA938B54BD6557F212"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1792451.0"
+        }]
+    }, {
+        "name": "Lykke",
+        "code": "LKK",
+        "rank": "60",
+        "domain": "lykke.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://lykke.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://blockchainexplorer.lykke.com/asset/AXkedGbAH1XGDpAypVzA5eyjegX4FaCnvM"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1402110.0"
+        }]
+    }, {
+        "name": "ICO",
+        "code": "ICO",
+        "rank": "61",
+        "domain": "icocoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://icocoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xa33e729bf4fdeb868b534e1f20523463d9c46bee"
+        }]
+    }, {
+        "name": "Aragon",
+        "code": "ANT",
+        "rank": "62",
+        "domain": "aragon.one",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://aragon.one"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Aragon"
+        }]
+    }, {
+        "name": "Pillar",
+        "code": "PLR",
+        "rank": "63",
+        "domain": "pillarproject.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://pillarproject.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0xe3818504c1b32bf1557b16c238b2e01fd3149c17"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1986401.0"
+        }]
+    }, {
+        "name": "SingularDTV",
+        "code": "SNGLS",
+        "rank": "64",
+        "domain": "singulardtv.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://singulardtv.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/SNGLS"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1562292.0"
+        }]
+    }, {
+        "name": "Nexus",
+        "code": "NXS",
+        "rank": "65",
+        "domain": "nexusearth.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.nexusearth.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://nexusoft.io/platform/Explorer"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=657601.0"
+        }]
+    }, {
+        "name": "Storj",
+        "code": "STORJ",
+        "rank": "66",
+        "domain": "storj.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://storj.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Storj"
+        }, {
+            "name": "Message Board",
+            "url": "https://community.storj.io"
+        }]
+    }, {
+        "name": "Bitquence",
+        "code": "BQX",
+        "rank": "67",
+        "domain": "bitquence.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.bitquence.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x5af2be193a6abca9c8817001f45744777db30756"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0x5af2be193a6abca9c8817001f45744777db30756"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1964187.0"
+        }]
+    }, {
+        "name": "Metaverse ETP",
+        "code": "ETP",
+        "rank": "68",
+        "domain": "mvs.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://mvs.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://explorer.mvs.live"
+        }]
+    }, {
+        "name": "Stox",
+        "code": "STX",
+        "rank": "69",
+        "domain": "stox.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.stox.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x006BeA43Baa3f7A6f765F14f10A1a1b08334EF45"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0x006bea43baa3f7a6f765f14f10a1a1b08334ef45"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=2035348.0"
+        }]
+    }, {
+        "name": "BitcoinDark",
+        "code": "BTCD",
+        "rank": "70",
+        "domain": "bitcoindark.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://bitcoindark.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://explorebtcd.info"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=684090.0"
+        }]
+    }, {
+        "name": "Cofound.it",
+        "code": "CFI",
+        "rank": "71",
+        "domain": "cofound.it",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://cofound.it"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x12fef5e57bf45873cd9b62e9dbd7bfb99e32d73e"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1849911.0"
+        }]
+    }, {
+        "name": "Particl",
+        "code": "PART",
+        "rank": "72",
+        "domain": "particl.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://particl.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://explorer.particl.io"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://chainz.cryptoid.info/part"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1835782.0"
+        }]
+    }, {
+        "name": "Ubiq",
+        "code": "UBQ",
+        "rank": "73",
+        "domain": "ubiqsmart.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://ubiqsmart.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://ubiqscan.io"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1763606"
+        }]
+    }, {
+        "name": "DECENT",
+        "code": "DCT",
+        "rank": "74",
+        "domain": "decent.ch",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://decent.ch"
+        }, {
+            "name": "Explorer",
+            "url": "https://decent-db.com"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1162392.0"
+        }]
+    }, {
+        "name": "SysCoin",
+        "code": "SYS",
+        "rank": "75",
+        "domain": "syscoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://syscoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/sys"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1466445.0"
+        }]
+    }, {
+        "name": "Edgeless",
+        "code": "EDG",
+        "rank": "76",
+        "domain": "edgeless.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://edgeless.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Edgeless"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1718384.0"
+        }]
+    }, {
+        "name": "AdEx",
+        "code": "ADX",
+        "rank": "77",
+        "domain": "adex.network",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.adex.network"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x4470bb87d77b963a013db939be332f927f2b992e"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1965467"
+        }]
+    }, {
+        "name": "FirstBlood",
+        "code": "1ST",
+        "rank": "78",
+        "domain": "firstblood.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://firstblood.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/FirstBlood"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1543891.0"
+        }]
+    }, {
+        "name": "Wings",
+        "code": "WINGS",
+        "rank": "79",
+        "domain": "wings.ai",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://wings.ai"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x667088b212ce3d06a1b553a7221E1fD19000d9aF"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1477055.0"
+        }]
+    }, {
+        "name": "Gulden",
+        "code": "NLG",
+        "rank": "80",
+        "domain": "gulden.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://gulden.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://blockchain.gulden.com"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1577392.0"
+        }]
+    }, {
+        "name": "Asch",
+        "code": "XAS",
+        "rank": "81",
+        "domain": "asch.so",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.asch.so"
+        }, {
+            "name": "Explorer",
+            "url": "http://aschd.org"
+        }]
+    }, {
+        "name": "iExec RLC",
+        "code": "RLC",
+        "rank": "82",
+        "domain": "iex.ec",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://iex.ec"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/RLC"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1746241.0"
+        }]
+    }, {
+        "name": "Blocknet",
+        "code": "BLOCK",
+        "rank": "83",
+        "domain": "blocknet.co",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://blocknet.co"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/block"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=829576.0"
+        }]
+    }, {
+        "name": "Numeraire",
+        "code": "NMR",
+        "rank": "84",
+        "domain": "numer.ai",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://numer.ai"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671"
+        }, {
+            "name": "Message Board",
+            "url": "https://forum.numer.ai"
+        }]
+    }, {
+        "name": "LEOcoin",
+        "code": "LEO",
+        "rank": "85",
+        "domain": "leocoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.leocoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://insight.leocoin.org"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://blockchain.leocoin.org"
+        }, {
+            "name": "Explorer 3",
+            "url": "http://cryptobe.com/chain/LEOcoin"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1545712.0"
+        }]
+    }, {
+        "name": "Emercoin",
+        "code": "EMC",
+        "rank": "86",
+        "domain": "emercoin.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://emercoin.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://emercoin.mintr.org"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://emcblock.info"
+        }, {
+            "name": "Message Board",
+            "url": "http://emercointalk.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=362513.0"
+        }]
+    }, {
+        "name": "Melon",
+        "code": "MLN",
+        "rank": "87",
+        "domain": "melon.network",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://melon.network"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Melon"
+        }]
+    }, {
+        "name": "Counterparty",
+        "code": "XCP",
+        "rank": "88",
+        "domain": "counterparty.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://counterparty.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://xchain.io"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://counterpartychain.io"
+        }, {
+            "name": "Message Board",
+            "url": "https://counterpartytalk.org"
+        }]
+    }, {
+        "name": "Elastic",
+        "code": "XEL",
+        "rank": "89",
+        "domain": "elastic.pw",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.elastic.pw"
+        }, {
+            "name": "Explorer",
+            "url": "http://elasticexplorer.org"
+        }, {
+            "name": "Message Board",
+            "url": "https://talk.elasticexplorer.org"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1957064"
+        }]
+    }, {
+        "name": "Peercoin",
+        "code": "PPC",
+        "rank": "90",
+        "domain": "peercoin.net",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.peercoin.net"
+        }, {
+            "name": "Explorer",
+            "url": "https://chainz.cryptoid.info/ppc"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://peercoin.mintr.org"
+        }, {
+            "name": "Message Board",
+            "url": "https://talk.peercoin.net"
+        }, {
+            "name": "Message Board 2",
+            "url": "https://peercoin.chat"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=101820.0"
+        }]
+    }, {
+        "name": "Round",
+        "code": "ROUND",
+        "rank": "91",
+        "domain": "roundcoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://roundcoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x4993CB95c7443bdC06155c5f5688Be9D8f6999a5"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1657439.0"
+        }]
+    }, {
+        "name": "TokenCard",
+        "code": "TKN",
+        "rank": "92",
+        "domain": "tokencard.io",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://tokencard.io"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/TokenCard"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1887092.0"
+        }]
+    }, {
+        "name": "NoLimitCoin",
+        "code": "NLC2",
+        "rank": "93",
+        "domain": "nolimitcoin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://www.nolimitcoin.org"
+        }, {
+            "name": "Explorer",
+            "url": "http://nolimitcoin.info"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1606674"
+        }]
+    }, {
+        "name": "Etheroll",
+        "code": "DICE",
+        "rank": "94",
+        "domain": "etheroll.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://etheroll.com"
+        }, {
+            "name": "Website 2",
+            "url": "https://etheroll.wordpress.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x2e071D2966Aa7D8dECB1005885bA1977D6038A65"
+        }, {
+            "name": "Announcement",
+            "url": "https://www.reddit.com/r/etheroll/comments/6b7g80/etheroll_dice_tokens_unlocked_may_15_on"
+        }]
+    }, {
+        "name": "adToken",
+        "code": "ADT",
+        "rank": "95",
+        "domain": "adtoken.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://adtoken.com"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/AdToken"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0xd0d6d6c5fe4a677d343cc433536bb717bae167dd"
+        }]
+    }, {
+        "name": "TaaS",
+        "code": "TAAS",
+        "rank": "96",
+        "domain": "taas.fund",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://taas.fund"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/Taas"
+        }, {
+            "name": "Explorer 2",
+            "url": "http://explorer.ambisafe.co/#/asset/TAAS/2?_k=9wkwx8"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1775766"
+        }]
+    }, {
+        "name": "FirstCoin",
+        "code": "FRST",
+        "rank": "97",
+        "domain": "firstcoinproject.com",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://firstcoinproject.com"
+        }, {
+            "name": "Explorer",
+            "url": "http://explorer.firstcoinproject.com"
+        }]
+    }, {
+        "name": "OpenAnx",
+        "code": "OAX",
+        "rank": "98",
+        "domain": "openanx.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://www.openanx.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x701c244b988a513c945973defa05de933b23fe1d"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1943946"
+        }]
+    }, {
+        "name": "FairCoin",
+        "code": "FAIR",
+        "rank": "99",
+        "domain": "fair-coin.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "http://fair-coin.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://chain.fair.to"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=702675.0"
+        }]
+    }, {
+        "name": "Quantum Resistant Ledger",
+        "code": "QRL",
+        "rank": "100",
+        "domain": "theqrl.org",
+        "relatedSite": [{
+            "name": "Website",
+            "url": "https://theqrl.org"
+        }, {
+            "name": "Explorer",
+            "url": "https://etherscan.io/token/0x697beac28b09e122c4332d163985e8a73121b97f"
+        }, {
+            "name": "Explorer 2",
+            "url": "https://ethplorer.io/address/0x697beac28b09e122c4332d163985e8a73121b97f"
+        }, {
+            "name": "Announcement",
+            "url": "https://bitcointalk.org/index.php?topic=1730273.0"
+        }]
+    }]
+};
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'Other',
+    sites: [{
+        domain: 'myetherwallet.com',
+        keywords: 'ether'
+    }]
+};
 
 /***/ })
 /******/ ]);
