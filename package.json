@@ -5,7 +5,7 @@
   "main": "background.js",
   "scripts": {
     "dev": "webpack --config webpack.config.js -w",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config prod.webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-bundle-analyzer": "^2.9.0"
   }
 }

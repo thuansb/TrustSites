@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: ['./src/app.js'],
@@ -28,7 +27,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.IgnorePlugin(/[^/]+\/[\S]+.prod$/),
-    new BundleAnalyzerPlugin()
+    new webpack.IgnorePlugin(/[^/]+\/[\S]+.dev$/),
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false,
+      compressor: {
+        warnings: false
+      }
+    })
   ]
 }
