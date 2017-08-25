@@ -26,6 +26,7 @@ class Master extends React.Component {
                 <div className="main-content">
                     <SiteList toggleModal={this.toggleModal}/>
                 </div>
+                <HelpModal toggleModal={this.toggleModal} isOpen={this.state.isModalOpen} />
             </div>
         );
     }

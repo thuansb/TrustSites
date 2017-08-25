@@ -7,6 +7,6 @@
     "default_popup": "popup.html",
     "name": "Green is TRUST | Red is DANGER"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
   "manifest_version": 2
 }

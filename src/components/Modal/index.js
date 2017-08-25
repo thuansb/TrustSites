@@ -5,7 +5,7 @@ function Modal({ isOpen, toggleModal, children }) {
     return (
         <div className={`modal ${isOpen && 'is-active'}`}>
         <div className="modal-background"></div>
-        <div className="modal-content">
+        <div className="modal-content box">
             {children}
         </div>
         <button

@@ -2,7 +2,10 @@
 @import "node_modules/bulma/sass/base/_all";
 @import "node_modules/bulma/sass/components/panel.sass";
 @import "node_modules/bulma/sass/components/modal.sass";
+@import "node_modules/bulma/sass/layout/_all.sass";
 @import "node_modules/bulma/sass/elements/title.sass";
+@import "node_modules/bulma/sass/elements/tag.sass";
+@import "node_modules/bulma/sass/elements/box.sass";
 
 .main-content {
     margin: 15px auto;
@@ -20,6 +23,6 @@
     }
 }
 
-.clickable {
+.is-clickable {
     cursor: pointer;
 }
