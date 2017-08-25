@@ -5,6 +5,7 @@ import exchanger from 'data/exchanger';
 import currency from 'data/currency';
 import other from 'data/other';
 import debounce from 'lodash/debounce';
+import Fuse from 'fuse.js';
 import './styles.scss';
 
 currency.sites = currency.sites.sort((c1, c2) => Number(c1.rank) > Number(c2.rank) ? 1 : -1);
@@ -15,6 +16,42 @@ const domainData = {
     'currency': currency,
     'other': other
 };
+
+const options = {
+    shouldSort: true,
+    includeScore: true,
+    threshold: 0,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: [
+        "domain",
+        "url",
+        "name",
+        "code",
+        "keywords",
+        "props.country",
+        "props.type",
+        "props.pairs",
+        "props.desc",
+        "props.walletType",
+        "relatedSite.name",
+        "relatedSite.url"
+  ]
+};
+
+let searchData = [];
+Object.keys(domainData).forEach((key) => {
+    searchData = searchData.concat(
+        domainData[key].sites.map(site => {
+            site.searchCategory = key;
+            return site;  
+        })
+    );
+});
+
+const fuse = new Fuse(searchData, options);
 
 class SiteList extends React.Component {
     constructor(props) {
@@ -43,23 +80,7 @@ class SiteList extends React.Component {
     search = (e) => {
         const searchTerm = e.target.value;
         domainData.searchResult = { name: 'Search Result', sites: [] }; 
-        Object.keys(domainData).forEach((key) => {
-            if (key != 'searchResult') {
-                const filterResult = domainData[key].sites.filter((site) => {                              
-                    return site.domain && site.domain.includes(searchTerm)
-                        || site.url && site.url.includes(searchTerm)
-                        || site.name && site.name.includes(searchTerm)
-                        || site.code && site.code.includes(searchTerm)
-                        || site.keywords && JSON.stringify(site.keywords).includes(searchTerm)
-                        || site.props && JSON.stringify(site.props).includes(searchTerm)
-                        || site.relatedSite && JSON.stringify(site.relatedSite).includes(searchTerm);
-                }).map(site => {
-                    site.searchCategory = key;
-                    return site;  
-                });    
-                domainData.searchResult.sites = domainData.searchResult.sites.concat(filterResult);
-            }            
-        });
+        domainData.searchResult.sites = fuse.search(searchTerm).map(rs => rs.item);    
         this.setState({ activedTab: 'searchResult' });
     }
 
@@ -105,11 +126,8 @@ class SiteList extends React.Component {
 
         return (
             <nav className="panel">
-                <h3 className="is-title">Trusted Crypto Sites</h3>
                 <p className="panel-heading">
-                    <span className="icon is-small is-clickable" onClick={this.props.toggleModal}>
-                        <i className="fa fa-question-circle"></i>
-                    </span>
+                    <h3 className="is-title">Trusted Crypto Sites</h3>
                 </p>
                 <div className="panel-block">
                     <p className="control has-icons-left">
@@ -118,6 +136,9 @@ class SiteList extends React.Component {
                             <i className="fa fa-search"></i>
                         </span>
                     </p>
+                    <span className="icon is-small is-clickable" onClick={this.props.toggleModal}>
+                        <i className="fa fa-question-circle"></i>
+                    </span>
                 </div>
                 <p className="panel-tabs">
                     <a
