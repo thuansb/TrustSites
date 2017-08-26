@@ -1,6 +1,7 @@
 import React from 'react';
 import SiteList from 'components/SiteList';
 import HelpModal from './HelpModal';
+import AppBar from 'material-ui/AppBar';
 import './styles.scss';
 
 class Master extends React.Component {
@@ -23,6 +24,7 @@ class Master extends React.Component {
     render() {
         return (
             <div className="Root">
+                <AppBar title="Trusted Crypto Sites" />
                 <div className="main-content">
                     <SiteList toggleModal={this.toggleModal}/>
                 </div>

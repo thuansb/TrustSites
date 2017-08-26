@@ -6,7 +6,28 @@ import currency from 'data/currency';
 import other from 'data/other';
 import debounce from 'lodash/debounce';
 import Fuse from 'fuse.js';
+import Divider from 'material-ui/Divider';
+import Paper from 'material-ui/Paper';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import Slider from 'material-ui/Slider';
+import {
+    Table,
+    TableBody,
+    TableHeader,
+    TableHeaderColumn,
+    TableRow,
+    TableRowColumn,
+  } from 'material-ui/Table';
 import './styles.scss';
+
+const styles = {
+  headline: {
+    fontSize: 24,
+    paddingTop: 16,
+    marginBottom: 12,
+    fontWeight: 400,
+  },
+};
 
 currency.sites = currency.sites.sort((c1, c2) => Number(c1.rank) > Number(c2.rank) ? 1 : -1);
 
@@ -125,40 +146,62 @@ class SiteList extends React.Component {
         }
 
         return (
-            <nav className="panel">
-                <p className="panel-heading">
-                    <h3 className="is-title">Trusted Crypto Sites</h3>
-                </p>
-                <div className="panel-block">
-                    <p className="control has-icons-left">
-                        <input onChange={this.handleSearch} className="input is-small" type="text" placeholder="search" />
-                        <span className="icon is-small is-left">
-                            <i className="fa fa-search"></i>
-                        </span>
-                    </p>
-                    <span className="icon is-small is-clickable" onClick={this.props.toggleModal}>
-                        <i className="fa fa-question-circle"></i>
-                    </span>
-                </div>
-                <p className="panel-tabs">
-                    <a
-                        onClick={() => this.changeTab('wallet')}
-                        className={this.state.activedTab === 'wallet' && 'is-active'}>wallet</a>
-                    <a
-                        onClick={() => this.changeTab('exchanger')}
-                        className={this.state.activedTab === 'exchanger' && 'is-active'}>exchanger</a>
-                    <a
-                        onClick={() => this.changeTab('currency')}
-                        className={this.state.activedTab === 'currency' && 'is-active'}>currencies</a>
-                    <a
-                        onClick={() => this.changeTab('other')}
-                        className={this.state.activedTab === 'other' && 'is-active'}>others</a>
-                </p>
-                {domainData[this.state.activedTab]
-                    .sites
-                    .map(genDomainBlock)}
-                <DetailModal isOpen={this.state.isModalOpen} toggleModal={() => this.toggleModal()} currencyInfo={this.state.currencyInfo} />
-            </nav>
+            <Paper zDepth={1}>
+                  <Tabs>
+    <Tab label="Wallet" >
+    <Table>
+    <TableHeader>
+      <TableRow>
+        <TableHeaderColumn>Name</TableHeaderColumn>
+        <TableHeaderColumn>Status</TableHeaderColumn>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableRowColumn>John Smith</TableRowColumn>
+        <TableRowColumn>Employed</TableRowColumn>
+      </TableRow>
+      <TableRow>
+        <TableRowColumn>Randal White</TableRowColumn>
+        <TableRowColumn>Unemployed</TableRowColumn>
+      </TableRow>
+      <TableRow>
+        <TableRowColumn>Stephanie Sanders</TableRowColumn>
+        <TableRowColumn>Employed</TableRowColumn>
+      </TableRow>
+      <TableRow>
+        <TableRowColumn>Steve Brown</TableRowColumn>
+        <TableRowColumn>Employed</TableRowColumn>
+      </TableRow>
+      <TableRow>
+        <TableRowColumn>Christopher Nolan</TableRowColumn>
+        <TableRowColumn>Unemployed</TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+    </Tab>
+    <Tab label="Exchanger" >
+      <div>
+        <h2 style={styles.headline}>Tab Two</h2>
+        <p>
+          This is another example tab.
+        </p>
+      </div>
+    </Tab>
+    <Tab
+      label="Currencies"
+      data-route="/home"
+    >
+      <div>
+        <h2 style={styles.headline}>Tab Three</h2>
+        <p>
+          This is a third example tab.
+        </p>
+      </div>
+    </Tab>
+  </Tabs>
+
+            </Paper>            
         )
     }
 }
