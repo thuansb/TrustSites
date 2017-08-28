@@ -1,18 +1,15 @@
 import React from 'react';
-import './styles.scss';
+import Dialog from 'material-ui/Dialog';
 
-function Modal({ isOpen, toggleModal, children }) {
+function Modal({ isOpen, toggleModal, children, title }) {
     return (
-        <div className={`modal ${isOpen && 'is-active'}`}>
-        <div className="modal-background"></div>
-        <div className="modal-content box">
+        <Dialog
+            title={title}
+            modal={false}
+            open={isOpen}
+            onRequestClose={toggleModal}>
             {children}
-        </div>
-        <button
-            onClick={toggleModal}
-            className="modal-close is-large"
-            aria-label="close"></button>
-    </div>
+        </Dialog>
     )
 }
 

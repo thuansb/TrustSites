@@ -1,35 +1,42 @@
 import React from 'react';
 import Modal from 'components/Modal';
+import { List, ListItem } from 'material-ui/List';
+import Subheader from 'material-ui/Subheader';
 
-function DetailModal({
-    currencyInfo,
-    ...props
-}) {
+const styles = {
+    favIcon: {
+        width: 16,
+        height: 16,
+        marginTop: 16
+    }
+}
+
+function renderListItem(site) {
+    const text = site.name || site.domain;
+    return (<ListItem
+        primaryText={text}
+        onClick={() => window.open(site.url || `https://${site.domain}`)}
+        leftIcon={
+            < img
+                style={styles.favIcon}
+                src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
+            />
+        }
+    />
+    );
+}
+
+
+function DetailModal({ currencyInfo, ...props }) {
     return (
-        <Modal {...props}>
-            {currencyInfo && (
-                <div className="detail__modal">
-                    <h5 className="title is-5">{`${currencyInfo.name} (${currencyInfo.code})`}</h5>
-                    <div className="container">
-                        <p className="is-size-6 has-text-grey-dark">related links</p>
-                        <ul>
-                            {currencyInfo
-                                .relatedSite
-                                .map(site => (
-                                    <li>
-                                        <img
-                                            src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}/> {' '}
-                                        <a target="blank" href={site.url || `https://${site.domain}`}>
-                                            {site.name || site.domain}
-                                        </a>
-                                    </li>
-                                ))}
-                        </ul>
-                    </div>
-                </div>
-            )}
-        </Modal>
-    )
+        <Modal title={currencyInfo && `${currencyInfo.name} (${currencyInfo.code})`} {...props}>
+            <List>
+                <Subheader>Related sites</Subheader>
+                {currencyInfo && currencyInfo
+                    .relatedSite
+                    .map(site => renderListItem(site))}
+            </List>
+        </Modal >)
 }
 
 export default DetailModal;

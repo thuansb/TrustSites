@@ -6,36 +6,24 @@ import currency from 'data/currency';
 import other from 'data/other';
 import debounce from 'lodash/debounce';
 import Fuse from 'fuse.js';
-import Divider from 'material-ui/Divider';
+import { List, ListItem } from 'material-ui/List';
+import Subheader from 'material-ui/Subheader';
 import Paper from 'material-ui/Paper';
-import {Tabs, Tab} from 'material-ui/Tabs';
-import Slider from 'material-ui/Slider';
-import {
-    Table,
-    TableBody,
-    TableHeader,
-    TableHeaderColumn,
-    TableRow,
-    TableRowColumn,
-  } from 'material-ui/Table';
-import './styles.scss';
-
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400,
-  },
-};
-
-currency.sites = currency.sites.sort((c1, c2) => Number(c1.rank) > Number(c2.rank) ? 1 : -1);
+import { Tabs, Tab } from 'material-ui/Tabs';
+import SearchBar from 'components/SearchBar';
+import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 
 const domainData = {
     'wallet': wallet,
     'exchanger': exchanger,
     'currency': currency,
-    'other': other
+    'other': other,
+    'searchResult': {
+        name: 'Search Result',
+        sites: []
+    }
 };
 
 const options = {
@@ -59,149 +47,147 @@ const options = {
         "props.walletType",
         "relatedSite.name",
         "relatedSite.url"
-  ]
+    ]
 };
 
 let searchData = [];
-Object.keys(domainData).forEach((key) => {
-    searchData = searchData.concat(
-        domainData[key].sites.map(site => {
-            site.searchCategory = key;
-            return site;  
-        })
-    );
-});
+Object
+    .keys(domainData)
+    .forEach((key) => {
+        searchData = searchData.concat(domainData[key].sites.map(site => {
+            const newSite = Object.assign({}, site);
+            newSite.searchCategory = key;
+            return newSite;
+        }));
+    });
 
 const fuse = new Fuse(searchData, options);
+
+const SEARCH_TAB_NAME = 'searchResult';
+const WALLET_TAB_NAME = 'wallet';
+const EXCHANGER_TAB_NAME = 'exchanger';
+const CURRENCY_TAB_NAME = 'currency';
+
+const styles = {
+    favIcon: {
+        width: 16,
+        height: 16,
+        marginTop: 16
+    },
+    list: {
+        maxHeight: 420,
+        overflow: 'auto'
+    }
+}
 
 class SiteList extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            activedTab: 'wallet',
-            isModalOpen: false
+            activedTab: WALLET_TAB_NAME,
+            isModalOpen: false,
+            searchExpanded: false
         }
 
         this.searchDebounded = debounce(this.search, 500);
     }
-    
+
     componentWillMount() {
-        chrome.storage.sync.get('SiteListState', (data) => {
-            data.SiteListState && this.setState(data.SiteListState)
-        });
+        // chrome
+        //     .storage
+        //     .sync
+        //     .get('SiteListState', (data) => {
+        //         data.SiteListState && this.setState(data.SiteListState)
+        //     });
     }
 
-    changeTab = (tab) => this.setState({activedTab: tab});
+    changeTab = (e, index, value) => this.setState({ activedTab: value });
+
     toggleModal = (site) => this.setState({
         isModalOpen: !this.state.isModalOpen,
         currencyInfo: site || this.state.currencyInfo
     });
 
-    search = (e) => {
-        const searchTerm = e.target.value;
-        domainData.searchResult = { name: 'Search Result', sites: [] }; 
-        domainData.searchResult.sites = fuse.search(searchTerm).map(rs => rs.item);    
-        this.setState({ activedTab: 'searchResult' });
+    search = (searchTerm) => {
+        domainData.searchResult.sites = fuse
+            .search(searchTerm)
+            .map(rs => rs.item);
+        this.forceUpdate();
     }
 
-    handleSearch = (e) => {
-        e.persist();
-        this.searchDebounded(e);
+    handleToggleExpandSearch = (expanded) => {
+        this.setState({
+            searchExpanded: expanded,
+            activedTab: expanded ? SEARCH_TAB_NAME : WALLET_TAB_NAME
+        });
     }
 
     render() {
-        chrome.storage.sync.set({'SiteListState': this.state});
+        // chrome
+        //     .storage
+        //     .sync
+        //     .set({'SiteListState': this.state});
 
-        const genDomainBlock = (site) => {
-            return (this.state.activedTab === 'currency' || (site.searchCategory && site.searchCategory === 'currency'))
-                ? (
-                    <a 
-                        key={site.name || site.domain}
-                        className="panel-block"
-                        href="javascript:void(0)" 
-                        onClick={() => this.toggleModal(site)}>
-                        <span className="panel-icon">
-                            <img
-                                src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}/>
-                        </span>
-                        {site.name || site.domain}
-                        {site.searchCategory && ` - ${site.searchCategory}`}
-                    </a>
-                )
-                : (
-                    <a
-                        key={site.name || site.domain}
-                        className="panel-block"
-                        href={site.url || `https://${site.domain}`}
-                        target="blank">
-                        <span className="panel-icon">
-                            <img
-                                src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}/>
-                        </span>
-                        {site.name || site.domain}
-                        {site.searchCategory && ` - ${site.searchCategory}`}
-                    </a>
-                )
+        const genRow = (site) => {
+
+            let text;
+            if (site.searchCategory) {
+                text = `${site.name || site.domain} - ${site.searchCategory}`;
+            } else {
+                text = site.name || site.domain;
+            }
+
+            const shouldOpenModal =
+                this.state.activedTab === 'currency'
+                || (site.searchCategory && site.searchCategory === 'currency');
+
+            return (
+                <ListItem
+                    key={text}
+                    onClick={() => shouldOpenModal
+                        ? this.toggleModal(site)
+                        : window.open(site.url || `https://${site.domain}`)
+                    }
+                    primaryText={text}
+                    leftIcon={(
+                        <img
+                            style={styles.favIcon}
+                            src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
+                        />
+                    )}
+                />
+            );
         }
 
         return (
             <Paper zDepth={1}>
-                  <Tabs>
-    <Tab label="Wallet" >
-    <Table>
-    <TableHeader>
-      <TableRow>
-        <TableHeaderColumn>Name</TableHeaderColumn>
-        <TableHeaderColumn>Status</TableHeaderColumn>
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      <TableRow>
-        <TableRowColumn>John Smith</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>Randal White</TableRowColumn>
-        <TableRowColumn>Unemployed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>Stephanie Sanders</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>Steve Brown</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>Christopher Nolan</TableRowColumn>
-        <TableRowColumn>Unemployed</TableRowColumn>
-      </TableRow>
-    </TableBody>
-  </Table>
-    </Tab>
-    <Tab label="Exchanger" >
-      <div>
-        <h2 style={styles.headline}>Tab Two</h2>
-        <p>
-          This is another example tab.
-        </p>
-      </div>
-    </Tab>
-    <Tab
-      label="Currencies"
-      data-route="/home"
-    >
-      <div>
-        <h2 style={styles.headline}>Tab Three</h2>
-        <p>
-          This is a third example tab.
-        </p>
-      </div>
-    </Tab>
-  </Tabs>
-
-            </Paper>            
+                <Toolbar>
+                    {!this.state.searchExpanded && (
+                        <ToolbarGroup firstChild>
+                            <DropDownMenu value={this.state.activedTab} onChange={this.changeTab}>
+                                <MenuItem value={WALLET_TAB_NAME} primaryText="Wallet" />
+                                <MenuItem value={EXCHANGER_TAB_NAME} primaryText="Exchanger" />
+                                <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
+                            </DropDownMenu>
+                        </ToolbarGroup>
+                    )}
+                    <ToolbarGroup firstChild={this.state.searchExpanded} lastChild>
+                        <SearchBar onChange={this.searchDebounded} onToggleExpandSearch={this.handleToggleExpandSearch} />
+                    </ToolbarGroup>
+                </Toolbar>
+                <List
+                    style={styles.list}>
+                    <Subheader>{domainData[this.state.activedTab].name}</Subheader>
+                    {domainData[this.state.activedTab]
+                        .sites
+                        .map(genRow)}
+                </List>
+                <DetailModal
+                    isOpen={this.state.isModalOpen}
+                    toggleModal={() => this.toggleModal()}
+                    currencyInfo={this.state.currencyInfo} />
+            </Paper>
         )
     }
 }

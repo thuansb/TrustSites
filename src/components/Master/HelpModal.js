@@ -7,7 +7,7 @@ function HelpModal(props) {
             <div className="help">
                 <div className="help__notation">
                     <div className="help__notation__icon">
-                        <img src="red.png"/>
+                        <img src="red.png" />
                     </div>
                     <div className="help__notation__description">
                         Untrusted site/not in the list
@@ -15,7 +15,7 @@ function HelpModal(props) {
                 </div>
                 <div className="help__notation">
                     <div className="help__notation__icon">
-                        <img src="green.png"/>
+                        <img src="green.png" />
                     </div>
                     <div className="help__notation__description">
                         Trusted site

@@ -2,6 +2,9 @@ import React from 'react';
 import SiteList from 'components/SiteList';
 import HelpModal from './HelpModal';
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import HelpIcon from 'material-ui/svg-icons/action/help-outline';
+
 import './styles.scss';
 
 class Master extends React.Component {
@@ -24,9 +27,9 @@ class Master extends React.Component {
     render() {
         return (
             <div className="Root">
-                <AppBar title="Trusted Crypto Sites" />
+                <AppBar iconElementLeft={<div />} title="Trusted Crypto Sites" iconElementRight={<IconButton><HelpIcon /></IconButton>} onRightIconButtonTouchTap={this.toggleModal} />
                 <div className="main-content">
-                    <SiteList toggleModal={this.toggleModal}/>
+                    <SiteList toggleModal={this.toggleModal} />
                 </div>
                 <HelpModal toggleModal={this.toggleModal} isOpen={this.state.isModalOpen} />
             </div>
