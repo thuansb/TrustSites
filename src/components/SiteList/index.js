@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailModal from './DetailModal';
+import DetailDialog from './DetailDialog';
 import wallet from 'data/wallet';
 import exchanger from 'data/exchanger';
 import currency from 'data/currency';
@@ -9,11 +9,11 @@ import Fuse from 'fuse.js';
 import { List, ListItem } from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
 import Paper from 'material-ui/Paper';
-import { Tabs, Tab } from 'material-ui/Tabs';
 import SearchBar from 'components/SearchBar';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+// import MostClickSites from 'components/MostClickSites';
 
 const domainData = {
     'wallet': wallet,
@@ -78,7 +78,7 @@ const styles = {
         maxHeight: 420,
         overflow: 'auto'
     }
-}
+};
 
 class SiteList extends React.Component {
     constructor(props) {
@@ -86,7 +86,7 @@ class SiteList extends React.Component {
 
         this.state = {
             activedTab: WALLET_TAB_NAME,
-            isModalOpen: false,
+            isDialogOpen: false,
             searchExpanded: false
         }
 
@@ -104,8 +104,8 @@ class SiteList extends React.Component {
 
     changeTab = (e, index, value) => this.setState({ activedTab: value });
 
-    toggleModal = (site) => this.setState({
-        isModalOpen: !this.state.isModalOpen,
+    toggleDialog = (site) => this.setState({
+        isDialogOpen: !this.state.isDialogOpen,
         currencyInfo: site || this.state.currencyInfo
     });
 
@@ -138,15 +138,15 @@ class SiteList extends React.Component {
                 text = site.name || site.domain;
             }
 
-            const shouldOpenModal =
+            const shouldOpenDialog =
                 this.state.activedTab === 'currency'
                 || (site.searchCategory && site.searchCategory === 'currency');
 
             return (
                 <ListItem
                     key={text}
-                    onClick={() => shouldOpenModal
-                        ? this.toggleModal(site)
+                    onClick={() => shouldOpenDialog
+                        ? this.toggleDialog(site)
                         : window.open(site.url || `https://${site.domain}`)
                     }
                     primaryText={text}
@@ -178,14 +178,16 @@ class SiteList extends React.Component {
                 </Toolbar>
                 <List
                     style={styles.list}>
+                    {/* <Subheader>Most used sites</Subheader> */}
+                    {/* <MostClickSites /> */}
                     <Subheader>{domainData[this.state.activedTab].name}</Subheader>
                     {domainData[this.state.activedTab]
                         .sites
                         .map(genRow)}
                 </List>
-                <DetailModal
-                    isOpen={this.state.isModalOpen}
-                    toggleModal={() => this.toggleModal()}
+                <DetailDialog
+                    isOpen={this.state.isDialogOpen}
+                    toggleDialog={() => this.toggleDialog()}
                     currencyInfo={this.state.currencyInfo} />
             </Paper>
         )

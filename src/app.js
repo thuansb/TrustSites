@@ -3,16 +3,8 @@ import ReactDOM from 'react-dom';
 import Master from './components/Master';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
-import {
-    cyan500, cyan700,
-    pinkA200,
-    grey100, grey300, grey400, grey500,
-    white, darkBlack, fullBlack,
-  } from 'material-ui/styles/colors';
-
-import {fade} from 'material-ui/utils/colorManipulator';
-  
+import { cyan500, grey300, white, darkBlack, fullBlack } from 'material-ui/styles/colors';
+import { fade } from 'material-ui/utils/colorManipulator';
 
 const muiTheme = getMuiTheme({
     palette: {
@@ -26,7 +18,7 @@ const muiTheme = getMuiTheme({
         secondaryTextColor: fade(darkBlack, 0.54),
         alternateTextColor: white,
         canvasColor: white,
-        borderColor: darkBlack,
+        borderColor: grey300,
         disabledColor: fade(darkBlack, 0.3),
         pickerHeaderColor: cyan500,
         clockCircleColor: fade(darkBlack, 0.07),
@@ -37,10 +29,14 @@ const muiTheme = getMuiTheme({
     },
     toolbar: {
         height: 50
-    }
+    },
+    dropDownMenu: {
+        accentColor: darkBlack,
+    },
+  
 });
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
-    <Master/>
-</MuiThemeProvider>, document.getElementById('app'));
+        <Master />
+    </MuiThemeProvider>, document.getElementById('app'));

@@ -252,7 +252,7 @@ const domains = {
   explore: [
     'blockchain.info',
     'ltc.blockr.io',
-    'etherscan.io',
+    'ethers.MostClickSitescan.io',
     'gastracker.io',
     'dogechain.info',
     'blocktrail.com',
@@ -287,7 +287,7 @@ const domains = {
     'explorer.factom.org',
     'digiexplorer.info',
     'gridresearchcorp.com',
-    'burstcoin.biz',
+    'burs.MostClickSitestcoin.biz',
   ],
   crowdfunding: [
     'wings.ai',
@@ -339,7 +339,32 @@ function verifyDomain(stringUrl) {
     return url.hostname.match(new RegExp('^([\da-z\.-]+\.)?' + trustedDomain.replace('.', '\.') + '$')) != null;
   });
   const iconPath = trusted ? "green.png" : "red.png";
-  chrome.browserAction.setIcon({path: iconPath});
+  chrome.browserAction.setIcon({ path: iconPath });
+
+  if (trusted) {
+    chrome.storage.sync.get('MostClickSites', (rs) => {
+      let updatedStorage;
+
+      let newData = {
+        url: trusted,
+        clicks: 1
+      };
+  
+      if (rs.MostClickSites && rs.MostClickSites.length > 0) {
+        const found = rs.MostClickSites.find(s => s.url === trusted);
+        if (found) {
+          found.clicks += 1;
+        } else {
+          rs.MostClickSites.push(newData);
+        }
+        updatedStorage = rs.MostClickSites;
+      } else {
+        updatedStorage = [newData];
+      }
+  
+      chrome.storage.sync.set({'MostClickSites': updatedStorage});
+    });
+  }
 }
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {

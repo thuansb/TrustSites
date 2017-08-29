@@ -1,13 +1,19 @@
 import React from 'react';
-import Modal from 'components/Modal';
+import Dialog from 'material-ui/Dialog';
 import { List, ListItem } from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
+import FlatButton from 'material-ui/FlatButton'
 
 const styles = {
     favIcon: {
         width: 16,
         height: 16,
         marginTop: 16
+    },
+
+    dialogContent: {
+        width: '90%',
+        overflowY: 'auto'
     }
 }
 
@@ -17,7 +23,7 @@ function renderListItem(site) {
         primaryText={text}
         onClick={() => window.open(site.url || `https://${site.domain}`)}
         leftIcon={
-            < img
+            <img
                 style={styles.favIcon}
                 src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
             />
@@ -26,17 +32,29 @@ function renderListItem(site) {
     );
 }
 
+function DetailDialog({ currencyInfo, isOpen, toggleDialog }) {
 
-function DetailModal({ currencyInfo, ...props }) {
+    const actions = [
+        <FlatButton label="Close" primary onClick={toggleDialog} />
+    ];
+
     return (
-        <Modal title={currencyInfo && `${currencyInfo.name} (${currencyInfo.code})`} {...props}>
+        <Dialog
+            title={currencyInfo && `${currencyInfo.name} (${currencyInfo.code})`}
+            open={isOpen}
+            onRequestClose={toggleDialog}
+            modal={false}
+            contentStyle={styles.dialogContent}
+            autoScrollBodyContent
+            actions={actions}
+        >
             <List>
                 <Subheader>Related sites</Subheader>
                 {currencyInfo && currencyInfo
                     .relatedSite
                     .map(site => renderListItem(site))}
             </List>
-        </Modal >)
+        </Dialog >)
 }
 
-export default DetailModal;
+export default DetailDialog;
