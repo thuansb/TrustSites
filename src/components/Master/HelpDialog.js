@@ -74,7 +74,7 @@ function HelpDialog({ isOpen, toggleDialog }) {
             <Card style={styles.card}>
                 <CardHeader title="Support me!" />
                 <CardText>
-                    I love to develop open source & give me some more FREE time please.
+                    I love to develop open source, if you see this tool helpful, give me some more FREE time please.
                 </CardText>
                 <CardActions>
                     <RaisedButton secondary onClick={() => window.open('https://etherscan.io/address/0xEb1d9926341945E28F3880e0F291B230FD92a3b9')} label="ETH" />

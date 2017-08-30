@@ -7,22 +7,22 @@ export default {
         "domain": "bitcoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://bitcoin.org"
+            "domain": "bitcoin.org"
         }, {
             "name": "Website 2",
-            "url": "https://www.bitcoin.com"
+            "domain": "bitcoin.com"
         }, {
             "name": "Explorer",
-            "url": "http://blockchain.info"
+            "domain": "blockchain.info"
         }, {
             "name": "Explorer 2",
-            "url": "https://blockexplorer.com"
+            "domain": "blockexplorer.com"
         }, {
             "name": "Message Board",
-            "url": "https://bitcointalk.org"
+            "domain": "bitcointalk.org"
         }, {
             "name": "Message Board 2",
-            "url": "https://forum.bitcoin.com"
+            "domain": "forum.bitcoin.com"
         }]
     }, {
         "name": "Ethereum",
@@ -31,19 +31,19 @@ export default {
         "domain": "ethereum.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.ethereum.org"
+            "domain": "ethereum.org"
         }, {
             "name": "Explorer",
-            "url": "https://live.ether.camp"
+            "domain": "live.ether.camp"
         }, {
             "name": "Explorer 2",
-            "url": "https://etherscan.io"
+            "domain": "etherscan.io"
         }, {
             "name": "Explorer 3",
-            "url": "https://etherchain.org"
+            "domain": "etherchain.org"
         }, {
             "name": "Message Board",
-            "url": "https://forum.ethereum.org"
+            "domain": "forum.ethereum.org"
         }]
     }, {
         "name": "Bitcoin Cash",
@@ -52,7 +52,7 @@ export default {
         "domain": "bitcoincash.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.bitcoincash.org"
+            "domain": "bitcoincash.org"
         }, {
             "name": "Explorer",
             "url": "https://blockchair.com/bitcoin-cash/blocks"
@@ -73,7 +73,7 @@ export default {
         "domain": "ripple.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://ripple.com"
+            "domain": "ripple.com"
         }, {
             "name": "Explorer",
             "url": "https://ripple.com/graph"
@@ -82,7 +82,7 @@ export default {
             "url": "https://bithomp.com/explorer"
         }, {
             "name": "Message Board",
-            "url": "http://www.xrpchat.com"
+            "domain": "xrpchat.com"
         }]
     }, {
         "name": "IOTA",
@@ -91,22 +91,22 @@ export default {
         "domain": "iota.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://iota.org"
+            "domain": "iota.org"
         }, {
             "name": "Explorer",
-            "url": "http://www.iota.tips"
+            "domain": "iota.tips"
         }, {
             "name": "Explorer 2",
-            "url": "https://iotasear.ch"
+            "domain": "iotasear.ch"
         }, {
             "name": "Explorer 3",
-            "url": "https://thetangle.org"
+            "domain": "thetangle.org"
         }, {
             "name": "Message Board",
-            "url": "https://forum.iota.org"
+            "domain": "forum.iota.org"
         }, {
             "name": "Message Board 2",
-            "url": "https://slack.iota.org"
+            "domain": "slack.iota.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1216479.0"
@@ -118,10 +118,10 @@ export default {
         "domain": "litecoin.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://litecoin.com"
+            "domain": "litecoin.com"
         }, {
             "name": "Website 2",
-            "url": "https://litecoin.org"
+            "domain": "litecoin.org"
         }, {
             "name": "Explorer",
             "url": "http://explorer.litecoin.net/chain/Litecoin"
@@ -133,7 +133,7 @@ export default {
             "url": "https://live.blockcypher.com/ltc"
         }, {
             "name": "Message Board",
-            "url": "https://litecointalk.io"
+            "domain": "litecointalk.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=47417.0"
@@ -145,16 +145,16 @@ export default {
         "domain": "nem.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://nem.io"
+            "domain": "nem.io"
         }, {
             "name": "Explorer",
-            "url": "http://nembex.nem.ninja"
+            "domain": "nembex.nem.ninja"
         }, {
             "name": "Explorer 2",
-            "url": "http://explorer.ournem.com"
+            "domain": "explorer.ournem.com"
         }, {
             "name": "Message Board",
-            "url": "https://forum.nem.io"
+            "domain": "forum.nem.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=654845.0"
@@ -166,7 +166,7 @@ export default {
         "domain": "dash.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.dash.org"
+            "domain": "dash.org"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/dash"
@@ -184,16 +184,16 @@ export default {
         "domain": "neo.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://neo.org"
+            "domain": "neo.org"
         }, {
             "name": "Explorer",
-            "url": "https://neotracker.io"
+            "domain": "neotracker.io"
         }, {
             "name": "Explorer 2",
-            "url": "http://antcha.in"
+            "domain": "antcha.in"
         }, {
             "name": "Explorer 3",
-            "url": "https://neoexplorer.co"
+            "domain": "neoexplorer.co"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1571738.0"
@@ -205,16 +205,16 @@ export default {
         "domain": "monero.cc",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.monero.cc"
+            "domain": "monero.cc"
         }, {
             "name": "Explorer",
             "url": "http://chainradar.com/xmr/blocks"
         }, {
             "name": "Explorer 2",
-            "url": "http://moneroblocks.info"
+            "domain": "moneroblocks.info"
         }, {
             "name": "Message Board",
-            "url": "https://forum.getmonero.org"
+            "domain": "forum.getmonero.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=583449.0"
@@ -226,10 +226,10 @@ export default {
         "domain": "ethereumclassic.github.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://ethereumclassic.github.io"
+            "domain": "ethereumclassic.github.io"
         }, {
             "name": "Explorer",
-            "url": "http://gastracker.io"
+            "domain": "gastracker.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1559630.0"
@@ -241,7 +241,7 @@ export default {
         "domain": "bitconnectcoin.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://bitconnectcoin.co"
+            "domain": "bitconnectcoin.co"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/bcc"
@@ -259,7 +259,7 @@ export default {
         "domain": "omg.omise.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://omg.omise.co"
+            "domain": "omg.omise.co"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/OmiseGo"
@@ -274,7 +274,7 @@ export default {
         "domain": "stratisplatform.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://stratisplatform.com"
+            "domain": "stratisplatform.com"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/strat"
@@ -283,7 +283,7 @@ export default {
             "url": "http://cryptobe.com/chain/Stratis"
         }, {
             "name": "Message Board",
-            "url": "https://www.stratistalk.org"
+            "domain": "stratistalk.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1512202.0"
@@ -295,13 +295,13 @@ export default {
         "domain": "qtum.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://qtum.org"
+            "domain": "qtum.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Qtum"
         }, {
             "name": "Explorer 2",
-            "url": "ethplorer.io/address/0x9a642d6b3368ddc662CA244bAdf32cDA716005BC"
+            "url": "https://ethplorer.io/address/0x9a642d6b3368ddc662CA244bAdf32cDA716005BC"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1720632.0"
@@ -313,16 +313,16 @@ export default {
         "domain": "wavesplatform.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://wavesplatform.com"
+            "domain": "wavesplatform.com"
         }, {
             "name": "Explorer",
-            "url": "http://wavesgo.com"
+            "domain": "wavesgo.com"
         }, {
             "name": "Explorer 2",
-            "url": "http://wavesexplorer.com"
+            "domain": "wavesexplorer.com"
         }, {
             "name": "Message Board",
-            "url": "https://wavestalk.org"
+            "domain": "wavestalk.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1387944.0"
@@ -334,13 +334,13 @@ export default {
         "domain": "z.cash",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://z.cash"
+            "domain": "z.cash"
         }, {
             "name": "Explorer",
-            "url": "https://explorer.zcha.in"
+            "domain": "explorer.zcha.in"
         }, {
             "name": "Message Board",
-            "url": "https://forum.z.cash"
+            "domain": "forum.z.cash"
         }]
     }, {
         "name": "EOS",
@@ -349,7 +349,7 @@ export default {
         "domain": "eos.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://eos.io"
+            "domain": "eos.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/EOS"
@@ -364,7 +364,7 @@ export default {
         "domain": "tenx.tech",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.tenx.tech"
+            "domain": "tenx.tech"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/TenXPay"
@@ -382,13 +382,13 @@ export default {
         "domain": "bitshares.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://bitshares.org"
+            "domain": "bitshares.org"
         }, {
             "name": "Explorer",
-            "url": "http://cryptofresh.com"
+            "domain": "cryptofresh.com"
         }, {
             "name": "Message Board",
-            "url": "https://bitsharestalk.org"
+            "domain": "bitsharestalk.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1949828"
@@ -400,7 +400,7 @@ export default {
         "domain": "tether.to",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://tether.to"
+            "domain": "tether.to"
         }, {
             "name": "Explorer",
             "url": "http://omnichest.info/lookupsp.aspx?sp=31"
@@ -412,13 +412,13 @@ export default {
         "domain": "lisk.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://lisk.io"
+            "domain": "lisk.io"
         }, {
             "name": "Explorer",
-            "url": "https://explorer.lisk.io"
+            "domain": "explorer.lisk.io"
         }, {
             "name": "Message Board",
-            "url": "https://forum.lisk.io"
+            "domain": "forum.lisk.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1346646"
@@ -430,19 +430,19 @@ export default {
         "domain": "steem.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://steem.io"
+            "domain": "steem.io"
         }, {
             "name": "Website 2",
-            "url": "https://steemit.com"
+            "domain": "steemit.com"
         }, {
             "name": "Explorer",
-            "url": "http://steemd.com"
+            "domain": "steemd.com"
         }, {
             "name": "Explorer 2",
-            "url": "https://steemdb.com"
+            "domain": "steemdb.com"
         }, {
             "name": "Message Board",
-            "url": "https://busy.org"
+            "domain": "busy.org"
         }, {
             "name": "Message Board 2",
             "url": "https://chainbb.com/forum/steem"
@@ -457,7 +457,7 @@ export default {
         "domain": "iconomi.net",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.iconomi.net"
+            "domain": "iconomi.net"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/ICONOMI"
@@ -472,7 +472,7 @@ export default {
         "domain": "binance.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.binance.com"
+            "domain": "binance.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
@@ -487,19 +487,19 @@ export default {
         "domain": "stellar.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.stellar.org"
+            "domain": "stellar.org"
         }, {
             "name": "Website 2",
-            "url": "https://mystellar.org"
+            "domain": "mystellar.org"
         }, {
             "name": "Explorer",
             "url": "https://www.stellar.org/stats"
         }, {
             "name": "Message Board",
-            "url": "https://stellarcommunity.org"
+            "domain": "stellarcommunity.org"
         }, {
             "name": "Message Board 2",
-            "url": "https://galactictalk.org"
+            "domain": "galactictalk.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=719019.0"
@@ -511,7 +511,7 @@ export default {
         "domain": "veritas.veritaseum.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://veritas.veritaseum.com"
+            "domain": "veritas.veritaseum.com"
         }, {
             "name": "Explorer",
             "url": "https://ethplorer.io/address/0x8f3470a7388c05ee4e7af3d01d8c722b0ff52374"
@@ -529,7 +529,7 @@ export default {
         "domain": "augur.net",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.augur.net"
+            "domain": "augur.net"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/REP"
@@ -541,7 +541,7 @@ export default {
         "domain": "golem.network",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://golem.network"
+            "domain": "golem.network"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Golem"
@@ -556,7 +556,7 @@ export default {
         "domain": "bytecoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://bytecoin.org"
+            "domain": "bytecoin.org"
         }, {
             "name": "Explorer",
             "url": "http://chainradar.com/bcn/blocks"
@@ -574,13 +574,13 @@ export default {
         "domain": "maidsafe.net",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://maidsafe.net"
+            "domain": "maidsafe.net"
         }, {
             "name": "Explorer",
-            "url": "http://omnichest.info/lookupsp.aspx?sp=3"
+            "domain": "omnichest.info"
         }, {
             "name": "Message Board",
-            "url": "https://safenetforum.org"
+            "domain": "safenetforum.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=579797.0"
@@ -592,10 +592,10 @@ export default {
         "domain": "factom.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://factom.org"
+            "domain": "factom.org"
         }, {
             "name": "Explorer",
-            "url": "http://explorer.factom.org"
+            "domain": "explorer.factom.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=850070.0"
@@ -607,10 +607,10 @@ export default {
         "domain": "sia.tech",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://sia.tech"
+            "domain": "sia.tech"
         }, {
             "name": "Explorer",
-            "url": "http://explore.sia.tech"
+            "domain": "explore.sia.tech"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1060294.0"
@@ -622,7 +622,7 @@ export default {
         "domain": "0xproject.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://0xproject.com"
+            "domain": "0xproject.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/ZRX"
@@ -634,7 +634,7 @@ export default {
         "domain": "neo.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://neo.org"
+            "domain": "neo.org"
         }, {
             "name": "Explorer",
             "url": "https://antchain.xyz/asset/hash/602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
@@ -652,7 +652,7 @@ export default {
         "domain": "dogecoin.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://dogecoin.com"
+            "domain": "dogecoin.com"
         }, {
             "name": "Explorer",
             "url": "http://dogechain.info/chain/Dogecoin"
@@ -667,7 +667,7 @@ export default {
         "domain": "basicattentiontoken.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://basicattentiontoken.org"
+            "domain": "basicattentiontoken.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Bat"
@@ -679,10 +679,10 @@ export default {
         "domain": "byteball.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://byteball.org"
+            "domain": "byteball.org"
         }, {
             "name": "Explorer",
-            "url": "https://explorer.byteball.org"
+            "domain": "explorer.byteball.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1608859.0"
@@ -694,7 +694,7 @@ export default {
         "domain": "status.im",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://status.im"
+            "domain": "status.im"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/StatusNetwork"
@@ -706,7 +706,7 @@ export default {
         "domain": "gnosis.pm",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://gnosis.pm"
+            "domain": "gnosis.pm"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Gnosis"
@@ -721,7 +721,7 @@ export default {
         "domain": "metalpay.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.metalpay.com"
+            "domain": "metalpay.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xF433089366899D83a9f26A773D59ec7eCF30355e"
@@ -733,7 +733,7 @@ export default {
         "domain": "digix.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://digix.io"
+            "domain": "digix.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/dgd"
@@ -748,13 +748,13 @@ export default {
         "domain": "ark.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://ark.io"
+            "domain": "ark.io"
         }, {
             "name": "Explorer",
             "url": "https://explorer.ark.io/networkMonitor"
         }, {
             "name": "Message Board",
-            "url": "http://forum.ark.io"
+            "domain": "forum.ark.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1649695.0"
@@ -766,7 +766,7 @@ export default {
         "domain": "populous.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://populous.co"
+            "domain": "populous.co"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xd4fa1460f537bb9085d22c7bccb5dd450ef28e3a"
@@ -781,7 +781,7 @@ export default {
         "domain": "civic.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.civic.com"
+            "domain": "civic.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/civic"
@@ -808,13 +808,13 @@ export default {
         "domain": "decred.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.decred.org"
+            "domain": "decred.org"
         }, {
             "name": "Explorer",
-            "url": "https://mainnet.decred.org"
+            "domain": "mainnet.decred.org"
         }, {
             "name": "Message Board",
-            "url": "https://forum.decred.org"
+            "domain": "forum.decred.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1290358.0"
@@ -826,10 +826,10 @@ export default {
         "domain": "gamecredits.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://gamecredits.com"
+            "domain": "gamecredits.com"
         }, {
             "name": "Explorer",
-            "url": "https://blockexplorer.gamecredits.com/ "
+            "domain": "blockexplorer.gamecredits.com"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1266597"
@@ -841,7 +841,7 @@ export default {
         "domain": "bytom.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://bytom.io"
+            "domain": "bytom.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750"
@@ -859,13 +859,13 @@ export default {
         "domain": "ardorplatform.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.ardorplatform.org"
+            "domain": "ardorplatform.org"
         }, {
             "name": "Explorer",
             "url": "https://www.mynxt.info/asset/12422608354438203866"
         }, {
             "name": "Message Board",
-            "url": "https://nxtforum.org"
+            "domain": "nxtforum.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1518497.0"
@@ -877,10 +877,10 @@ export default {
         "domain": "komodoplatform.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://komodoplatform.com"
+            "domain": "komodoplatform.com"
         }, {
             "name": "Explorer",
-            "url": "http://kmd.explorer.supernet.org"
+            "domain": "kmd.explorer.supernet.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1605144.0"
@@ -892,7 +892,7 @@ export default {
         "domain": "mona.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.mona.co"
+            "domain": "mona.co"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Monaco"
@@ -910,10 +910,10 @@ export default {
         "domain": "digibyte.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.digibyte.co"
+            "domain": "digibyte.co"
         }, {
             "name": "Explorer",
-            "url": "http://digiexplorer.info"
+            "domain": "digiexplorer.info"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=408268.0"
@@ -925,7 +925,7 @@ export default {
         "domain": "pivx.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.pivx.org"
+            "domain": "pivx.org"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/pivx"
@@ -934,10 +934,10 @@ export default {
             "url": "http://www.presstab.pw/phpexplorer/PIVX"
         }, {
             "name": "Explorer 3",
-            "url": "http://pivx.presstab.pw"
+            "domain": "pivx.presstab.pw"
         }, {
             "name": "Message Board",
-            "url": "https://forum.pivx.org"
+            "domain": "forum.pivx.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1262920"
@@ -949,7 +949,7 @@ export default {
         "domain": "funfair.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://funfair.io"
+            "domain": "funfair.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/FunFair"
@@ -967,19 +967,19 @@ export default {
         "domain": "nxt.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://nxt.org"
+            "domain": "nxt.org"
         }, {
             "name": "Explorer",
             "url": "https://www.mynxt.info/blockexplorer"
         }, {
             "name": "Explorer 2",
-            "url": "https://nxtportal.org"
+            "domain": "nxtportal.org"
         }, {
             "name": "Explorer 3",
-            "url": "http://www.peerexplorer.com"
+            "domain": "peerexplorer.com"
         }, {
             "name": "Message Board",
-            "url": "https://nxtforum.org"
+            "domain": "nxtforum.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=587007.0"
@@ -991,7 +991,7 @@ export default {
         "domain": "bancor.network",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://bancor.network"
+            "domain": "bancor.network"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Bancor"
@@ -1006,7 +1006,7 @@ export default {
         "domain": "district0x.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://district0x.io"
+            "domain": "district0x.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/district0x"
@@ -1024,7 +1024,7 @@ export default {
         "domain": "mobilego.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://mobilego.io"
+            "domain": "mobilego.io"
         }, {
             "name": "Explorer",
             "url": "http://www.wavesgo.com/assets.html?2Y8eFFXDTkxgCvXbMT5K4J38cpDYYbQdciJEZb48vTDj"
@@ -1042,7 +1042,7 @@ export default {
         "domain": "lykke.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://lykke.com"
+            "domain": "lykke.com"
         }, {
             "name": "Explorer",
             "url": "https://blockchainexplorer.lykke.com/asset/AXkedGbAH1XGDpAypVzA5eyjegX4FaCnvM"
@@ -1057,7 +1057,7 @@ export default {
         "domain": "icocoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://icocoin.org"
+            "domain": "icocoin.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xa33e729bf4fdeb868b534e1f20523463d9c46bee"
@@ -1069,7 +1069,7 @@ export default {
         "domain": "aragon.one",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://aragon.one"
+            "domain": "aragon.one"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Aragon"
@@ -1081,7 +1081,7 @@ export default {
         "domain": "pillarproject.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://pillarproject.io"
+            "domain": "pillarproject.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0xe3818504c1b32bf1557b16c238b2e01fd3149c17"
@@ -1096,7 +1096,7 @@ export default {
         "domain": "singulardtv.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://singulardtv.com"
+            "domain": "singulardtv.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/SNGLS"
@@ -1111,7 +1111,7 @@ export default {
         "domain": "nexusearth.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.nexusearth.com"
+            "domain": "nexusearth.com"
         }, {
             "name": "Explorer",
             "url": "http://nexusoft.io/platform/Explorer"
@@ -1126,7 +1126,7 @@ export default {
         "domain": "storj.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://storj.io"
+            "domain": "storj.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Storj"
@@ -1141,7 +1141,7 @@ export default {
         "domain": "bitquence.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.bitquence.com"
+            "domain": "bitquence.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x5af2be193a6abca9c8817001f45744777db30756"
@@ -1159,10 +1159,10 @@ export default {
         "domain": "mvs.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://mvs.org"
+            "domain": "mvs.org"
         }, {
             "name": "Explorer",
-            "url": "http://explorer.mvs.live"
+            "domain": "explorer.mvs.live"
         }]
     }, {
         "name": "Stox",
@@ -1171,7 +1171,7 @@ export default {
         "domain": "stox.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.stox.com"
+            "domain": "stox.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x006BeA43Baa3f7A6f765F14f10A1a1b08334EF45"
@@ -1189,10 +1189,10 @@ export default {
         "domain": "bitcoindark.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://bitcoindark.com"
+            "domain": "bitcoindark.com"
         }, {
             "name": "Explorer",
-            "url": "http://explorebtcd.info"
+            "domain": "explorebtcd.info"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=684090.0"
@@ -1204,7 +1204,7 @@ export default {
         "domain": "cofound.it",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://cofound.it"
+            "domain": "cofound.it"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x12fef5e57bf45873cd9b62e9dbd7bfb99e32d73e"
@@ -1219,10 +1219,10 @@ export default {
         "domain": "particl.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://particl.io"
+            "domain": "particl.io"
         }, {
             "name": "Explorer",
-            "url": "https://explorer.particl.io"
+            "domain": "explorer.particl.io"
         }, {
             "name": "Explorer 2",
             "url": "https://chainz.cryptoid.info/part"
@@ -1237,10 +1237,10 @@ export default {
         "domain": "ubiqsmart.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://ubiqsmart.com"
+            "domain": "ubiqsmart.com"
         }, {
             "name": "Explorer",
-            "url": "https://ubiqscan.io"
+            "domain": "ubiqscan.io"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1763606"
@@ -1252,10 +1252,10 @@ export default {
         "domain": "decent.ch",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://decent.ch"
+            "domain": "decent.ch"
         }, {
             "name": "Explorer",
-            "url": "https://decent-db.com"
+            "domain": "decent-db.com"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1162392.0"
@@ -1267,7 +1267,7 @@ export default {
         "domain": "syscoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://syscoin.org"
+            "domain": "syscoin.org"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/sys"
@@ -1282,7 +1282,7 @@ export default {
         "domain": "edgeless.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://edgeless.io"
+            "domain": "edgeless.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Edgeless"
@@ -1297,7 +1297,7 @@ export default {
         "domain": "adex.network",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.adex.network"
+            "domain": "adex.network"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x4470bb87d77b963a013db939be332f927f2b992e"
@@ -1312,7 +1312,7 @@ export default {
         "domain": "firstblood.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://firstblood.io"
+            "domain": "firstblood.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/FirstBlood"
@@ -1327,7 +1327,7 @@ export default {
         "domain": "wings.ai",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://wings.ai"
+            "domain": "wings.ai"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x667088b212ce3d06a1b553a7221E1fD19000d9aF"
@@ -1342,10 +1342,10 @@ export default {
         "domain": "gulden.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://gulden.com"
+            "domain": "gulden.com"
         }, {
             "name": "Explorer",
-            "url": "https://blockchain.gulden.com"
+            "domain": "blockchain.gulden.com"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1577392.0"
@@ -1357,10 +1357,10 @@ export default {
         "domain": "asch.so",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.asch.so"
+            "domain": "asch.so"
         }, {
             "name": "Explorer",
-            "url": "http://aschd.org"
+            "domain": "aschd.org"
         }]
     }, {
         "name": "iExec RLC",
@@ -1369,7 +1369,7 @@ export default {
         "domain": "iex.ec",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://iex.ec"
+            "domain": "iex.ec"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/RLC"
@@ -1384,7 +1384,7 @@ export default {
         "domain": "blocknet.co",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://blocknet.co"
+            "domain": "blocknet.co"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/block"
@@ -1399,13 +1399,13 @@ export default {
         "domain": "numer.ai",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://numer.ai"
+            "domain": "numer.ai"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671"
         }, {
             "name": "Message Board",
-            "url": "https://forum.numer.ai"
+            "domain": "forum.numer.ai"
         }]
     }, {
         "name": "LEOcoin",
@@ -1414,13 +1414,13 @@ export default {
         "domain": "leocoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.leocoin.org"
+            "domain": "leocoin.org"
         }, {
             "name": "Explorer",
-            "url": "https://insight.leocoin.org"
+            "domain": "insight.leocoin.org"
         }, {
             "name": "Explorer 2",
-            "url": "http://blockchain.leocoin.org"
+            "domain": "blockchain.leocoin.org"
         }, {
             "name": "Explorer 3",
             "url": "http://cryptobe.com/chain/LEOcoin"
@@ -1435,16 +1435,16 @@ export default {
         "domain": "emercoin.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://emercoin.com"
+            "domain": "emercoin.com"
         }, {
             "name": "Explorer",
-            "url": "https://emercoin.mintr.org"
+            "domain": "emercoin.mintr.org"
         }, {
             "name": "Explorer 2",
-            "url": "https://emcblock.info"
+            "domain": "emcblock.info"
         }, {
             "name": "Message Board",
-            "url": "http://emercointalk.org"
+            "domain": "emercointalk.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=362513.0"
@@ -1456,7 +1456,7 @@ export default {
         "domain": "melon.network",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://melon.network"
+            "domain": "melon.network"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Melon"
@@ -1468,16 +1468,16 @@ export default {
         "domain": "counterparty.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://counterparty.io"
+            "domain": "counterparty.io"
         }, {
             "name": "Explorer",
-            "url": "https://xchain.io"
+            "domain": "xchain.io"
         }, {
             "name": "Explorer 2",
-            "url": "https://counterpartychain.io"
+            "domain": "counterpartychain.io"
         }, {
             "name": "Message Board",
-            "url": "https://counterpartytalk.org"
+            "domain": "counterpartytalk.org"
         }]
     }, {
         "name": "Elastic",
@@ -1486,13 +1486,13 @@ export default {
         "domain": "elastic.pw",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.elastic.pw"
+            "domain": "elastic.pw"
         }, {
             "name": "Explorer",
-            "url": "http://elasticexplorer.org"
+            "domain": "elasticexplorer.org"
         }, {
             "name": "Message Board",
-            "url": "https://talk.elasticexplorer.org"
+            "domain": "talk.elasticexplorer.org"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1957064"
@@ -1504,19 +1504,19 @@ export default {
         "domain": "peercoin.net",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.peercoin.net"
+            "domain": "peercoin.net"
         }, {
             "name": "Explorer",
             "url": "https://chainz.cryptoid.info/ppc"
         }, {
             "name": "Explorer 2",
-            "url": "https://peercoin.mintr.org"
+            "domain": "peercoin.mintr.org"
         }, {
             "name": "Message Board",
-            "url": "https://talk.peercoin.net"
+            "domain": "talk.peercoin.net"
         }, {
             "name": "Message Board 2",
-            "url": "https://peercoin.chat"
+            "domain": "peercoin.chat"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=101820.0"
@@ -1528,7 +1528,7 @@ export default {
         "domain": "roundcoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://roundcoin.org"
+            "domain": "roundcoin.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x4993CB95c7443bdC06155c5f5688Be9D8f6999a5"
@@ -1543,7 +1543,7 @@ export default {
         "domain": "tokencard.io",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://tokencard.io"
+            "domain": "tokencard.io"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/TokenCard"
@@ -1558,10 +1558,10 @@ export default {
         "domain": "nolimitcoin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://www.nolimitcoin.org"
+            "domain": "nolimitcoin.org"
         }, {
             "name": "Explorer",
-            "url": "http://nolimitcoin.info"
+            "domain": "nolimitcoin.info"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1606674"
@@ -1573,10 +1573,10 @@ export default {
         "domain": "etheroll.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://etheroll.com"
+            "domain": "etheroll.com"
         }, {
             "name": "Website 2",
-            "url": "https://etheroll.wordpress.com"
+            "domain": "etheroll.wordpress.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x2e071D2966Aa7D8dECB1005885bA1977D6038A65"
@@ -1591,7 +1591,7 @@ export default {
         "domain": "adtoken.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://adtoken.com"
+            "domain": "adtoken.com"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/AdToken"
@@ -1606,7 +1606,7 @@ export default {
         "domain": "taas.fund",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://taas.fund"
+            "domain": "taas.fund"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/Taas"
@@ -1624,10 +1624,10 @@ export default {
         "domain": "firstcoinproject.com",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://firstcoinproject.com"
+            "domain": "firstcoinproject.com"
         }, {
             "name": "Explorer",
-            "url": "http://explorer.firstcoinproject.com"
+            "domain": "explorer.firstcoinproject.com"
         }]
     }, {
         "name": "OpenAnx",
@@ -1636,7 +1636,7 @@ export default {
         "domain": "openanx.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://www.openanx.org"
+            "domain": "openanx.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x701c244b988a513c945973defa05de933b23fe1d"
@@ -1651,10 +1651,10 @@ export default {
         "domain": "fair-coin.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "http://fair-coin.org"
+            "domain": "fair-coin.org"
         }, {
             "name": "Explorer",
-            "url": "https://chain.fair.to"
+            "domain": "chain.fair.to"
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=702675.0"
@@ -1666,7 +1666,7 @@ export default {
         "domain": "theqrl.org",
         "relatedSite": [{
             "name": "Website",
-            "url": "https://theqrl.org"
+            "domain": "theqrl.org"
         }, {
             "name": "Explorer",
             "url": "https://etherscan.io/token/0x697beac28b09e122c4332d163985e8a73121b97f"
