@@ -89,6 +89,14 @@ export default {
                 't Bitcoin via margin trading.'
         }
     }, {
+        domain: 'prism.exchange',
+        keyword: 'decentralize, peer to peer, ShapeShift',
+        props: {
+            country: 'N/A',
+            type: 'decentralize',
+        }
+    },
+        {
         domain: 'bitflyer.jp',
         keywords: 'leading Japanese exchange, send and receive Bitcoins in just 1',
         props: {

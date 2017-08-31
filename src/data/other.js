@@ -1,7 +1,16 @@
 export default {
     name: 'Other',
-    sites: [{
-        domain: 'myetherwallet.com',
-        keywords: 'ether'
-    }]
+    sites: [
+        {
+            domain: 'coinmarketcap.com'
+        }, {
+            domain: 'coincap.io'
+        }, {
+            domain: 'coinmarketcap.com'
+        }, {
+            domain: 'coinranking.com'
+        }, {
+            domain: 'coinspectator.com'
+        }
+    ]
 }

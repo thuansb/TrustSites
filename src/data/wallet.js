@@ -13,6 +13,17 @@ export default {
       security: 'Good'
     }
   }, {
+    "name": "Neo Tracker Web Wallet",
+    "url": "https://neotracker.io/wallet"
+  }, {
+    "name": "Download Neon wallet",
+    "url": "https://github.com/CityOfZion/neon-wallet/releases"
+  }, {
+    name: 'Other NEO wallets',
+    domain: 'neo.org',
+    url: 'https://neo.org/download',
+    keywords: ['neo']
+  }, {
     domain: 'ledgerwallet.com',
     keywords: [
       'hardware', 'ether', 'bitcoin'
@@ -319,10 +330,5 @@ export default {
   }, {
     domain: 'mymonero.com',
     keywords: ['monero', 'web-wallet']
-  }, {
-    name: 'NEO wallets',
-    domain: 'neo.org',
-    url: 'https://neo.org/download',
-    keywords: ['neo']
   }]
 }

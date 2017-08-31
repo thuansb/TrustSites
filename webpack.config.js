@@ -3,9 +3,12 @@ var webpack = require('webpack');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  entry: ['./src/app.js'],
+  entry: {
+    popup: './src/app.js',
+    background: './src/background.js'
+  },
   output: {
-    filename: 'index.js',
+    filename: '[name].js',
     path: path.resolve('./public')
   },
   module: {

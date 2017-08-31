@@ -2,10 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: ['./src/app.js'],
+  entry: {
+    popup: './src/app.js',
+    background: './src/background.js'
+  },
   output: {
-    filename: 'index.js',
-    path: path.resolve('./public')
+    filename: '[name].js',
+    path: path.resolve('./release')
   },
   module: {
     loaders: [

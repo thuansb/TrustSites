@@ -1,32 +1,37 @@
 import React from 'react';
 import SiteList from 'components/SiteList';
-import HelpModal from './HelpModal';
+import HelpDialog from './HelpDialog';
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import HelpIcon from 'material-ui/svg-icons/action/help-outline';
+
 import './styles.scss';
 
 class Master extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isModalOpen: false
+            isDialogOpen: false
         };
-        this.toggleModal = this
-            .toggleModal
+        this.toggleDialog = this
+            .toggleDialog
             .bind(this);
     }
 
-    toggleModal() {
+    toggleDialog() {
         this.setState({
-            isModalOpen: !this.state.isModalOpen
+            isDialogOpen: !this.state.isDialogOpen
         });
     }
 
     render() {
         return (
             <div className="Root">
+                <AppBar iconElementLeft={<div />} title="Trusted Crypto Sites" iconElementRight={<IconButton><HelpIcon /></IconButton>} onRightIconButtonTouchTap={this.toggleDialog} />
                 <div className="main-content">
-                    <SiteList toggleModal={this.toggleModal}/>
+                    <SiteList toggleDialog={this.toggleDialog} />
                 </div>
-                <HelpModal toggleModal={this.toggleModal} isOpen={this.state.isModalOpen} />
+                <HelpDialog toggleDialog={this.toggleDialog} isOpen={this.state.isDialogOpen} />
             </div>
         );
     }
