@@ -197,6 +197,27 @@ export default {
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1571738.0"
+        }, {
+            "name": "Neon Wallet",
+            "url": "https://github.com/CityOfZion/neon-wallet/releases"
+        }, {
+            "name": "NEO Desktop Client",
+            "url": "https://github.com/neo-project/neo-gui/releases"
+        }, {
+            "name": "Neo Tracker Web Wallet",
+            "url": "https://neotracker.io/wallet"
+        }, {
+            "name": "Neo Web Wallet",
+            "domain": "neowallet.cn"
+        }, {
+            "name": "NEO Web Wallet by OnChain dev",
+            "domain": "neowallet.net"
+        }, {
+            "name": "Blue Whale Web",
+            "domain": "otcgo.cn"
+        }, {
+            "name": "Neo To Gas",
+            "domain": "neotogas.com"
         }]
     }, {
         "name": "Monero",
