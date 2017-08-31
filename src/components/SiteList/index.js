@@ -13,7 +13,6 @@ import SearchBar from 'components/SearchBar';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
-// import MostClickSites from 'components/MostClickSites';
 
 const domainData = {
     'wallet': wallet,
@@ -85,7 +84,7 @@ class SiteList extends React.Component {
         super(props);
 
         this.state = {
-            activedTab: WALLET_TAB_NAME,
+            activedTab: CURRENCY_TAB_NAME,
             isDialogOpen: false,
             searchExpanded: false
         }
@@ -94,12 +93,12 @@ class SiteList extends React.Component {
     }
 
     componentWillMount() {
-        // chrome
-        //     .storage
-        //     .sync
-        //     .get('SiteListState', (data) => {
-        //         data.SiteListState && this.setState(data.SiteListState)
-        //     });
+        chrome
+            .storage
+            .local
+            .get(['SiteListState'], (data) => {
+                if (data.SiteListState) this.setState(data.SiteListState);            
+            });
     }
 
     changeTab = (e, index, value) => this.setState({ activedTab: value });
@@ -124,10 +123,12 @@ class SiteList extends React.Component {
     }
 
     render() {
-        // chrome
-        //     .storage
-        //     .sync
-        //     .set({'SiteListState': this.state});
+        chrome
+            .storage
+            .local
+            .set({
+                'SiteListState': this.state
+            });
 
         const genRow = (site) => {
 
@@ -166,9 +167,9 @@ class SiteList extends React.Component {
                     {!this.state.searchExpanded && (
                         <ToolbarGroup firstChild>
                             <DropDownMenu value={this.state.activedTab} onChange={this.changeTab}>
+                                <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
                                 <MenuItem value={WALLET_TAB_NAME} primaryText="Wallet" />
                                 <MenuItem value={EXCHANGER_TAB_NAME} primaryText="Exchanger" />
-                                <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
                             </DropDownMenu>
                         </ToolbarGroup>
                     )}
@@ -178,8 +179,6 @@ class SiteList extends React.Component {
                 </Toolbar>
                 <List
                     style={styles.list}>
-                    {/* <Subheader>Most used sites</Subheader> */}
-                    {/* <MostClickSites /> */}
                     <Subheader>{domainData[this.state.activedTab].name}</Subheader>
                     {domainData[this.state.activedTab]
                         .sites

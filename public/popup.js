@@ -29215,8 +29215,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-// import MostClickSites from 'components/MostClickSites';
-
 var domainData = {
     'wallet': _wallet2.default,
     'exchanger': _exchanger2.default,
@@ -29301,7 +29299,7 @@ var SiteList = function (_React$Component) {
         };
 
         _this.state = {
-            activedTab: WALLET_TAB_NAME,
+            activedTab: CURRENCY_TAB_NAME,
             isDialogOpen: false,
             searchExpanded: false
         };
@@ -29313,22 +29311,20 @@ var SiteList = function (_React$Component) {
     _createClass(SiteList, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            // chrome
-            //     .storage
-            //     .sync
-            //     .get('SiteListState', (data) => {
-            //         data.SiteListState && this.setState(data.SiteListState)
-            //     });
+            var _this2 = this;
+
+            chrome.storage.local.get(['SiteListState'], function (data) {
+                if (data.SiteListState) _this2.setState(data.SiteListState);
+            });
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _this3 = this;
 
-            // chrome
-            //     .storage
-            //     .sync
-            //     .set({'SiteListState': this.state});
+            chrome.storage.local.set({
+                'SiteListState': this.state
+            });
 
             var genRow = function genRow(site) {
 
@@ -29339,12 +29335,12 @@ var SiteList = function (_React$Component) {
                     text = site.name || site.domain;
                 }
 
-                var shouldOpenDialog = _this2.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
+                var shouldOpenDialog = _this3.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
 
                 return _react2.default.createElement(_List.ListItem, {
                     key: text,
                     onClick: function onClick() {
-                        return shouldOpenDialog ? _this2.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
+                        return shouldOpenDialog ? _this3.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
                     },
                     primaryText: text,
                     leftIcon: _react2.default.createElement('img', {
@@ -29366,9 +29362,9 @@ var SiteList = function (_React$Component) {
                         _react2.default.createElement(
                             _DropDownMenu2.default,
                             { value: this.state.activedTab, onChange: this.changeTab },
+                            _react2.default.createElement(_MenuItem2.default, { value: CURRENCY_TAB_NAME, primaryText: 'Currency' }),
                             _react2.default.createElement(_MenuItem2.default, { value: WALLET_TAB_NAME, primaryText: 'Wallet' }),
-                            _react2.default.createElement(_MenuItem2.default, { value: EXCHANGER_TAB_NAME, primaryText: 'Exchanger' }),
-                            _react2.default.createElement(_MenuItem2.default, { value: CURRENCY_TAB_NAME, primaryText: 'Currency' })
+                            _react2.default.createElement(_MenuItem2.default, { value: EXCHANGER_TAB_NAME, primaryText: 'Exchanger' })
                         )
                     ),
                     _react2.default.createElement(
@@ -29391,7 +29387,7 @@ var SiteList = function (_React$Component) {
                 _react2.default.createElement(_DetailDialog2.default, {
                     isOpen: this.state.isDialogOpen,
                     toggleDialog: function toggleDialog() {
-                        return _this2.toggleDialog();
+                        return _this3.toggleDialog();
                     },
                     currencyInfo: this.state.currencyInfo })
             );
@@ -34946,6 +34942,17 @@ exports.default = {
       security: 'Good'
     }
   }, {
+    "name": "Neo Tracker Web Wallet",
+    "url": "https://neotracker.io/wallet"
+  }, {
+    "name": "Download Neon wallet",
+    "url": "https://github.com/CityOfZion/neon-wallet/releases"
+  }, {
+    name: 'Other NEO wallets',
+    domain: 'neo.org',
+    url: 'https://neo.org/download',
+    keywords: ['neo']
+  }, {
     domain: 'ledgerwallet.com',
     keywords: ['hardware', 'ether', 'bitcoin'],
     props: {
@@ -35231,11 +35238,6 @@ exports.default = {
   }, {
     domain: 'mymonero.com',
     keywords: ['monero', 'web-wallet']
-  }, {
-    name: 'NEO wallets',
-    domain: 'neo.org',
-    url: 'https://neo.org/download',
-    keywords: ['neo']
   }]
 };
 
@@ -35987,6 +35989,27 @@ exports.default = {
         }, {
             "name": "Announcement",
             "url": "https://bitcointalk.org/index.php?topic=1571738.0"
+        }, {
+            "name": "Neon Wallet",
+            "url": "https://github.com/CityOfZion/neon-wallet/releases"
+        }, {
+            "name": "NEO Desktop Client",
+            "url": "https://github.com/neo-project/neo-gui/releases"
+        }, {
+            "name": "Neo Tracker Web Wallet",
+            "url": "https://neotracker.io/wallet"
+        }, {
+            "name": "Neo Web Wallet",
+            "domain": "neowallet.cn"
+        }, {
+            "name": "NEO Web Wallet by OnChain dev",
+            "domain": "neowallet.net"
+        }, {
+            "name": "Blue Whale Web",
+            "domain": "otcgo.cn"
+        }, {
+            "name": "Neo To Gas",
+            "domain": "neotogas.com"
         }]
     }, {
         "name": "Monero",
@@ -39051,9 +39074,20 @@ var SearchBar = function (_React$Component) {
     }
 
     _createClass(SearchBar, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            chrome.storage.local.get('SearchBarState', function (data) {
+                data.SearchBarState && _this2.setState(data.SearchBarState);
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _this3 = this;
+
+            chrome.storage.local.set({ 'SearchBarState': this.state });
 
             var styles = getStyles(this.props, this.state);
 
@@ -39066,9 +39100,9 @@ var SearchBar = function (_React$Component) {
                     this.state.expandSearch ? _react2.default.createElement(_arrowBack2.default, null) : _react2.default.createElement(_search2.default, null)
                 ),
                 this.state.expandSearch && [_react2.default.createElement(_TextField2.default, { key: 1, ref: function ref(element) {
-                        _this2.textField = element;
+                        _this3.textField = element;
                     }, hintText: 'Search', onChange: function onChange(e, v) {
-                        return _this2.props.onChange(v);
+                        return _this3.props.onChange(v);
                     } }), _react2.default.createElement(
                     _IconButton2.default,
                     { key: 2, onClick: this.clearOrClose },

@@ -24,6 +24,15 @@ class SearchBar extends React.Component {
         };
     }
 
+    componentWillMount() {
+        chrome
+            .storage
+            .local
+            .get('SearchBarState', (data) => {
+                data.SearchBarState && this.setState(data.SearchBarState)
+            });
+    }
+
     toggleExpandSearch = () => {
         this.props.onToggleExpandSearch(!this.state.expandSearch);
 
@@ -44,8 +53,11 @@ class SearchBar extends React.Component {
         }
     }
 
-
     render() {
+        chrome
+            .storage
+            .local
+            .set({ 'SearchBarState': this.state });
 
         const styles = getStyles(this.props, this.state);
 
