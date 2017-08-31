@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve('./public')
+    path: path.resolve('./release')
   },
   module: {
     loaders: [

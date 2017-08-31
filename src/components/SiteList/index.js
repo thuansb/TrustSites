@@ -66,6 +66,7 @@ const SEARCH_TAB_NAME = 'searchResult';
 const WALLET_TAB_NAME = 'wallet';
 const EXCHANGER_TAB_NAME = 'exchanger';
 const CURRENCY_TAB_NAME = 'currency';
+const OTHER_TAB_NAME = 'other';
 
 const styles = {
     favIcon: {
@@ -170,6 +171,7 @@ class SiteList extends React.Component {
                                 <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
                                 <MenuItem value={WALLET_TAB_NAME} primaryText="Wallet" />
                                 <MenuItem value={EXCHANGER_TAB_NAME} primaryText="Exchanger" />
+                                <MenuItem value={OTHER_TAB_NAME} primaryText="Others" />
                             </DropDownMenu>
                         </ToolbarGroup>
                     )}

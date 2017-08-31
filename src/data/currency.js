@@ -23,7 +23,14 @@ export default {
         }, {
             "name": "Message Board 2",
             "domain": "forum.bitcoin.com"
-        }]
+        }, {
+            "name": "Twitter",
+            "url": "https://twitter.com/Bitcoin"
+        }, {
+            "name": "Reddit",
+            "url": "https://www.reddit.com/r/Bitcoin/"
+        }
+    ]
     }, {
         "name": "Ethereum",
         "code": "ETH",
@@ -44,6 +51,12 @@ export default {
         }, {
             "name": "Message Board",
             "domain": "forum.ethereum.org"
+        }, {
+            "name": "Twitter",
+            "url": "https://twitter.com/ethereumproject"
+        }, {
+            "name": "Reddit",
+            "url": "https://www.reddit.com/r/ethereum/"
         }]
     }, {
         "name": "Bitcoin Cash",
@@ -218,6 +231,12 @@ export default {
         }, {
             "name": "Neo To Gas",
             "domain": "neotogas.com"
+        }, {
+            "name": "Neo Reddit",
+            "url": "https://www.reddit.com/r/NEO/"
+        }, {
+            "name": "Neo Twitter",
+            "url": "https://twitter.com/neo_blockchain"
         }]
     }, {
         "name": "Monero",

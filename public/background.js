@@ -65,7 +65,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 371:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -390,7 +390,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 372:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -463,6 +463,13 @@ exports.default = {
             type: 'centralized',
             pairs: 'multi',
             desc: 'BitFinex offers three main functions - it is a bitcoin, litecoin and dashcoin to' + ' fiat exchange, a margin trading exchange and a liquidity provider. Although the' + ' company is said to be in Beta phase there are a number of features available th' + 'at expand the financial positions you can take - for example the ability to shor' + 't Bitcoin via margin trading.'
+        }
+    }, {
+        domain: 'prism.exchange',
+        keyword: 'decentralize, peer to peer, ShapeShift',
+        props: {
+            country: 'N/A',
+            type: 'decentralize'
         }
     }, {
         domain: 'bitflyer.jp',
@@ -930,7 +937,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 373:
+/***/ 116:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -964,6 +971,12 @@ exports.default = {
         }, {
             "name": "Message Board 2",
             "domain": "forum.bitcoin.com"
+        }, {
+            "name": "Twitter",
+            "url": "https://twitter.com/Bitcoin"
+        }, {
+            "name": "Reddit",
+            "url": "https://www.reddit.com/r/Bitcoin/"
         }]
     }, {
         "name": "Ethereum",
@@ -985,6 +998,12 @@ exports.default = {
         }, {
             "name": "Message Board",
             "domain": "forum.ethereum.org"
+        }, {
+            "name": "Twitter",
+            "url": "https://twitter.com/ethereumproject"
+        }, {
+            "name": "Reddit",
+            "url": "https://www.reddit.com/r/ethereum/"
         }]
     }, {
         "name": "Bitcoin Cash",
@@ -1159,6 +1178,12 @@ exports.default = {
         }, {
             "name": "Neo To Gas",
             "domain": "neotogas.com"
+        }, {
+            "name": "Neo Reddit",
+            "url": "https://www.reddit.com/r/NEO/"
+        }, {
+            "name": "Neo Twitter",
+            "url": "https://twitter.com/neo_blockchain"
         }]
     }, {
         "name": "Monero",
@@ -2644,7 +2669,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 374:
+/***/ 117:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2655,7 +2680,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
     name: 'Other',
-    sites: []
+    sites: [{
+        domain: 'coinmarketcap.com'
+    }, {
+        domain: 'coincap.io'
+    }, {
+        domain: 'coinmarketcap.com'
+    }, {
+        domain: 'coinranking.com'
+    }, {
+        domain: 'coinspectator.com'
+    }]
 };
 
 /***/ }),
@@ -2666,19 +2701,19 @@ exports.default = {
 "use strict";
 
 
-var _wallet = __webpack_require__(371);
+var _wallet = __webpack_require__(114);
 
 var _wallet2 = _interopRequireDefault(_wallet);
 
-var _exchanger = __webpack_require__(372);
+var _exchanger = __webpack_require__(115);
 
 var _exchanger2 = _interopRequireDefault(_exchanger);
 
-var _currency = __webpack_require__(373);
+var _currency = __webpack_require__(116);
 
 var _currency2 = _interopRequireDefault(_currency);
 
-var _other = __webpack_require__(374);
+var _other = __webpack_require__(117);
 
 var _other2 = _interopRequireDefault(_other);
 
