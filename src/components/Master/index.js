@@ -4,7 +4,6 @@ import HelpDialog from './HelpDialog';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import HelpIcon from 'material-ui/svg-icons/action/help-outline';
-
 import './styles.scss';
 
 class Master extends React.Component {

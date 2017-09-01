@@ -60,12 +60,103 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 470);
+/******/ 	return __webpack_require__(__webpack_require__.s = 466);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 114:
+/***/ 466:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _wallet = __webpack_require__(467);
+
+var _wallet2 = _interopRequireDefault(_wallet);
+
+var _exchanger = __webpack_require__(468);
+
+var _exchanger2 = _interopRequireDefault(_exchanger);
+
+var _currency = __webpack_require__(469);
+
+var _currency2 = _interopRequireDefault(_currency);
+
+var _other = __webpack_require__(470);
+
+var _other2 = _interopRequireDefault(_other);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var temp = [];
+_currency2.default.sites.forEach(function (site) {
+  temp = temp.concat(site.relatedSite);
+});
+
+var domainData = [].concat(_toConsumableArray(_wallet2.default.sites), _toConsumableArray(_exchanger2.default.sites), _toConsumableArray(_other2.default.sites), _toConsumableArray(_currency2.default.sites), _toConsumableArray(temp));
+
+function verifyDomain(stringUrl) {
+  var trusted = domainData.find(function (site) {
+    return check(stringUrl, site.domain, site.url);
+  });
+
+  var iconPath = trusted ? "green.png" : "red.png";
+  chrome.browserAction.setIcon({ path: iconPath });
+}
+
+function check(stringUrl, siteDomain, siteURL) {
+  var url = new URL(stringUrl);
+
+  var trusted = false;
+  if (siteDomain) {
+    trusted = url.hostname.match(new RegExp('^([\da-z\.-]+\.)?' + siteDomain.replace('.', '\.') + '$')) != null;
+  } else {
+    trusted = stringUrl === siteURL;
+  }
+
+  return trusted;
+}
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (changeInfo.url) verifyDomain(changeInfo.url);
+});
+
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+  chrome.tabs.get(activeInfo.tabId, function (tab) {
+    if (tab) verifyDomain(tab.url);
+  });
+});
+
+/*
+  Prepare data for UI
+*/
+
+window.domainData = {
+  'wallet': _wallet2.default,
+  'exchanger': _exchanger2.default,
+  'currency': _currency2.default,
+  'other': _other2.default,
+  'searchResult': {
+    name: 'Search Result',
+    sites: []
+  }
+};
+
+window.searchData = [];
+Object.keys(window.domainData).forEach(function (key) {
+  window.searchData = window.searchData.concat(window.domainData[key].sites.map(function (site) {
+    var newSite = Object.assign({}, site);
+    newSite.searchCategory = key;
+    return newSite;
+  }));
+});
+
+/***/ }),
+
+/***/ 467:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -390,7 +481,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 115:
+/***/ 468:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -937,7 +1028,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 116:
+/***/ 469:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2669,7 +2760,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 117:
+/***/ 470:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2690,75 +2781,10 @@ exports.default = {
         domain: 'coinranking.com'
     }, {
         domain: 'coinspectator.com'
+    }, {
+        domain: 'tradingview.com'
     }]
 };
-
-/***/ }),
-
-/***/ 470:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _wallet = __webpack_require__(114);
-
-var _wallet2 = _interopRequireDefault(_wallet);
-
-var _exchanger = __webpack_require__(115);
-
-var _exchanger2 = _interopRequireDefault(_exchanger);
-
-var _currency = __webpack_require__(116);
-
-var _currency2 = _interopRequireDefault(_currency);
-
-var _other = __webpack_require__(117);
-
-var _other2 = _interopRequireDefault(_other);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var temp = [];
-_currency2.default.sites.forEach(function (site) {
-  temp = temp.concat(site.relatedSite);
-});
-
-var domainData = [].concat(_toConsumableArray(_wallet2.default.sites), _toConsumableArray(_exchanger2.default.sites), _toConsumableArray(_other2.default.sites), _toConsumableArray(_currency2.default.sites), _toConsumableArray(temp));
-
-function verifyDomain(stringUrl) {
-  var trusted = domainData.find(function (site) {
-    return check(stringUrl, site.domain, site.url);
-  });
-
-  var iconPath = trusted ? "green.png" : "red.png";
-  chrome.browserAction.setIcon({ path: iconPath });
-}
-
-function check(stringUrl, siteDomain, siteURL) {
-  var url = new URL(stringUrl);
-
-  var trusted = false;
-  if (siteDomain) {
-    trusted = url.hostname.match(new RegExp('^([\da-z\.-]+\.)?' + siteDomain.replace('.', '\.') + '$')) != null;
-  } else {
-    trusted = stringUrl === siteURL;
-  }
-
-  return trusted;
-}
-
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  if (changeInfo.url) verifyDomain(changeInfo.url);
-});
-
-chrome.tabs.onActivated.addListener(function (activeInfo) {
-  chrome.tabs.get(activeInfo.tabId, function (tab) {
-    if (tab) verifyDomain(tab.url);
-  });
-});
 
 /***/ })
 

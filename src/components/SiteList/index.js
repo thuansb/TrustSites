@@ -1,9 +1,5 @@
 import React from 'react';
 import DetailDialog from './DetailDialog';
-import wallet from 'data/wallet';
-import exchanger from 'data/exchanger';
-import currency from 'data/currency';
-import other from 'data/other';
 import debounce from 'lodash/debounce';
 import Fuse from 'fuse.js';
 import { List, ListItem } from 'material-ui/List';
@@ -14,18 +10,7 @@ import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-const domainData = {
-    'wallet': wallet,
-    'exchanger': exchanger,
-    'currency': currency,
-    'other': other,
-    'searchResult': {
-        name: 'Search Result',
-        sites: []
-    }
-};
-
-const options = {
+const searchOptions = {
     shouldSort: true,
     includeScore: true,
     threshold: 0,
@@ -47,20 +32,7 @@ const options = {
         "relatedSite.name",
         "relatedSite.url"
     ]
-};
-
-let searchData = [];
-Object
-    .keys(domainData)
-    .forEach((key) => {
-        searchData = searchData.concat(domainData[key].sites.map(site => {
-            const newSite = Object.assign({}, site);
-            newSite.searchCategory = key;
-            return newSite;
-        }));
-    });
-
-const fuse = new Fuse(searchData, options);
+  };
 
 const SEARCH_TAB_NAME = 'searchResult';
 const WALLET_TAB_NAME = 'wallet';
@@ -93,6 +65,15 @@ class SiteList extends React.Component {
         this.searchDebounded = debounce(this.search, 500);
     }
 
+    componentWillMount() {
+        // Get domains data from background.js
+        chrome.runtime.getBackgroundPage((bg) => {
+            this.domainData = bg.domainData;
+            this.fuse = new Fuse(bg.searchData, searchOptions);
+            this.forceUpdate();
+        });        
+    }
+
     changeTab = (e, index, value) => this.setState({ activedTab: value });
 
     toggleDialog = (site) => this.setState({
@@ -101,7 +82,7 @@ class SiteList extends React.Component {
     });
 
     search = (searchTerm) => {
-        domainData.searchResult.sites = fuse
+        this.domainData.searchResult.sites = this.fuse
             .search(searchTerm)
             .map(rs => rs.item);
         this.forceUpdate();
@@ -140,13 +121,14 @@ class SiteList extends React.Component {
                         <img
                             style={styles.favIcon}
                             src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
+                            alt="fav icon"
                         />
                     )}
                 />
             );
         }
 
-        return (
+        return !this.domainData ? <div>Please wait...</div> : (
             <Paper zDepth={1}>
                 <Toolbar>
                     {!this.state.searchExpanded && (
@@ -165,8 +147,8 @@ class SiteList extends React.Component {
                 </Toolbar>
                 <List
                     style={styles.list}>
-                    <Subheader>{domainData[this.state.activedTab].name}</Subheader>
-                    {domainData[this.state.activedTab]
+                    <Subheader>{this.domainData[this.state.activedTab].name}</Subheader>
+                    {this.domainData[this.state.activedTab]
                         .sites
                         .map(genRow)}
                 </List>

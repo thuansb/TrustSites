@@ -39,3 +39,27 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
     if (tab) verifyDomain(tab.url);
   });
 });
+
+/*
+  Prepare data for UI
+*/
+
+window.domainData = {
+  'wallet': wallet,
+  'exchanger': exchanger,
+  'currency': currency,
+  'other': other,
+  'searchResult': {
+    name: 'Search Result',
+    sites: []
+  }
+};
+
+window.searchData = [];
+Object.keys(window.domainData).forEach((key) => {
+  window.searchData = window.searchData.concat(window.domainData[key].sites.map(site => {
+    const newSite = Object.assign({}, site);
+    newSite.searchCategory = key;
+    return newSite;
+  }));
+});

@@ -20,12 +20,14 @@ const styles = {
 function renderListItem(site) {
     const text = site.name || site.domain;
     return (<ListItem
+        key={text}
         primaryText={text}
         onClick={() => window.open(site.url || `https://${site.domain}`)}
         leftIcon={
             <img
                 style={styles.favIcon}
                 src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
+                alt="fav icon"
             />
         }
     />

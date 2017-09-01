@@ -11,6 +11,8 @@ export default {
             domain: 'coinranking.com'
         }, {
             domain: 'coinspectator.com'
+        }, {
+            domain: 'tradingview.com'
         }
     ]
 }
