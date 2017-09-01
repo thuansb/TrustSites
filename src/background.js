@@ -15,8 +15,6 @@ function verifyDomain(stringUrl) {
 
   const iconPath = trusted ? "green.png" : "red.png";
   chrome.browserAction.setIcon({ path: iconPath });
-
- if (trusted) updateCounter(stringUrl);
 }
 
 function check(stringUrl, siteDomain, siteURL) {
@@ -41,28 +39,3 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
     if (tab) verifyDomain(tab.url);
   });
 });
-
-function updateCounter(domain) {
-    chrome.storage.sync.get('MostClickSites', (rs) => {
-      let updatedStorage;
-
-      let newData = {
-        url: domain,
-        clicks: 1
-      };
-  
-      if (rs.MostClickSites && rs.MostClickSites.length > 0) {
-        const found = rs.MostClickSites.find(s => s.url === domain);
-        if (found) {
-          found.clicks += 1;
-        } else {
-          rs.MostClickSites.push(newData);
-        }
-        updatedStorage = rs.MostClickSites;
-      } else {
-        updatedStorage = [newData];
-      }
-  
-      chrome.storage.sync.set({'MostClickSites': updatedStorage});
-    });
-}

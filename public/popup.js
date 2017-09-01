@@ -31841,6 +31841,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+console.log('====================================');
+console.log(new Date());
+console.log('====================================');
+
 var domainData = {
     'wallet': _wallet2.default,
     'exchanger': _exchanger2.default,
@@ -31892,6 +31896,8 @@ var styles = {
     }
 };
 
+console.log(new Date());
+
 var SiteList = function (_React$Component) {
     _inherits(SiteList, _React$Component);
 
@@ -31936,22 +31942,9 @@ var SiteList = function (_React$Component) {
     }
 
     _createClass(SiteList, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            var _this2 = this;
-
-            chrome.storage.local.get(['SiteListState'], function (data) {
-                if (data.SiteListState) _this2.setState(data.SiteListState);
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
-
-            chrome.storage.local.set({
-                'SiteListState': this.state
-            });
+            var _this2 = this;
 
             var genRow = function genRow(site) {
 
@@ -31962,12 +31955,12 @@ var SiteList = function (_React$Component) {
                     text = site.name || site.domain;
                 }
 
-                var shouldOpenDialog = _this3.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
+                var shouldOpenDialog = _this2.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
 
                 return _react2.default.createElement(_List.ListItem, {
                     key: text,
                     onClick: function onClick() {
-                        return shouldOpenDialog ? _this3.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
+                        return shouldOpenDialog ? _this2.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
                     },
                     primaryText: text,
                     leftIcon: _react2.default.createElement('img', {
@@ -32015,7 +32008,7 @@ var SiteList = function (_React$Component) {
                 _react2.default.createElement(_DetailDialog2.default, {
                     isOpen: this.state.isDialogOpen,
                     toggleDialog: function toggleDialog() {
-                        return _this3.toggleDialog();
+                        return _this2.toggleDialog();
                     },
                     currencyInfo: this.state.currencyInfo })
             );
@@ -39111,20 +39104,9 @@ var SearchBar = function (_React$Component) {
     }
 
     _createClass(SearchBar, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            var _this2 = this;
-
-            chrome.storage.local.get('SearchBarState', function (data) {
-                data.SearchBarState && _this2.setState(data.SearchBarState);
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
-
-            chrome.storage.local.set({ 'SearchBarState': this.state });
+            var _this2 = this;
 
             var styles = getStyles(this.props, this.state);
 
@@ -39137,9 +39119,9 @@ var SearchBar = function (_React$Component) {
                     this.state.expandSearch ? _react2.default.createElement(_arrowBack2.default, null) : _react2.default.createElement(_search2.default, null)
                 ),
                 this.state.expandSearch && [_react2.default.createElement(_TextField2.default, { key: 1, ref: function ref(element) {
-                        _this3.textField = element;
+                        _this2.textField = element;
                     }, hintText: 'Search', onChange: function onChange(e, v) {
-                        return _this3.props.onChange(v);
+                        return _this2.props.onChange(v);
                     } }), _react2.default.createElement(
                     _IconButton2.default,
                     { key: 2, onClick: this.clearOrClose },

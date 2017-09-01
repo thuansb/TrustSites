@@ -15,22 +15,12 @@ const getStyles = (props, state) => {
 }
 
 class SearchBar extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
             expandSearch: false,
             focus: false
         };
-    }
-
-    componentWillMount() {
-        chrome
-            .storage
-            .local
-            .get('SearchBarState', (data) => {
-                data.SearchBarState && this.setState(data.SearchBarState)
-            });
     }
 
     toggleExpandSearch = () => {
@@ -54,11 +44,6 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        chrome
-            .storage
-            .local
-            .set({ 'SearchBarState': this.state });
-
         const styles = getStyles(this.props, this.state);
 
         return (

@@ -2735,8 +2735,6 @@ function verifyDomain(stringUrl) {
 
   var iconPath = trusted ? "green.png" : "red.png";
   chrome.browserAction.setIcon({ path: iconPath });
-
-  if (trusted) updateCounter(stringUrl);
 }
 
 function check(stringUrl, siteDomain, siteURL) {
@@ -2761,33 +2759,6 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
     if (tab) verifyDomain(tab.url);
   });
 });
-
-function updateCounter(domain) {
-  chrome.storage.sync.get('MostClickSites', function (rs) {
-    var updatedStorage = void 0;
-
-    var newData = {
-      url: domain,
-      clicks: 1
-    };
-
-    if (rs.MostClickSites && rs.MostClickSites.length > 0) {
-      var found = rs.MostClickSites.find(function (s) {
-        return s.url === domain;
-      });
-      if (found) {
-        found.clicks += 1;
-      } else {
-        rs.MostClickSites.push(newData);
-      }
-      updatedStorage = rs.MostClickSites;
-    } else {
-      updatedStorage = [newData];
-    }
-
-    chrome.storage.sync.set({ 'MostClickSites': updatedStorage });
-  });
-}
 
 /***/ })
 

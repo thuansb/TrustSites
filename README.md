@@ -9,7 +9,8 @@ https://goo.gl/forms/JDKzxWekir3P2Gwm2
 
 If you see this extension helpful, you can give me a cup of :coffee:  :). Thank you!
 
-BTC: [1GN5tySvzzs9fcNSY9NWgGSaMAc8PWf7Gi](https://blockchain.info/address/1GN5tySvzzs9fcNSY9NWgGSaMAc8PWf7Gi)
+BTC: 1GN5tySvzzs9fcNSY9NWgGSaMAc8PWf7Gi
 
-ETH: 0xd4c3E64cF7B1902f0aC09664d92De3b92E20D831
+ETH: 0xEb1d9926341945E28F3880e0F291B230FD92a3b9
 
+NEOGAS: AbfXhG5NhrZYKdUWQ2zH4tZ1RyvJhtD9ui

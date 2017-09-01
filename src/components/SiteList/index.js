@@ -14,6 +14,10 @@ import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+console.log('====================================');
+console.log(new Date());
+console.log('====================================');
+
 const domainData = {
     'wallet': wallet,
     'exchanger': exchanger,
@@ -80,6 +84,8 @@ const styles = {
     }
 };
 
+console.log(new Date());
+
 class SiteList extends React.Component {
     constructor(props) {
         super(props);
@@ -91,15 +97,6 @@ class SiteList extends React.Component {
         }
 
         this.searchDebounded = debounce(this.search, 500);
-    }
-
-    componentWillMount() {
-        chrome
-            .storage
-            .local
-            .get(['SiteListState'], (data) => {
-                if (data.SiteListState) this.setState(data.SiteListState);            
-            });
     }
 
     changeTab = (e, index, value) => this.setState({ activedTab: value });
@@ -124,13 +121,6 @@ class SiteList extends React.Component {
     }
 
     render() {
-        chrome
-            .storage
-            .local
-            .set({
-                'SiteListState': this.state
-            });
-
         const genRow = (site) => {
 
             let text;
