@@ -14,10 +14,6 @@ import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-console.log('====================================');
-console.log(new Date());
-console.log('====================================');
-
 const domainData = {
     'wallet': wallet,
     'exchanger': exchanger,
@@ -83,8 +79,6 @@ const styles = {
         overflow: 'auto'
     }
 };
-
-console.log(new Date());
 
 class SiteList extends React.Component {
     constructor(props) {

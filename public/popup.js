@@ -31841,10 +31841,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-console.log('====================================');
-console.log(new Date());
-console.log('====================================');
-
 var domainData = {
     'wallet': _wallet2.default,
     'exchanger': _exchanger2.default,
@@ -31895,8 +31891,6 @@ var styles = {
         overflow: 'auto'
     }
 };
-
-console.log(new Date());
 
 var SiteList = function (_React$Component) {
     _inherits(SiteList, _React$Component);

@@ -2,7 +2,7 @@
   "name": "Trusted Crypto Site Indicator",
   "short_name": "Trusted CS",
   "description": "Identifying the official crypto site, prevent from phishing attacks.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
