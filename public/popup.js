@@ -29262,7 +29262,7 @@ var SiteList = function (_React$Component) {
         };
 
         _this.state = {
-            activedTab: CURRENCY_TAB_NAME,
+            activedTab: WALLET_TAB_NAME,
             isDialogOpen: false,
             searchExpanded: false
         };
@@ -29284,9 +29284,18 @@ var SiteList = function (_React$Component) {
             });
         }
     }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this3 = this;
+
+            setTimeout(function () {
+                _this3.setState({ fetchRealFavIcon: true });
+            }, 500);
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this4 = this;
 
             var genRow = function genRow(site) {
 
@@ -29297,17 +29306,17 @@ var SiteList = function (_React$Component) {
                     text = site.name || site.domain;
                 }
 
-                var shouldOpenDialog = _this3.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
+                var shouldOpenDialog = _this4.state.activedTab === 'currency' || site.searchCategory && site.searchCategory === 'currency';
 
                 return _react2.default.createElement(_List.ListItem, {
                     key: text,
                     onClick: function onClick() {
-                        return shouldOpenDialog ? _this3.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
+                        return shouldOpenDialog ? _this4.toggleDialog(site) : window.open(site.url || 'https://' + site.domain);
                     },
                     primaryText: text,
                     leftIcon: _react2.default.createElement('img', {
                         style: styles.favIcon,
-                        src: 'https://www.google.com/s2/favicons?domain=' + (site.domain || site.url),
+                        src: _this4.state.fetchRealFavIcon ? 'https://www.google.com/s2/favicons?domain=' + (site.domain || site.url) : 'default-fav.png',
                         alt: 'fav icon'
                     })
                 });
@@ -29329,9 +29338,9 @@ var SiteList = function (_React$Component) {
                         _react2.default.createElement(
                             _DropDownMenu2.default,
                             { value: this.state.activedTab, onChange: this.changeTab },
-                            _react2.default.createElement(_MenuItem2.default, { value: CURRENCY_TAB_NAME, primaryText: 'Currency' }),
                             _react2.default.createElement(_MenuItem2.default, { value: WALLET_TAB_NAME, primaryText: 'Wallet' }),
                             _react2.default.createElement(_MenuItem2.default, { value: EXCHANGER_TAB_NAME, primaryText: 'Exchanger' }),
+                            _react2.default.createElement(_MenuItem2.default, { value: CURRENCY_TAB_NAME, primaryText: 'Currency' }),
                             _react2.default.createElement(_MenuItem2.default, { value: OTHER_TAB_NAME, primaryText: 'Others' })
                         )
                     ),
@@ -29355,7 +29364,7 @@ var SiteList = function (_React$Component) {
                 _react2.default.createElement(_DetailDialog2.default, {
                     isOpen: this.state.isDialogOpen,
                     toggleDialog: function toggleDialog() {
-                        return _this3.toggleDialog();
+                        return _this4.toggleDialog();
                     },
                     currencyInfo: this.state.currencyInfo })
             );
@@ -41294,7 +41303,7 @@ var Avatar = function (_Component) {
 
 Avatar.muiName = 'Avatar';
 Avatar.defaultProps = {
-  size: 4
+  size: 40
 };
 Avatar.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired

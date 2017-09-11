@@ -57,7 +57,7 @@ class SiteList extends React.Component {
         super(props);
 
         this.state = {
-            activedTab: CURRENCY_TAB_NAME,
+            activedTab: WALLET_TAB_NAME,
             isDialogOpen: false,
             searchExpanded: false
         }
@@ -95,6 +95,12 @@ class SiteList extends React.Component {
         });
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ fetchRealFavIcon: true });
+        }, 500);
+    }
+
     render() {
         const genRow = (site) => {
 
@@ -120,7 +126,7 @@ class SiteList extends React.Component {
                     leftIcon={(
                         <img
                             style={styles.favIcon}
-                            src={`https://www.google.com/s2/favicons?domain=${site.domain || site.url}`}
+                            src={this.state.fetchRealFavIcon ? `https://www.google.com/s2/favicons?domain=${site.domain || site.url}` : 'default-fav.png'}
                             alt="fav icon"
                         />
                     )}
@@ -134,9 +140,9 @@ class SiteList extends React.Component {
                     {!this.state.searchExpanded && (
                         <ToolbarGroup firstChild>
                             <DropDownMenu value={this.state.activedTab} onChange={this.changeTab}>
-                                <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
                                 <MenuItem value={WALLET_TAB_NAME} primaryText="Wallet" />
                                 <MenuItem value={EXCHANGER_TAB_NAME} primaryText="Exchanger" />
+                                <MenuItem value={CURRENCY_TAB_NAME} primaryText="Currency" />
                                 <MenuItem value={OTHER_TAB_NAME} primaryText="Others" />
                             </DropDownMenu>
                         </ToolbarGroup>
